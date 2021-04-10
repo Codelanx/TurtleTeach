@@ -5,8 +5,8 @@
     margin-bottom: 1rem;
 }
 
-.turtle-nav > a {
-
+.turtle-nav a {
+    color: #fff;
 }
 
 .turtle-nav > NavItem > :visited {
