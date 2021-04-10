@@ -5,7 +5,7 @@ import TurtleRouter from "./Router";
 function App() {
     return (
         <React.Fragment>
-            <Navigation/>
+            <Navigation />
             <div id="content" className="container col-md-9 col-lg-10">
                 <TurtleRouter />
             </div>

@@ -1,0 +1,20 @@
+.turtle-nav {
+    background-color: #04a43c;
+    color: #fff;
+    border-bottom: .5rem solid #0a537a;
+    margin-bottom: 1rem;
+}
+
+.turtle-nav > a {
+
+}
+
+.turtle-nav > NavItem > :visited {
+
+}
+
+/** TODO: Rename */
+
+.turtle-secondary {
+    background-color: #7ab648;
+}

@@ -1,12 +1,18 @@
 import React from "react";
 import './Navigation.css';
-import {Badge, Button, Input, InputGroup, Nav, NavItem, NavLink} from "reactstrap";
+import {Badge, Button, Collapse, Input, InputGroup, Nav, Navbar, NavbarToggler, NavItem, NavLink} from "reactstrap";
 import {Link} from "react-router-dom";
 
 class Navigation extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.isOpen = false;
+    }
+
+    toggle() {
+        this.isOpen = !this.isOpen;
     }
 
     render() {
@@ -36,12 +42,21 @@ class Navigation extends React.Component {
             </React.Fragment>
         );*/
         return (
-            <div>
-                <Nav pills>
-                    <NavItem>
-                        <Link to="#">Test Pill</Link>
-                    </NavItem>
-                </Nav>
+            <div className="turtle-nav">
+                <Navbar expand="md">
+                    <NavbarToggler onClick={this.toggle()} />
+                    <Collapse isOpen={this.isOpen} navbar>
+                        <Nav>
+                            <NavItem>
+                                <NavLink>
+                                    <Link to="/test">
+                                        Testing Page
+                                    </Link>
+                                </NavLink>
+                            </NavItem>
+                        </Nav>
+                    </Collapse>
+                </Navbar>
             </div>
         );
     }
