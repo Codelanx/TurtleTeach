@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "../components/Navigation";
+import './ComponentPage.css';
 
 class ComponentPage extends React.Component {
 
@@ -10,8 +11,11 @@ class ComponentPage extends React.Component {
 
     render() {
         return (
-            <div style={{"border": "2px solid #ccc;"}}>
-                <Navigation />
+            <div className="content-border">
+                <h1>Component Render:</h1>
+                <div className="content-border">
+                    <Navigation />
+                </div>
             </div>
         );
     }
