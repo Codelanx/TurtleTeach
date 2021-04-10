@@ -6,6 +6,7 @@ import Customize from "./pages/customize/Customize";
 import Course from "./pages/course/Course";
 import Sandbox from "./pages/sandbox/Sandbox";
 import Landing from "./pages/Landing";
+import Testing from "./pages/Testing";
 
 function TurtleRouter() {
     //TODO: Routing for authed vs not
@@ -26,8 +27,11 @@ function TurtleRouter() {
             <Route path="/home">
                 <Home />
             </Route>
-            <Route path="/">
+            <Route path="/landing">
                 <Landing />
+            </Route>
+            <Route path="/">
+                <Testing />
             </Route>
         </Switch>
     );

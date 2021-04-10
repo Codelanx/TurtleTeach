@@ -1,6 +1,6 @@
 import React from "react";
 
-class ContentCard extends React.Component {
+class ComponentPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -10,9 +10,11 @@ class ContentCard extends React.Component {
     render() {
         return (
             <div>
-                {this.props.text}
+
             </div>
         );
     }
 
 }
+
+export default ComponentPage;
