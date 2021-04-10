@@ -17,6 +17,12 @@ class ContentCard extends React.Component {
 
                     </CardImg>
                 </Card>
+                <div>
+                    class info
+                </div>
+                <div>
+                    grade info
+                </div>
                 {this.props.text}
             </div>
         );
