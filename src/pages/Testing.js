@@ -20,12 +20,22 @@ class Testing extends React.Component {
                 <hr />
                 <ListGroup>
                     <ListGroupItem>
-                        <Link to="/landing">Landing Page</Link><br/>
-                        <Link to="/login">Login Page</Link><br/>
-                        <Link to="/home">Home Page</Link><br/>
-                        <Link to="/course">Course Page</Link><br/>
-                        <Link to="/customize">Customize Page</Link><br/>
-                        <Link to="/sandbox">Sandbox Page</Link><br/>
+                        <Link to="/landing">Landing Page</Link>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                        <Link to="/login">Login Page</Link>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                        <Link to="/home">Home Page</Link>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                        <Link to="/course">Course Page</Link>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                        <Link to="/customize">Customize Page</Link>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                        <Link to="/sandbox">Sandbox Page</Link>
                     </ListGroupItem>
                 </ListGroup>
             </List>
