@@ -1,4 +1,5 @@
 import React from "react";
+import './ContentCard.css';
 
 class ContentCard extends React.Component {
 

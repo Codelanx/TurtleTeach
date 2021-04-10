@@ -1,5 +1,5 @@
 import React from "react";
-import './Navigation.css';
+import './Swagponent.css';
 import {Badge, Button, Input, InputGroup, Nav, NavItem, NavLink} from "reactstrap";
 
 class Swagponent extends React.Component {

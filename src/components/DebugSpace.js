@@ -1,5 +1,5 @@
 import React from "react";
-import './Navigation.css';
+import './DebugSpace.css';
 import {Badge, Button, Input, InputGroup, Nav, NavItem, NavLink} from "reactstrap";
 
 class DebugSpace extends React.Component {

@@ -1,4 +1,5 @@
 import React from "react";
+import './StudentGrades.css';
 import {Button} from "reactstrap";
 import {Link} from "react-router-dom";
 

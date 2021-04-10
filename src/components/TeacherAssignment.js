@@ -1,5 +1,5 @@
 import React from "react";
-import './Navigation.css';
+import './TeacherAssignment.css';
 import {Badge, Button, Input, InputGroup, Nav, NavItem, NavLink} from "reactstrap";
 
 class TeacherAssignment extends React.Component {

@@ -1,4 +1,5 @@
 import React from "react";
+import './TabBar.css';
 import {Button} from "reactstrap";
 import {Link} from "react-router-dom";
 

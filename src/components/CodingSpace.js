@@ -1,5 +1,5 @@
 import React from "react";
-import './Navigation.css';
+import './CodingSpace.css';
 import {Badge, Button, Input, InputGroup, Nav, NavItem, NavLink} from "reactstrap";
 
 class CodingSpace extends React.Component {
