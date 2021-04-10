@@ -14,6 +14,12 @@ class Testing extends React.Component {
             <List>
                 <ListGroup>
                     <ListGroupItem>
+                        <Link to="/test/component">Component Testing Page</Link>
+                    </ListGroupItem>
+                </ListGroup>
+                <hr />
+                <ListGroup>
+                    <ListGroupItem>
                         <Link to="/landing">Landing Page</Link>
                     </ListGroupItem>
                 </ListGroup>

@@ -7,6 +7,7 @@ import Course from "./pages/course/Course";
 import Sandbox from "./pages/sandbox/Sandbox";
 import Landing from "./pages/Landing";
 import Testing from "./pages/Testing";
+import ComponentPage from "./pages/ComponentPage";
 
 function TurtleRouter() {
     //TODO: Routing for authed vs not
@@ -29,6 +30,12 @@ function TurtleRouter() {
             </Route>
             <Route path="/landing">
                 <Landing />
+            </Route>
+            <Route path="/test/component">
+                <ComponentPage />
+            </Route>
+            <Route path="/test">
+                <Testing />
             </Route>
             <Route path="/">
                 <Testing />

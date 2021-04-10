@@ -1,6 +1,7 @@
 import React from "react";
 import './Navigation.css';
 import {Badge, Button, Input, InputGroup, Nav, NavItem, NavLink} from "reactstrap";
+import {Link} from "react-router-dom";
 
 class Navigation extends React.Component {
 
@@ -36,9 +37,10 @@ class Navigation extends React.Component {
         );*/
         return (
             <div>
-
                 <Nav pills>
-
+                    <NavItem>
+                        <Link to="#">Test Pill</Link>
+                    </NavItem>
                 </Nav>
             </div>
         );
