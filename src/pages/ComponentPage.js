@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import './ComponentPage.css';
 import {Link} from "react-router-dom";
+import ContentCard from "../components/ContentCard";
 
 class ComponentPage extends React.Component {
 
@@ -16,7 +17,7 @@ class ComponentPage extends React.Component {
                 <Link to="/test">&lt; Testing Page</Link>
                 <h1>Component Render:</h1>
                 <div className="content-border">
-                    <Navigation />
+                    <ContentCard />
                 </div>
             </div>
         );
