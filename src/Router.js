@@ -5,7 +5,7 @@ import Login from "./pages/login/Login";
 import Customize from "./pages/customize/Customize";
 import Course from "./pages/course/Course";
 import Sandbox from "./pages/sandbox/Sandbox";
-import Landing from "./pages/Landing";
+import Landing from "./pages/landing/Landing";
 import Testing from "./pages/Testing";
 import ComponentPage from "./pages/ComponentPage";
 
