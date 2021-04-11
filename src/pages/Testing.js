@@ -1,6 +1,7 @@
 import React from "react";
 import {List, ListGroup, ListGroupItem} from "reactstrap";
 import { Link } from "react-router-dom";
+import TabBar from "../components/TabBar";
 
 class Testing extends React.Component {
 
@@ -39,6 +40,7 @@ class Testing extends React.Component {
                     </ListGroupItem>
                 </ListGroup>
             </List>
+
         );
     }
 
