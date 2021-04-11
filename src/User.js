@@ -51,7 +51,7 @@ class Users {
 class Profile {
 
     constructor() {
-        this.currentUser = null;
+        this.currentUser = Users.STUDENT;
     }
 
     getCurrentUser() {
@@ -62,6 +62,9 @@ class Profile {
         this.currentUser = Users.findUser(username);
     }
 
+    isLoggedIn() {
+        return this.currentUser !== null;
+    }
 }
 
 export default Profile;

@@ -16,7 +16,7 @@ function TurtleRouter(props) {
             <Route path="/sandbox">
                 <Sandbox profile={props.profile} />
             </Route>
-            <Route path="/course">
+            <Route path="/class">
                 <Course profile={props.profile} />
             </Route>
             <Route path="/customize">
