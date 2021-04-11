@@ -9,36 +9,36 @@ import Landing from "./pages/Landing";
 import Testing from "./pages/Testing";
 import ComponentPage from "./pages/ComponentPage";
 
-function TurtleRouter() {
+function TurtleRouter(props) {
     //TODO: Routing for authed vs not
     return (
         <Switch>
             <Route path="/sandbox">
-                <Sandbox />
+                <Sandbox profile={props.profile} />
             </Route>
             <Route path="/course">
-                <Course />
+                <Course profile={props.profile} />
             </Route>
             <Route path="/customize">
-                <Login />
+                <Customize profile={props.profile} />
             </Route>
             <Route path="/login">
-                <Customize />
+                <Login profile={props.profile} />
             </Route>
             <Route path="/home">
-                <Home />
+                <Home profile={props.profile} />
             </Route>
             <Route path="/landing">
-                <Landing />
+                <Landing profile={props.profile} />
             </Route>
             <Route path="/test/component">
-                <ComponentPage />
+                <ComponentPage profile={props.profile} />
             </Route>
             <Route path="/test">
-                <Testing />
+                <Testing profile={props.profile} />
             </Route>
             <Route path="/">
-                <Testing />
+                <Testing profile={props.profile} />
             </Route>
         </Switch>
     );
