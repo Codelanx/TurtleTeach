@@ -4,6 +4,7 @@ import './ComponentPage.css';
 import {Link} from "react-router-dom";
 import StudentLabel from "../components/StudentLabel";
 import ContentCard from "../components/ContentCard";
+import Logo from "../components/Logo";
 
 class ComponentPage extends React.Component {
 
