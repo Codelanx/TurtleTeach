@@ -1,6 +1,6 @@
 import React from "react";
 import './TeacherAssignment.css';
-import {Badge, Button, Input, InputGroup, Nav, NavItem, NavLink} from "reactstrap";
+import {Table} from "reactstrap";
 
 class TeacherAssignment extends React.Component {
 
@@ -9,38 +9,46 @@ class TeacherAssignment extends React.Component {
     }
 
     render() {
-        //TODO: Remove below example code after navbar up and running
-        /*return (
-            <React.Fragment>
-                <Button id="nav-fold" type="button"
-                        className="btn btn-secondary btn-lg btn-block col-xs-12 d-block d-md-none" data-toggle="collapse"
-                        data-target="#sidenav" aria-expanded="true" aria-controls="collapseExample">
-                    <span className="fa fa-bars"></span>
-                </Button>
-                <div className="col-md-3 col-lg-2 col-xs-12 sidebar collapse" id="sidenav">
-                    <Nav vertical={true} className="nav-sidebar flex-column">
-                        <NavItem><NavLink href="./queue">Queue <Badge color="secondary">{this.queueSize}</Badge></NavLink></NavItem>
-                        <NavItem><NavLink href="./browser">Browser</NavLink></NavItem>
-                        <NavItem><NavLink href="./admin">Admin</NavLink></NavItem>
-                        <NavIteTm><NavLink href="./torrents">Torrents</NavLink></NavItem>
-                        <NavItem><NavLink href="./logout">Logout</NavLink></NavItem>
-                    </Nav>
-                    <div className="control-row">
-                        <InputGroup className="searcher col-xs-12" data-search-type="general">
-                            <Input type='text' placeholder='Search media...' />
-                            <div className="form-popup d-none"></div>
-                        </InputGroup>
-                    </div>
-                </div>
-            </React.Fragment>
-        );*/
+
+
         return (
-            <div>
+            <Table bordered>
+                <thead>
+                <tr>
+                    <th>Assignment</th>
+                    <th>Completed</th>
+                    <th>Graded</th>
+                    <th>Due Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr bgcolor="#00ff00">
+                    <td>Swagatoni</td>
+                    <td>03/24</td>
+                    <td>02/24</td>
+                    <td>04/30/21</td>
+                </tr>
+                <tr bgcolor="#bbbbbb">
+                    <td>Swag Flip</td>
+                    <td>20/24</td>
+                    <td>18/24</td>
+                    <td>04/20/21</td>
+                </tr>
+                <tr bgcolor="#bbbbbb">
+                    <td>Swag Slide</td>
+                    <td>15/24</td>
+                    <td>10/24</td>
+                    <td>04/25/21</td>
+                </tr>
+                <tr bgcolor="#bbbbbb">
+                    <td>Swagscape</td>
+                    <td>04/24</td>
+                    <td>02/24</td>
+                    <td>04/30/21</td>
+                </tr>
+                </tbody>
+            </Table>
 
-                <Nav pills>
-
-                </Nav>
-            </div>
         );
     }
 

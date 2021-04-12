@@ -1,9 +1,11 @@
 import React, {useState} from "react";
-import './TabBar.css';
-import {Link} from "react-router-dom";
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, CardTitle, CardText, Row, Col } from 'reactstrap';
+import './StudentTab.css';
+import TeacherAssignment from "./TeacherAssignment";
+import TeacherGrades from "./TeacherGrades";
+import TeacherStudentView from "./TeacherStudentView";
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row} from 'reactstrap';
 
-const TabBar = (props) => {
+const TeacherTab = (props) => {
     const [activeTab, setActiveTab] = useState('1');
 
     const toggle = tab => {
@@ -17,7 +19,7 @@ const TabBar = (props) => {
                     <NavLink
                         onClick={() => { toggle('1'); }}
                     >
-                        My Assignments
+                        My Students
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -25,7 +27,7 @@ const TabBar = (props) => {
 
                         onClick={() => { toggle('2'); }}
                     >
-                        Class Leaderboard
+                       Assignments
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -33,7 +35,7 @@ const TabBar = (props) => {
 
                         onClick={() => { toggle('3'); }}
                     >
-                        My Grades
+                        Grading
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -41,23 +43,22 @@ const TabBar = (props) => {
 
                         onClick={() => { toggle('4'); }}
                     >
-                        Tutorial
+                        Tutorials
                     </NavLink>
                 </NavItem>
             </Nav>
             <TabContent activeTab={activeTab}>
                 <TabPane tabId="1">
                     <Row>
-                        Assignments Page Goes Here
+                        <TeacherStudentView/>
                     </Row>
                 </TabPane>
                 <TabPane tabId="2">
-                    <Row>Class Leaderboard Goes Here
-                    </Row>
+                    <TeacherAssignment/>
                 </TabPane>
                 <TabPane tabId="3">
                     <Row>
-                        Grades Page Goes Here
+                        <TeacherGrades/>
                     </Row>
                 </TabPane>
                 <TabPane tabId="4">
@@ -69,4 +70,4 @@ const TabBar = (props) => {
     );
 }
 
-export default TabBar;
+export default TeacherTab;

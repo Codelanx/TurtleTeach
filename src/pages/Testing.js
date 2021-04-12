@@ -1,13 +1,11 @@
 import React from "react";
 import {List, ListGroup, ListGroupItem} from "reactstrap";
 import { Link } from "react-router-dom";
-import TabBar from "../components/TabBar";
 
 class Testing extends React.Component {
 
     constructor(props) {
         super(props);
-
     }
 
     render() {
