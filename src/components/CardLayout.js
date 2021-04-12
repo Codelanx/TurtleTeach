@@ -13,6 +13,14 @@ class CardLayout extends React.Component {
     render() {
         return (
             <div>
+                <div>
+                    <h1><u>Current Classes</u></h1>
+                </div>
+
+                
+                <div>
+                    <h1><u>Previous Classes</u></h1>
+                </div>
                 {this.props.text}
             </div>
         );
