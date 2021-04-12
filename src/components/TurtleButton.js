@@ -21,9 +21,9 @@ class TurtleButton extends React.Component {
         }
 
         return (
-            <TurtleButton onMouseOver={changeBackground} onMouseLeave={originalBackground} classname={"buttonStyle"} type="button" value={this.props.value}>
+            <Button onMouseOver={changeBackground} onMouseLeave={originalBackground} type="button" size="lg" value="CLICK ME">
 
-            </TurtleButton>
+            </Button>
         );
     }
 
