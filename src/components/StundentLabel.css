@@ -1,0 +1,20 @@
+#mainContainer {
+    display: flex; /* or inline-flex */
+    width: 400px;
+    align-items: center;
+}
+
+#subContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    flex: 1;
+}
+
+#link {
+    font-size: x-large;
+    color: #0a537a;
+    text-underline: #0a537a;
+}
