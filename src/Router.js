@@ -8,6 +8,7 @@ import Sandbox from "./pages/sandbox/Sandbox";
 import Landing from "./pages/landing/Landing";
 import Testing from "./pages/Testing";
 import ComponentPage from "./pages/ComponentPage";
+import ClassHome from "./pages/ClassHome/ClassHome";
 import StudentHome from "./pages/StudentHome/StudentHome";
 import TeacherHome from "./pages/TeacherHome/TeacherHome";
 
@@ -50,6 +51,9 @@ function TurtleRouter(props) {
             </Route>
             <Route path="/test">
                 <Testing profile={props.profile} />
+            </Route>
+            <Route path="/ClassHome">
+                <ClassHome profile={props.profile} />
             </Route>
             <Route path="/">
                 <HomeRoute profile={props.profile} />
