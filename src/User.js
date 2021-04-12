@@ -19,6 +19,10 @@ class User {
         return this.type;
     }
 
+    getAvatarURL() {
+        return '/img/turtle.png';
+    }
+
     isStudent() {
         return this.getUserType() === UserType.STUDENT;
     }
