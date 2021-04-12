@@ -1,14 +1,11 @@
 import React from "react";
 import {List, ListGroup, ListGroupItem} from "reactstrap";
 import { Link } from "react-router-dom";
-import StudentTab from "../components/StudentTab";
-import TeacherTab from "../components/TeacherTab";
 
 class Testing extends React.Component {
 
     constructor(props) {
         super(props);
-
     }
 
     render() {

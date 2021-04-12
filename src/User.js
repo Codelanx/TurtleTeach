@@ -59,7 +59,7 @@ class Profile {
     }
 
     setCurrentUser(username) {
-        this.currentUser = Users.findUser(username);
+        return this.currentUser = Users.findUser(username);
     }
 
     isLoggedIn() {

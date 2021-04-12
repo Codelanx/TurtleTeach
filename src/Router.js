@@ -9,14 +9,26 @@ import Landing from "./pages/landing/Landing";
 import Testing from "./pages/Testing";
 import ComponentPage from "./pages/ComponentPage";
 
+function HomeRoute(props) {
+    if (false) { //TODO: REMOVE
+        return (
+            <Testing profile={props.profile} />
+        );
+    }
+    if (!props.profile.isLoggedIn()) {
+        return (<Landing profile={props.profile} />);
+    }
+    //TODO: Other conditionals
+    return (<Course profile={props.profile} />);
+}
+
 function TurtleRouter(props) {
-    //TODO: Routing for authed vs not
     return (
         <Switch>
             <Route path="/sandbox">
                 <Sandbox profile={props.profile} />
             </Route>
-            <Route path="/class">
+            <Route path="/class/:classID">
                 <Course profile={props.profile} />
             </Route>
             <Route path="/customize">
@@ -38,7 +50,7 @@ function TurtleRouter(props) {
                 <Testing profile={props.profile} />
             </Route>
             <Route path="/">
-                <Testing profile={props.profile} />
+                <HomeRoute profile={props.profile} />
             </Route>
         </Switch>
     );
