@@ -1,58 +1,127 @@
 import React from "react";
 import './Navigation.css';
-import {Badge, Button, Collapse, Input, InputGroup, Nav, Navbar, NavbarToggler, NavItem, NavLink} from "reactstrap";
+import {
+    Badge,
+    Button,
+    Collapse,
+    Dropdown, DropdownItem, DropdownMenu, DropdownToggle,
+    Input,
+    InputGroup,
+    Nav,
+    Navbar,
+    NavbarToggler,
+    NavItem,
+    NavLink
+} from "reactstrap";
 import {Link} from "react-router-dom";
+
+class ClassDropdown extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {isOpen: false};
+    }
+
+    toggle = () => {
+        this.setState({isOpen: !this.state.isOpen});
+    };
+
+    render() {
+        var prof = this.props.profile;
+        if (!prof.isLoggedIn() || prof.getCurrentUser().isCreator()) {
+            return null;
+        }
+        return (
+            <Dropdown isOpen={this.state.isOpen} toggle={this.toggle} >
+                <DropdownToggle caret>My Classes</DropdownToggle>
+                <DropdownMenu right>
+                    <DropdownItem><Link to={"/class/101"}>Class 1</Link></DropdownItem>
+                    <DropdownItem><Link to={"/class/102"}>Class 2</Link></DropdownItem>
+                    <DropdownItem><Link to={"/class/103"}>Class 3</Link></DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
+        );
+    }
+}
+
+class AccountDropdown extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {isOpen: false};
+    }
+
+    toggle = () => {
+        this.setState({isOpen: !this.state.isOpen});
+    }
+
+    render() {
+        if (!this.props.profile.isLoggedIn()) {
+            return (<Link to={"/login"}>Login / Register</Link>);
+        }
+        return (
+            <Dropdown isOpen={this.state.isOpen} toggle={this.toggle} >
+                <DropdownToggle caret>{this.props.profile.getCurrentUser().getUsername()}</DropdownToggle>
+                <DropdownMenu right>
+                    <DropdownItem><Link to={"/account"}>Account Settings</Link></DropdownItem>
+                    <DropdownItem><Link to={"/customize"}>Customize Turtle</Link></DropdownItem>
+                    <DropdownItem><Link to={"/logout"}>Sign Out</Link></DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
+        );
+    }
+}
+
+class LeftBar extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        let link = this.props.profile.isLoggedIn()
+            ? (<Link to="/test">Testing Page</Link>)
+            : (<Link to="/sandbox">Try it Now!</Link>);
+        return (
+            <Nav justified={"left"}>
+                <NavItem>
+                    <NavLink>
+                        {link}
+                    </NavLink>
+                </NavItem>
+            </Nav>
+        );
+    }
+}
 
 class Navigation extends React.Component {
 
     constructor(props) {
         super(props);
 
-        this.isOpen = false;
+        this.state = {
+            isOpen: false,
+        };
     }
 
     toggle() {
-        this.isOpen = !this.isOpen;
+        this.setState({isOpen: !this.state.isOpen});
     }
 
     render() {
-        //TODO: Remove below example code after navbar up and running
-        /*return (
-            <React.Fragment>
-                <Button id="nav-fold" type="button"
-                        className="btn btn-secondary btn-lg btn-block col-xs-12 d-block d-md-none" data-toggle="collapse"
-                        data-target="#sidenav" aria-expanded="true" aria-controls="collapseExample">
-                    <span className="fa fa-bars"></span>
-                </Button>
-                <div className="col-md-3 col-lg-2 col-xs-12 sidebar collapse" id="sidenav">
-                    <Nav vertical={true} className="nav-sidebar flex-column">
-                        <NavItem><NavLink href="./queue">Queue <Badge color="secondary">{this.queueSize}</Badge></NavLink></NavItem>
-                        <NavItem><NavLink href="./browser">Browser</NavLink></NavItem>
-                        <NavItem><NavLink href="./admin">Admin</NavLink></NavItem>
-                        <NavIteTm><NavLink href="./torrents">Torrents</NavLink></NavItem>
-                        <NavItem><NavLink href="./logout">Logout</NavLink></NavItem>
-                    </Nav>
-                    <div className="control-row">
-                        <InputGroup className="searcher col-xs-12" data-search-type="general">
-                            <Input type='text' placeholder='Search media...' />
-                            <div className="form-popup d-none"></div>
-                        </InputGroup>
-                    </div>
-                </div>
-            </React.Fragment>
-        );*/
         return (
             <div className="turtle-nav">
                 <Navbar expand="md">
-                    <NavbarToggler onClick={this.toggle()} />
-                    <Collapse isOpen={this.isOpen} navbar>
+                    <NavbarToggler onClick={this.toggle} />
+                    <Collapse isOpen={this.state.isOpen} navbar className={"justify-content-md-between"}>
+                        <LeftBar profile={this.props.profile} />
+                        <Link to={"/"}><img className={"logo"} src={"/img/turtle.png"}  alt={"Click logo to return to home screen"}/></Link>
                         <Nav>
                             <NavItem>
-                                <NavLink>
-                                    <Link to="/test">
-                                        Testing Page
-                                    </Link>
-                                </NavLink>
+                                <ClassDropdown profile={this.props.profile} />
+                            </NavItem>
+                            <NavItem>
+                                <AccountDropdown profile={this.props.profile} />
                             </NavItem>
                         </Nav>
                     </Collapse>
