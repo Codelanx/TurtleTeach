@@ -38,6 +38,12 @@ class Testing extends React.Component {
                     <ListGroupItem>
                         <Link to="/sandbox">Sandbox Page</Link>
                     </ListGroupItem>
+                    <ListGroupItem>
+                        <Link to="/StudentHome">Student Home Page</Link>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                        <Link to="/TeacherHome">Teacher Home Page</Link>
+                    </ListGroupItem>
                 </ListGroup>
             </List>
 

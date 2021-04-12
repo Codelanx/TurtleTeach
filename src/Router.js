@@ -8,6 +8,8 @@ import Sandbox from "./pages/sandbox/Sandbox";
 import Landing from "./pages/landing/Landing";
 import Testing from "./pages/Testing";
 import ComponentPage from "./pages/ComponentPage";
+import StudentHome from "./pages/StudentHome/StudentHome";
+import TeacherHome from "./pages/TeacherHome/TeacherHome";
 
 function TurtleRouter(props) {
     //TODO: Routing for authed vs not
@@ -38,6 +40,12 @@ function TurtleRouter(props) {
                 <Testing profile={props.profile} />
             </Route>
             <Route path="/">
+                <Testing profile={props.profile} />
+            </Route>
+            <Route path="/StudentHome">
+                <Testing profile={props.profile} />
+            </Route>
+            <Route path="/TeacherHome">
                 <Testing profile={props.profile} />
             </Route>
         </Switch>
