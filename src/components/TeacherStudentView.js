@@ -1,8 +1,8 @@
 import React from "react";
 import './TeacherStudentView.css';
-import {Row, Col, Container, Table} from "reactstrap";
+import {Row, Col, Button, Table} from "reactstrap";
 import StudentLabel from "./StudentLabel";
-/*import TurtleButton from "./TurtleButton";*/
+import SearchBar from "./SearchBar";
 
 class TeacherStudentView extends React.Component {
 
@@ -50,11 +50,13 @@ class TeacherStudentView extends React.Component {
                 </Col>
                 <Col>
                     <Col xs={12}>
-                    <Row>TODO Add search bar</Row>
+                    <Row><SearchBar placeholder={"Search Students"}/></Row>
                     <Row className="text-font">For Selected:</Row>
-
+                        <Row><Button color="success" size="lg">Send Auto-Login Email</Button></Row>
+                        <Row><Button color="success" size="lg">Draft Email Message</Button></Row>
                     <Row className="text-font">Enter new Student emails, seperated by commas or newlines</Row>
                     <Row><input type="text" name="Enter Emails Here" ></input></Row>
+                        <Row><Button color="success" size="lg" >Add New Students</Button></Row>
                     </Col>
                 </Col>
             </Row>

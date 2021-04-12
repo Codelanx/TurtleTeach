@@ -1,6 +1,8 @@
 import React from "react";
 import {List, ListGroup, ListGroupItem} from "reactstrap";
 import { Link } from "react-router-dom";
+import TeacherStudentView from "../components/TeacherStudentView";
+import TeacherTab from "../components/TeacherTab";
 
 class Testing extends React.Component {
 
@@ -43,6 +45,7 @@ class Testing extends React.Component {
                         <Link to="/TeacherHome">Teacher Home Page</Link>
                     </ListGroupItem>
                 </ListGroup>
+                <TeacherTab/>
             </List>
 
         );
