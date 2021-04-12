@@ -1,6 +1,6 @@
 import React from "react";
 import './ContentCard.css';
-import {Card, CardImg} from "reactstrap";
+import {Card, CardImg, Button} from "reactstrap";
 
 class ContentCard extends React.Component {
 
@@ -21,10 +21,8 @@ class ContentCard extends React.Component {
                     <div id="BottomTextClass">
                         <div>
                             <a href="#top" id="link">Introduction to TurtleTeach</a>
+                            <Button>Grade: B+</Button>
                         </div>
-                    </div>
-                    <div>
-                        Grade: B+
                     </div>
                     <div>
                         *Unsure how to shrink image/card*
