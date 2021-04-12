@@ -1,30 +1,17 @@
 import React from "react";
-import './StudentGrades.css';
-import {Button, Table, Row, Col} from "reactstrap";
-import {Link} from "react-router-dom";
-import TeacherAssignment from "./TeacherAssignment";
+import './TeacherAssignment.css';
+import {Table} from "reactstrap";
 
-class StudentGrades extends React.Component {
+class TeacherGrades extends React.Component {
 
     constructor(props) {
         super(props);
-
     }
 
     render() {
+
+
         return (
-            <Row>
-                <Col xs={2}>
-                    <Table bordered>
-                        <thead>
-                        <th>Overall Grade</th>
-                        </thead>
-                        <tbody>
-                            <th className={"grade-font"}>B+</th>
-                        </tbody>
-                    </Table>
-                </Col>
-                <Col xs={8}>
             <Table bordered>
                 <thead>
                 <tr>
@@ -67,11 +54,10 @@ class StudentGrades extends React.Component {
                 </tr>
                 </tbody>
             </Table>
-                </Col>
-            </Row>
+
         );
     }
 
 }
 
-export default StudentGrades;
+export default TeacherGrades;
