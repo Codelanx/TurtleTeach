@@ -1,0 +1,4 @@
+#BottomTextClass {
+    display: flex;
+    flex-direction: column;
+}
