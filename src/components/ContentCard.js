@@ -13,16 +13,25 @@ class ContentCard extends React.Component {
         return (
             <div>
                 <Card>
-                    <CardImg>
 
-                    </CardImg>
+                    <div>
+                        <CardImg src="/img/turtle.png" alt="this was supposed to be a turtle" width="100" height="350" />
+                    </div>
+
+                    <div id="BottomTextClass">
+                        <div>
+                            <a href="#top" id="link">Introduction to TurtleTeach</a>
+                        </div>
+                    </div>
+                    <div>
+                        Grade: B+
+                    </div>
+                    <div>
+                        *Unsure how to shrink image/card*
+                    </div>
+
+
                 </Card>
-                <div>
-                    class info
-                </div>
-                <div>
-                    grade info
-                </div>
                 {this.props.text}
             </div>
         );
