@@ -2,6 +2,7 @@
     display: flex; /* or inline-flex */
     width: 400px;
     align-items: center;
+    font-size: large;
 }
 
 #subContainer {
