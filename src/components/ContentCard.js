@@ -1,6 +1,7 @@
 import React from "react";
 import './ContentCard.css';
 import {Card, CardImg, Button, Col, Row} from "reactstrap";
+import { Link } from "react-router-dom";
 
 class ContentCard extends React.Component {
 
@@ -19,8 +20,8 @@ class ContentCard extends React.Component {
                     </div>
 
                     <div id="BottomTextClass">
-                        <Row>
-                            <Col><a href="#top" id="link">{this.props.course}</a></Col>
+                        <Row >
+                            <Col><a href={this.props.link} id="link" >{this.props.course}</a></Col>
                             <Col>{this.props.grade}</Col>
                             <Col className={"notifications"}>{this.props.notifications}</Col>
                         </Row>

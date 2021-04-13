@@ -24,7 +24,7 @@ class StudentHome extends React.Component {
                 <Col xs={10}>
                 <CardLayout topText={"Current Classes"} class2={"Turtle Racing"} date1={"Jan-Jun 2021"} grade1={"A"} class1={"Turtle Ethics"} date2={"Jan-Jun 2021"} grade2={"F"}
                             bottomText={"Previous Classes"} class3={"Introduction"} date3={"Aug 2020"} grade3={"A"} class4={"Control Statements"} date4={"Aug-Dec 2020"} grade4={"B+"} class5={"Shell Dynamics"} date5={"Aug-Dec 2020"}
-                            grade5={"B-"} class6={"Turtle Genetics"} date6={"Aug-Dec 2020"} grade6={"D"}/>
+                            grade5={"B-"} class6={"Turtle Genetics"} date6={"Aug-Dec 2020"} grade6={"D"} link={"/ClassHome"}/>
                 </Col>
                 <Col xs={1}>
                     <Row>
