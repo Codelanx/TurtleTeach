@@ -1,7 +1,6 @@
 import React from "react";
 import './ExecutionSpace.css';
-import {Button} from "reactstrap";
-import {Link} from "react-router-dom";
+import {Col, Row} from "reactstrap";
 
 class ExecutionSpace extends React.Component {
 
@@ -12,9 +11,12 @@ class ExecutionSpace extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.props.text}
-            </div>
+            <Col bgcolor="#FFFFFF">
+                <Row>   </Row>
+                <Row>Execution Area - Turtle Space</Row>
+                <Row>   </Row>
+                <Row>   </Row>
+            </Col>
         );
     }
 

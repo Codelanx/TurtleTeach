@@ -68,9 +68,9 @@ class StudentAssignment extends React.Component {
                 <tr>
                     <td>
                         <Row>
-                        <Col><ContentCard course="Ring of Fire" date="Due Date: 4/14"/></Col>
-                        <Col><ContentCard course="Surfin' the EAC" date="Due Date: 4/20"/></Col>
-                        <Col><ContentCard course="Deep Diving" date="Due Date: 4/24"/></Col>
+                        <Col><ContentCard course="Ring of Fire" date="Due Date: 4/14" link={"/DevEnvironment"}/></Col>
+                        <Col><ContentCard course="Surfin' the EAC" date="Due Date: 4/20" link={"/DevEnvironment"}/></Col>
+                        <Col><ContentCard course="Deep Diving" date="Due Date: 4/24" link={"/DevEnvironment"}/></Col>
                         </Row>
                     </td>
                     <td rowSpan={2}>

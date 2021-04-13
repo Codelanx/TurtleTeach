@@ -1,6 +1,6 @@
 import React from "react";
 import './CodeBlock.css';
-import {Button} from "reactstrap";
+import {Row, Col, Container} from "reactstrap";
 import {Link} from "react-router-dom";
 
 class CodeBlock extends React.Component {
@@ -12,9 +12,11 @@ class CodeBlock extends React.Component {
 
     render() {
         return (
-            <div>
+            <Container bgcolor="#9999ff">
+            <Row>
                 {this.props.text}
-            </div>
+            </Row>
+            </Container>
         );
     }
 

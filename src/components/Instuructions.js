@@ -1,20 +1,19 @@
 import React from "react";
-import './DebugSpace.css';
+import './ExecutionSpace.css';
 import {Col, Row} from "reactstrap";
-import PlayButtons from "./PlayButtons";
 
-class DebugSpace extends React.Component {
+class Instuructions extends React.Component {
 
     constructor(props) {
         super(props);
+
     }
 
     render() {
         return (
-            <Col bgcolor="#999999">
-                <Row><PlayButtons/></Row>
+            <Col bgcolor="#ffffcc">
                 <Row>   </Row>
-                <Row>Debug Area</Row>
+                <Row>Instructions Area</Row>
                 <Row>   </Row>
                 <Row>   </Row>
             </Col>
@@ -23,4 +22,4 @@ class DebugSpace extends React.Component {
 
 }
 
-export default DebugSpace;
+export default Instuructions;

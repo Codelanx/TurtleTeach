@@ -10,6 +10,7 @@ import ComponentPage from "./pages/ComponentPage";
 import ClassHome from "./pages/ClassHome/ClassHome";
 import StudentHome from "./pages/StudentHome/StudentHome";
 import TeacherHome from "./pages/TeacherHome/TeacherHome";
+import DevEnvironment from "./pages/DevEnvironment/DevEnvironment";
 
 function HomeRoute(props) {
     if (false) { //TODO: REMOVE
@@ -46,7 +47,7 @@ function TurtleRouter(props) {
                 <ComponentPage profile={props.profile} />
             </Route>
             <Route path="/test">
-                <StudentHome profile={props.profile} />
+                <Testing profile={props.profile} />
             </Route>n
             <Route path="/ClassHome">
                 <ClassHome profile={props.profile} />
@@ -56,6 +57,9 @@ function TurtleRouter(props) {
             </Route>
             <Route path="/TeacherHome">
                 <TeacherHome profile={props.profile} />
+            </Route>
+            <Route path="/DevEnvironment">
+                <DevEnvironment profile={props.profile} />
             </Route>
             <Route path="/">
                 <HomeRoute profile={props.profile} />
