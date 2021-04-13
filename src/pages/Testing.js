@@ -26,9 +26,6 @@ class Testing extends React.Component {
                         <Link to="/login">Login Page</Link>
                     </ListGroupItem>
                     <ListGroupItem>
-                        <Link to="/home">Home Page</Link>
-                    </ListGroupItem>
-                    <ListGroupItem>
                         <Link to="/course">Course Page</Link>
                     </ListGroupItem>
                     <ListGroupItem>
@@ -47,7 +44,7 @@ class Testing extends React.Component {
                         <Link to="/TeacherHome">Teacher Home Page</Link>
                     </ListGroupItem>
                 </ListGroup>
-                <ContentCard/>
+                {/* ContentCard */}
             </List>
 
         );

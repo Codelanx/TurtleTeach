@@ -1,6 +1,5 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
-import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Customize from "./pages/customize/Customize";
 import Course from "./pages/course/Course";
@@ -40,9 +39,6 @@ function TurtleRouter(props) {
             <Route path="/login">
                 <Login profile={props.profile} />
             </Route>
-            <Route path="/home">
-                <Home profile={props.profile} />
-            </Route>
             <Route path="/landing">
                 <Landing profile={props.profile} />
             </Route>
@@ -50,8 +46,8 @@ function TurtleRouter(props) {
                 <ComponentPage profile={props.profile} />
             </Route>
             <Route path="/test">
-                <Testing profile={props.profile} />
-            </Route>
+                <StudentHome profile={props.profile} />
+            </Route>n
             <Route path="/ClassHome">
                 <ClassHome profile={props.profile} />
             </Route>

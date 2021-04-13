@@ -21,9 +21,6 @@ class ComponentPage extends React.Component {
 
                     <Swagponent pathname="/img/sunglasses.png" />
                     <Swagponent pathname="/img/flag.png" />
-                    <ContentCard />
-                    <Logo />
-
                 </div>
             </div>
         );
