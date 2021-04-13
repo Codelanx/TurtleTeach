@@ -54,8 +54,10 @@ class Users {
 
 class Profile {
 
+    static DEFAULT_USER = null;//Users.STUDENT
+
     constructor() {
-        this.currentUser = Users.STUDENT;
+        this.currentUser = Profile.DEFAULT_USER;
     }
 
     getCurrentUser() {
