@@ -1,13 +1,39 @@
 import React from "react";
 import './CardLayout.css';
-import {Button} from "reactstrap";
-import {Link} from "react-router-dom";
 
+class CardCategory extends React.Component {
+
+    constructor(props) {
+        super(props);
+        //use prop "name" to render the category title
+        //then render the categories' children cards
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                {this.props.children}
+            </React.Fragment>
+        );
+    }
+}
+
+/*
+Usage:
+
+<CardLayout>
+  <CardCategory name="Current Classes">
+    <ContentCard />
+    <ContentCard />
+    ...
+    <ContentCard />
+  </CardCategory>
+</CardLayout>
+ */
 class CardLayout extends React.Component {
 
     constructor(props) {
         super(props);
-
     }
 
     render() {

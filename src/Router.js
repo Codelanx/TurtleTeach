@@ -28,6 +28,12 @@ function HomeRoute(props) {
 function TurtleRouter(props) {
     return (
         <Switch>
+            <Route path="/StudentHome">
+                <Testing profile={props.profile} />
+            </Route>
+            <Route path="/TeacherHome">
+                <Testing profile={props.profile} />
+            </Route>
             <Route path="/sandbox">
                 <Sandbox profile={props.profile} />
             </Route>
@@ -57,12 +63,6 @@ function TurtleRouter(props) {
             </Route>
             <Route path="/">
                 <HomeRoute profile={props.profile} />
-            </Route>
-            <Route path="/StudentHome">
-                <Testing profile={props.profile} />
-            </Route>
-            <Route path="/TeacherHome">
-                <Testing profile={props.profile} />
             </Route>
         </Switch>
     );
