@@ -1,5 +1,7 @@
 import React from "react";
 import './CardLayout.css';
+import { Row, Col } from 'reactstrap';
+import ContentCard from "./ContentCard";
 
 class CardCategory extends React.Component {
 
@@ -40,14 +42,23 @@ class CardLayout extends React.Component {
         return (
             <div>
                 <div>
-                    <h1><u>Current Classes</u></h1>
+                    <h1><u>{this.props.topText}</u></h1>
                 </div>
-
+                <Row>
+                    <Col><ContentCard course={this.props.class1} date={this.props.date1} notifications={this.props.notifications1} grade={this.props.grade1}/></Col>
+                    <Col><ContentCard course={this.props.class2} date={this.props.date2} notifications={this.props.notifications2} grade={this.props.grade2}/></Col>
+                </Row>
                 
                 <div>
-                    <h1><u>Previous Classes</u></h1>
+                    <h1><u>{this.props.bottomText}</u></h1>
                 </div>
-                {this.props.text}
+                <Row>
+                    <Col><ContentCard course={this.props.class3} date={this.props.date3} grade={this.props.grade3}/></Col>
+                    <Col><ContentCard course={this.props.class4} date={this.props.date4} grade={this.props.grade4}/></Col>
+                    <Col><ContentCard course={this.props.class5} date={this.props.date5} grade={this.props.grade5}/></Col>
+                    <Col><ContentCard course={this.props.class6} date={this.props.date6} grade={this.props.grade6}/></Col>
+                </Row>
+
             </div>
         );
     }

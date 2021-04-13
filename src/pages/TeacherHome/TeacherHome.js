@@ -1,43 +1,27 @@
 import React from 'react'
 import './TeacherHome.css';
 import {
-    Card, CardText, CardBody, CardLink,
-    CardTitle, CardSubtitle, Button
+    Row, Button
 } from 'reactstrap';
-import {Link} from "react-router-dom";
+import CardLayout from "../../components/CardLayout";
 
 
 class TeacherHome extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
-
-    example() {
-
-    }
-
-
     render() {
         return (
-            <div className="TeacherHome">
-                <h1>Teacher Homepage: </h1>
-                <div>
-                    <img src="/img/turtle.png" alt="this was supposed to be the users profile image" width="100" height="100" />
-                </div>
-
-                <div>
-                    <div>Current Classes</div>
-                    
-                    <div>Previous Classes</div>
-
-                </div>
-
-                <div>
+            <Row className="TeacherHome">
+                <Row>
                     <Button>Add New Class</Button>
-                </div>
-            </div>
+                </Row>
+                <Row>
+                    <CardLayout topText={"Current Teaching"} class1={"Turtle Racing"} date1={"Jan-Jun 2021"} notifications1={"10"} class2={"Turtle Ethics"} date2={"Jan-Jun 2021"} notifications2={"69"}
+                                bottomText={"Previous Taught"} class3={"Introduction"} date3={"Aug 2020"} class4={"Control Statements"} date4={"Aug-Dec 2020"} class5={"Shell Dynamics"} date5={"Aug-Dec 2020"}
+                                 class6={"Turtle Ethics"} date6={"Aug-Dec 2020"}/>
+                </Row>
+
+
+            </Row>
         );
     }
 }

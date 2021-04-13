@@ -1,10 +1,9 @@
 import React from 'react'
 import './StudentHome.css';
 import {
-    Card, CardText, CardBody, CardLink,
-    CardTitle, CardSubtitle, Button
+    Row, Col, Button
 } from 'reactstrap';
-import {Link} from "react-router-dom";
+import CardLayout from "../../components/CardLayout";
 
 
 class StudentHome extends React.Component {
@@ -21,30 +20,29 @@ class StudentHome extends React.Component {
 
     render() {
         return (
-            <div className="StudentHome">
-                <h1>Student Homepage: </h1>
-                <div>
+            <Row className="StudentHome">
+                <Col xs={10}>
+                <CardLayout topText={"Current Classes"} class2={"Turtle Racing"} date1={"Jan-Jun 2021"} grade1={"A"} class1={"Turtle Ethics"} date2={"Jan-Jun 2021"} grade2={"F"}
+                            bottomText={"Previous Classes"} class3={"Introduction"} date3={"Aug 2020"} grade3={"A"} class4={"Control Statements"} date4={"Aug-Dec 2020"} grade4={"B+"} class5={"Shell Dynamics"} date5={"Aug-Dec 2020"}
+                            grade5={"B-"} class6={"Turtle Genetics"} date6={"Aug-Dec 2020"} grade6={"D"}/>
+                </Col>
+                <Col xs={1}>
+                    <Row>
                     <img src="/img/turtle.png" alt="this was supposed to be the users profile image" width="100" height="100" />
-                </div>
+                    </Row>
+                    <Row>
+                        <Button>Customize</Button>
+                    </Row>
+                    <Row>
+                        <Button>Free Range </Button>
+                    </Row>
+                    <Row>
+                        <Button>Other Puzzles </Button>
+                    </Row>
 
-                <div>
-                    <div>Current Classes</div>
-                    <div>
-                        
-                    </div>
-                    <div>Previous Classes</div>
-                    <div>
-                        
-                    </div>
-                    
-                </div>
+                </Col>
 
-                <div>
-                <Button>Customize</Button>
-                <Button>Free Range </Button>
-                <Button>Other Puzzles </Button>
-                </div>
-            </div>
+            </Row>
         );
     }
 }
