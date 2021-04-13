@@ -4,6 +4,7 @@ import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Table } from 'reactstr
 import StudentGrades from "./StudentGrades";
 import StudentAssignment from "./StudentAssignment";
 import StudentLabel from "./StudentLabel";
+import Tutorial from "./Tutorial";
 
 
 
@@ -105,7 +106,7 @@ const StudentTab = (props) => {
                     <StudentGrades/>
                 </TabPane>
                 <TabPane tabId="4">
-                    <Row>Here Shall Be Tutorials Page
+                    <Row><Tutorial/>
                     </Row>
                 </TabPane>
             </TabContent>

@@ -3,6 +3,7 @@ import './StudentTab.css';
 import TeacherAssignment from "./TeacherAssignment";
 import TeacherGrades from "./TeacherGrades";
 import TeacherStudentView from "./TeacherStudentView";
+import Tutorial from "./Tutorial";
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row} from 'reactstrap';
 
 const TeacherTab = (props) => {
@@ -62,7 +63,7 @@ const TeacherTab = (props) => {
                     </Row>
                 </TabPane>
                 <TabPane tabId="4">
-                    <Row>Here Shall Be Tutorials Page
+                    <Row><Tutorial/>
                     </Row>
                 </TabPane>
             </TabContent>
