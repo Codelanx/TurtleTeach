@@ -4,6 +4,7 @@ import {
     Row, Col, Button
 } from 'reactstrap';
 import CardLayout from "../../components/CardLayout";
+import {Link} from "react-router-dom";
 
 
 class StudentHome extends React.Component {
@@ -31,10 +32,10 @@ class StudentHome extends React.Component {
                     <img src="/img/turtle.png" alt="this was supposed to be the users profile image" width="100" height="100" />
                     </Row>
                     <Row>
-                        <Button>Customize</Button>
+                        <Button tag={Link} to="/customize">Customize</Button>
                     </Row>
                     <Row>
-                        <Button>Free Range </Button>
+                        <Button tag={Link} to="/sandbox">Free Range </Button>
                     </Row>
                     <Row>
                         <Button>Other Puzzles </Button>
