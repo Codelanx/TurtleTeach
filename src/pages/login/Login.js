@@ -44,6 +44,20 @@ class Login extends React.Component {
         this.profile = props.profile;
         this.state = {email: ''}
         this.state = {name: ''}
+        this.state = {
+            name: "React"
+        };
+        this.onValueChange = this.onValueChange.bind(this);
+        this.formSubmit = this.formSubmit.bind(this);
+    }
+    onValueChange(event) {
+        this.setState({
+            selectedOption: event.target.value
+        });
+    }
+    formSubmit(event) {
+        event.preventDefault();
+        console.log(this.state.selectedOption)
     }
     updateName = (n) => {
         this.setState({name: n.target.value});
@@ -99,11 +113,41 @@ class Login extends React.Component {
                                 <div>
                                     Account Type:
                                 </div>
-                                <ButtonGroup>
-                                    <Button>Student</Button>
-                                    <Button>Teacher</Button>
-                                    <Button>Content Creator</Button>
-                                </ButtonGroup>
+                                <form onSubmit={this.formSubmit}>
+                                    <div className="radio">
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                value="Student"
+                                                checked={this.state.selectedOption === "Student"}
+                                                onChange={this.onValueChange}
+                                            />
+                                            Student
+                                        </label>
+                                    </div>
+                                    <div className="radio">
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                value="Teacher"
+                                                checked={this.state.selectedOption === "Teacher"}
+                                                onChange={this.onValueChange}
+                                            />
+                                            Teacher
+                                        </label>
+                                    </div>
+                                    <div className="radio">
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                value="Content Creator"
+                                                checked={this.state.selectedOption === "Content Creator"}
+                                                onChange={this.onValueChange}
+                                            />
+                                            Content Creator
+                                        </label>
+                                    </div>
+                                </form>
                             </div>
 
                         </div>
