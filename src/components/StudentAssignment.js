@@ -1,6 +1,8 @@
 import React from "react";
 import './StudentAssignment.css';
+import './ContentCard';
 import {Table, Col, Row} from "reactstrap";
+import ContentCard from "./ContentCard";
 
 class UpcomingAssignment extends React.Component {
     constructor(props) {
@@ -37,7 +39,6 @@ class PreviousAssignment extends React.Component {
     render() {
         return (
             <Col>
-
                 <Row>Past Assignments
                 </Row>
             <Table striped>
@@ -66,7 +67,11 @@ class StudentAssignment extends React.Component {
             <Table borderless>
                 <tr>
                     <td>
-                        TODO Add assignment cards
+                        <Row>
+                        <Col><ContentCard course="Ring of Fire" date="Due Date: 4/14"/></Col>
+                        <Col><ContentCard course="Surfin' the EAC" date="Due Date: 4/20"/></Col>
+                        <Col><ContentCard course="Deep Diving" date="Due Date: 4/24"/></Col>
+                        </Row>
                     </td>
                     <td rowSpan={2}>
                         <UpcomingAssignment/>

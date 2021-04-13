@@ -1,6 +1,7 @@
 import React from "react";
 import {List, ListGroup, ListGroupItem} from "reactstrap";
 import { Link } from "react-router-dom";
+import ContentCard from "../components/ContentCard";
 
 class Testing extends React.Component {
 
@@ -37,12 +38,10 @@ class Testing extends React.Component {
                         <Link to="/sandbox">Sandbox Page</Link>
                     </ListGroupItem>
                     <ListGroupItem>
-                        <Link to="/StudentHome">Student Home Page</Link>
-                    </ListGroupItem>
-                    <ListGroupItem>
-                        <Link to="/TeacherHome">Teacher Home Page</Link>
+                        <Link to="/ClassHome">Class Home Page</Link>
                     </ListGroupItem>
                 </ListGroup>
+                <ContentCard/>
             </List>
 
         );
