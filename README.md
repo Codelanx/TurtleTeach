@@ -27,3 +27,6 @@ npm install --save bootstrap
 
 Bootstrap-Icons:
 npm install --save bootstrap-icons
+
+Currently must switch user type by using User.js line 58.
+Only Teacher and Student are mocked up.
