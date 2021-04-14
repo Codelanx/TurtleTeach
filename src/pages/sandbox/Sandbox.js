@@ -29,7 +29,6 @@ class Sandbox extends React.Component {
                     <Col>
                         <div className="DragAndDrop">
                             <span>Drag and Drop</span>
-                            <ExecutionSpace />
                         </div>
                     </Col>
                     <Col>

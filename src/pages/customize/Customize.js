@@ -2,7 +2,7 @@ import React from 'react'
 import './Customize.css';
 import User from "../../User";
 import SearchBar from "../../components/SearchBar";
-import Button from "reactstrap";
+import {Button, ButtonGroup} from "reactstrap";
 import Swagponent from "../../components/Swagponent";
 
 
@@ -14,6 +14,7 @@ class Customize extends React.Component {
                 <div>
                     <SearchBar/>
                 </div>
+                <Button>Save</Button>
             </div>
         );
     }
