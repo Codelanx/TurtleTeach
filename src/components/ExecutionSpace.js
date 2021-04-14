@@ -11,11 +11,8 @@ class ExecutionSpace extends React.Component {
 
     render() {
         return (
-            <Col bgcolor="#FFFFFF">
-                <Row>   </Row>
-                <Row>Execution Area - Turtle Space</Row>
-                <Row>   </Row>
-                <Row>   </Row>
+            <Col bgcolor="#FFFFFF" className={"space"}>
+                <Row className={"text"}>Execution Area - Turtle Space</Row>
             </Col>
         );
     }

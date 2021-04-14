@@ -38,9 +38,7 @@ class StudentEnv extends React.Component {
                         <Row><ExecutionSpace/></Row>
                         <Row><DebugSpace/></Row>
                     </Col>
-
                 </Row>
-                <a href="/ClassHome">Home</a>
             </Col>
 
         );

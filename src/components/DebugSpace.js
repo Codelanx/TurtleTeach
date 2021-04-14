@@ -11,12 +11,9 @@ class DebugSpace extends React.Component {
 
     render() {
         return (
-            <Col bgcolor="#999999">
+            <Col bgcolor="#999999" className={"space"}>
                 <Row><PlayButtons/></Row>
-                <Row>   </Row>
-                <Row>Debug Area</Row>
-                <Row>   </Row>
-                <Row>   </Row>
+                <Row className={"text"}>Debug Area</Row>
             </Col>
         );
     }
