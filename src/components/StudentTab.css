@@ -1,4 +1,35 @@
 .rank-font{
-    font-size: 300%;
+    font-size: 250%;
     font-weight: bold;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
+
+.hidden{
+    display: none;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#leaderboard {
+    background-color: #ffffff;
+    width: 800px;
+    height: 25px;
+}
+a.fill-div {
+    display: block;
+    height: 50%;
+    width: 100%;
+    text-decoration: none;
+    font-size: 125%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+

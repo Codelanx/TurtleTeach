@@ -21,7 +21,7 @@ class StudentLabel extends React.Component {
 
                     <div id="subContainer" class="item">
                         <div>
-                            <a href="#top" id="link">Student Name</a>
+                            <a href="#top" id="link">{this.props.you} Student Name</a>
                         </div>
                         <div>
                             <i>student@email.com</i>

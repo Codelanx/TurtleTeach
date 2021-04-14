@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './StudentTab.css';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Table } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Table, UncontrolledCollapse, Button, Card, CardBody, Col } from 'reactstrap';
 import StudentGrades from "./StudentGrades";
 import StudentAssignment from "./StudentAssignment";
 import StudentLabel from "./StudentLabel";
@@ -10,36 +10,60 @@ import Tutorial from "./Tutorial";
 
 class Leaderboard extends React.Component {
 
-    render() {
-        return (
-            <Table bordered>
-                <thead>
-                <tr><th scope="row" colSpan={2} className="rank-font">Class Leaderboard</th></tr>
-                </thead>
-                <tr bgcolor="#ffd700">
-                    <th scope="row" className="rank-font">#1</th>
-                    <th><StudentLabel/></th>
-                </tr>
-                <tr bgcolor="#C0C0C0">
-                    <th scope="row" className="rank-font">#2</th>
-                    <th><StudentLabel/></th>
-                </tr>
-                <tr bgcolor="#CD7f32">
-                    <th scope="row" className="rank-font">#3</th>
-                    <th><StudentLabel/></th>
-                </tr>
-                <tr>
-                    <th scope="row" className="rank-font">#4</th>
-                    <th><StudentLabel/></th>
-                </tr>
-                <tr>
-                    <th scope="row" className="rank-font">#5</th>
-                    <th><StudentLabel/></th>
-                </tr>
-                <tbody>
 
-                </tbody>
-            </Table>
+
+
+    render() {
+        var text = "rank-font";
+
+        function hideText(){
+            text = "hidden";
+        }
+
+        return (
+
+            <div>
+                <Card>
+                    <CardBody className={"rank-font"}>
+                        <Row style={{backgroundColor: '#ffd700'}}><Col xs={2.5}>#1</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                        <Row style={{backgroundColor: '#C0C0C0'}}><Col xs={2.5}>#2</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                        <Row style={{backgroundColor: '#CD7f32'}}><Col xs={2.5}>#3</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                        <Row><Col xs={2.5}>#4</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                        <Row><Col xs={2.5}>#5</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                    </CardBody>
+                </Card>
+
+
+                <UncontrolledCollapse toggler="#leaderboard" defaultOpen="True">
+                    <div id="leaderboard" >
+                        <a href="#" className="fill-div" onClick={'hideText()'}>...</a>
+                    </div>
+                    <Row className="rank-font"><Col xs="2">#9</Col><Col xs="8"><StudentLabel you={"You:"}/></Col></Row>
+                </UncontrolledCollapse>
+
+
+
+                <UncontrolledCollapse toggler="#leaderboard">
+                    <Card>
+                        <CardBody className={"rank-font"}>
+                            <Row><Col xs={2.5}>#6</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                            <Row><Col xs={2.5}>#7</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                            <Row><Col xs={2.5}>#8</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                            <Row><Col xs={2.5}>#9</Col><Col xs={7.5}><StudentLabel you={"You:"}/></Col></Row>
+                            <Row><Col xs={2.5}>#10</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                            <Row><Col xs={2.5}>#11</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                            <Row><Col xs={2.5}>#12</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                            <Row><Col xs={2.5}>#13</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                            <Row><Col xs={2.5}>#14</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                            <Row><Col xs={2.5}>#15</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                            <Row><Col xs={2.5}>#16</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                            <Row><Col xs={2.5}>#17</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                        </CardBody>
+                    </Card>
+                </UncontrolledCollapse>
+
+
+            </div>
         );
     }
 }
