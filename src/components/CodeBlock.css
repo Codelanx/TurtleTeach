@@ -1,0 +1,9 @@
+.piece {
+    text-align: center;
+    font-size: 150%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 450px;
+    height: 60px;
+
+}

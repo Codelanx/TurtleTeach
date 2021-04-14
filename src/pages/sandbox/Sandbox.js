@@ -3,6 +3,7 @@ import './Sandbox.css';
 import SearchBar from "../../components/SearchBar";
 import {Button, ButtonGroup} from "reactstrap";
 import { Row, Col } from 'reactstrap';
+import CodeBlock from "../../components/CodeBlock";
 
 class Sandbox extends React.Component {
     render() {
@@ -14,6 +15,13 @@ class Sandbox extends React.Component {
                         <div className="PiecePicker">
                             <span>Piece Selection</span>
                             <SearchBar>Search</SearchBar>
+                            <div><CodeBlock text={"Forward x"}/></div>
+                            <div><CodeBlock text={"Backward x"}/></div>
+                            <div><CodeBlock text={"Turn Right x"}/></div>
+                            <div><CodeBlock text={"Turn Left x"}/></div>
+                            <div><CodeBlock text={"If (Condition)"}/></div>
+                            <div><CodeBlock text={"Else"}/></div>
+                            <div><CodeBlock text={"Speed x"}/></div>
                         </div>
                     </Col>
                     <Col>

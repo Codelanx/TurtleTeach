@@ -14,7 +14,7 @@ class StudentEnv extends React.Component {
     render() {
         return (
             <Col>
-                <Row>
+                <Row xs="3">
                     <Col>
                         <Button>Help</Button>
                     </Col>

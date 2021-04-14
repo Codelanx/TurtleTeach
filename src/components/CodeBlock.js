@@ -12,9 +12,9 @@ class CodeBlock extends React.Component {
 
     render() {
         return (
-            <Container bgcolor="#9999ff">
-            <Row>
-                {this.props.text}
+            <Container>
+            <Row style={{backgroundColor: '#9999ff'}} className={"piece"}>
+                <span className={"piece"}>{this.props.text}</span>
             </Row>
             </Container>
         );

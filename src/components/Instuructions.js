@@ -1,5 +1,5 @@
 import React from "react";
-import './ExecutionSpace.css';
+import './Instructions.css';
 import {Col, Row} from "reactstrap";
 
 class Instuructions extends React.Component {
@@ -11,11 +11,8 @@ class Instuructions extends React.Component {
 
     render() {
         return (
-            <Col bgcolor="#ffffcc">
-                <Row>   </Row>
-                <Row>Instructions Area</Row>
-                <Row>   </Row>
-                <Row>   </Row>
+            <Col bgcolor="#ffffcc" className={"space"}>
+                <Row className={"text"}>Instructions Area</Row>
             </Col>
         );
     }

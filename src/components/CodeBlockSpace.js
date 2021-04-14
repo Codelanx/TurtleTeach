@@ -11,15 +11,12 @@ class CodeBlockSpace extends React.Component {
 
     render() {
         return (
-            <Col bgcolor="#b2d8b2">
+            <Col className={"space"}>
+                <p className={"text"}>Pieces</p>
                 <Row><CodeBlock text={"Forward x"}/></Row>
                 <Row><CodeBlock text={"Backward x"}/></Row>
                 <Row><CodeBlock text={"Turn Right x"}/></Row>
                 <Row><CodeBlock text={"Turn Left x"}/></Row>
-                <Row><CodeBlock text={"If (Condition)"}/></Row>
-                <Row><CodeBlock text={"Else"}/></Row>
-                <Row><CodeBlock text={"Speed x"}/></Row>
-                <Row><CodeBlock text={"Jump"}/></Row>
             </Col>
         );
     }

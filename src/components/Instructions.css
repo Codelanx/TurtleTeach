@@ -1,0 +1,15 @@
+.space {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 300px;
+    width: 500px;
+
+}
+
+.text {
+    text-align: center;
+    font-size: 125%;
+
+
+}
