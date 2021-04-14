@@ -3,6 +3,7 @@ import './TeacherStudentView.css';
 import {Row, Col, Button, Table, CustomInput} from "reactstrap";
 import StudentLabel from "./StudentLabel";
 import SearchBar from "./SearchBar";
+import TurtleButton from "./TurtleButton";
 
 class TeacherStudentView extends React.Component {
 
@@ -31,16 +32,14 @@ class TeacherStudentView extends React.Component {
                         <StudentLabel checkbox={true} showEmail={true} lastOnline={true} />
                     </Row>
                 </Col>
-                <Col>
-                    <Col xs={12}>
+                <Col xs={"12"} md={"6"}>
                     <Row><SearchBar placeholder={"Search Students"}/></Row>
-                    <Row className="text-font">For Selected:</Row>
-                        <Row><Button color="success" size="lg">Send Auto-Login Email</Button></Row>
-                        <Row><Button color="success" size="lg">Draft Email Message</Button></Row>
-                    <Row className="text-font">Enter new Student emails, seperated by commas or newlines</Row>
+                    <Row className="text-font col-12">For Selected:</Row>
+                        <Row><TurtleButton expand>Send Auto-Login Email</TurtleButton></Row>
+                        <Row><TurtleButton expand={true}>Draft Email Message</TurtleButton></Row>
+                    <Row className="text-font col-12">Enter new Student emails, seperated by commas or newlines</Row>
                     <Row><input type="text" name="Enter Emails Here" height="1000"/></Row>
-                        <Row><Button color="success" size="lg" >Add New Students</Button></Row>
-                    </Col>
+                        <Row><TurtleButton expand>Add New Students</TurtleButton></Row>
                 </Col>
             </Row>
 

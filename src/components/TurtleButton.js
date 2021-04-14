@@ -10,18 +10,14 @@ class TurtleButton extends React.Component {
     
     render() {
 
-
-        function changeBackground(e) {
-            e.target.style.background = '#6E00A5';
-        }
-
-        function originalBackground(e) {
-            e.target.style.background = '#AF11FF';
+        let out = "turtle-button";
+        if (this.props.expand) {
+            out += " col-12 turtle-button-expanded";
         }
 
         return (
-            <Button onMouseOver={changeBackground} onMouseLeave={originalBackground} type="button" size="lg" value="CLICK ME">
-
+            <Button className={out} >
+                {this.props.children}
             </Button>
         );
     }

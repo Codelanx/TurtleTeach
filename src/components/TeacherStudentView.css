@@ -13,3 +13,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+.full-text-area {
+    height: 30rem;
+}

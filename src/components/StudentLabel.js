@@ -13,14 +13,14 @@ class StudentLabel extends React.Component {
     render() {
         let checkbox = this.props.checkbox === true
             ? (<Col xs={"1"} className={"fix-height"}>
-                <input type={"checkbox"} style={{height: "100%"}}/>
-               </Col>)
+                <input type={"checkbox"} style={{height: "100%"}} />
+            </Col>)
             : null;
         let showEmail = this.props.showEmail === true
             ? (<React.Fragment><br /><i>student@email.com</i></React.Fragment>)
             : null;
         let end = this.props.lastOnline === undefined ? null : (
-            <Col xs={"3"}>
+            <Col xs={"hidden"} md={"3"}>
                 Last Online:
                 <br />
                 Jan-20-21
