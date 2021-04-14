@@ -16,22 +16,28 @@ class StudentLabel extends React.Component {
                 <input type={"checkbox"} style={{height: "100%"}}/>
                </Col>)
             : null;
+        let showEmail = this.props.showEmail === true
+            ? (<React.Fragment><br /><i>student@email.com</i></React.Fragment>)
+            : null;
+        let end = this.props.lastOnline === undefined ? null : (
+            <Col xs={"3"}>
+                Last Online:
+                <br />
+                Jan-20-21
+            </Col>
+        );
+        let textWidth = end === null ? "8" : "5";
         return (
-            <Row style={{padding: "0 0.5rem"}}>
+            <Row className="mainContainer">
                 {checkbox}
                 <Col xs={"3"} className={"fix-height student-roster-img"}>
                     <img src="/img/turtle.png" alt="this was supposed to be a turtle" className={"student-roster-image"} />
                 </Col>
-                <Col xs={"5"}>
+                <Col xs={textWidth}>
                     <a href="#" className={"student-roster-link"}>{this.props.you} Student Name</a>
-                    <br />
-                    <i>student@email.com</i>
+                    {showEmail}
                 </Col>
-                <Col xs={"3"}>
-                    Last Online:
-                    <br />
-                    Jan-20-21
-                </Col>
+                {end}
             </Row>
         );
     }

@@ -7,12 +7,12 @@ import StudentLabel from "./StudentLabel";
 import Tutorial from "./Tutorial";
 
 
-const stu = 8;
-const num = 4;
+const stu = 11;
+const num = 1;
 
 function Rank(props) {
     return (
-        <Col xs={num} className={"rank-font"}>#{props.value}</Col>
+        <Col xs={num} className={"rank-font fix-height"}>#{props.value}</Col>
     );
 }
 
@@ -44,7 +44,7 @@ class Leaderboard extends React.Component {
 
 
         return (
-            <div class={"leaderboard-container"}>
+            <div className={"leaderboard-container"}>
                 <Listing place={1} style={{backgroundColor: '#ffd700'}}/>
                 <Listing place={2} style={{backgroundColor: '#C0C0C0'}}/>
                 <Listing place={3} style={{backgroundColor: '#CD7f32'}}/>

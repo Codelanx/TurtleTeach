@@ -9,7 +9,6 @@ class StudentHome extends React.Component {
         return (
             <div className="ClassHome">
                 <StudentTab/>
-                <Link to={"/"}>Home</Link>
             </div>
         );
     }
@@ -20,7 +19,6 @@ class TeacherHome extends React.Component {
         return (
             <div className="ClassHome">
                 <TeacherTab/>
-                <Link to={"/"}>Home</Link>
             </div>
         );
     }
