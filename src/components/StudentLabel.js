@@ -13,11 +13,14 @@ class StudentLabel extends React.Component {
 
     render() {
         return (
-            <Row>
-                <Col xs={"3"} className={"student-roster-img"}>
+            <Row style={{padding: "0 0.5rem"}}>
+                <Col xs={"1"} className={"fix-height"}>
+                    <input type={"checkbox"} style={{height: "100%"}}/>
+                </Col>
+                <Col xs={"3"} className={"fix-height student-roster-img"}>
                     <img src="/img/turtle.png" alt="this was supposed to be a turtle" className={"student-roster-image"} />
                 </Col>
-                <Col xs={"6"}>
+                <Col xs={"5"}>
                     <a href="#" className={"student-roster-link"}>{this.props.you} Student Name</a>
                     <br />
                     <i>student@email.com</i>

@@ -6,3 +6,10 @@
 .small-text{
     font-size: 25%;
 }
+
+.student-roster {
+    border: 1px solid #333;
+    border-radius: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

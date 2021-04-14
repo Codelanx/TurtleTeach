@@ -24,7 +24,6 @@
     max-height: 4rem;
     max-width: 100%;
     width: auto;
-    height: 100%;
     vertical-align: middle;
 }
 
@@ -37,4 +36,8 @@
 
 .roster-card {
     display: inline-block;
+}
+
+.fix-height {
+    height: 100%;
 }

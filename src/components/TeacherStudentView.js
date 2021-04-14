@@ -1,6 +1,6 @@
 import React from "react";
 import './TeacherStudentView.css';
-import {Row, Col, Button, Table} from "reactstrap";
+import {Row, Col, Button, Table, CustomInput} from "reactstrap";
 import StudentLabel from "./StudentLabel";
 import SearchBar from "./SearchBar";
 
@@ -20,14 +20,16 @@ class TeacherStudentView extends React.Component {
             <Row>
                 <Col xs={"12"} md={"6"}>
                     <Row><h1>Student Roster</h1></Row>
-                    <StudentLabel/>
-                    <StudentLabel/>
-                    <StudentLabel/>
-                    <StudentLabel/>
-                    <StudentLabel/>
-                    <StudentLabel/>
-                    <StudentLabel/>
-                    <StudentLabel/>
+                    <Row className={"student-roster"}>
+                        <StudentLabel />
+                        <StudentLabel />
+                        <StudentLabel />
+                        <StudentLabel />
+                        <StudentLabel />
+                        <StudentLabel />
+                        <StudentLabel />
+                        <StudentLabel />
+                    </Row>
                 </Col>
                 <Col>
                     <Col xs={12}>
