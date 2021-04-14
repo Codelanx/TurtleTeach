@@ -16,7 +16,7 @@ function LoginButton(props) {
     }
 
     return (
-        <Button color={"primary"} onClick={handleClick} block>Log In{redir}</Button>
+        <Button color={"primary"} onClick={handleClick} block tag={Link} to={"/login"}>Log In{redir}</Button>
     );
 }
 
@@ -25,9 +25,11 @@ function RegisterButton(props) {
     let redir = null;
 
     function handleClick() {
-        if ((props.parent.profile.setCurrentUser(props.parent.state.email) !== null) && (props.parent.profile.setCurrentUser(props.parent.state.name) !== null)){
+        props.parent.profile.setCurrentUser(props.parent.state.email);
+        if ((props.parent.profile.setCurrentUser(props.parent.state.email) !== null)){
             //history.push('/');
             redir = (<Redirect to={'/'} />);
+
         }
     }
 

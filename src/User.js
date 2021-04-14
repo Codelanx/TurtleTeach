@@ -41,6 +41,7 @@ class Users {
     static STUDENT = new User("Student", UserType.STUDENT);
     static TEACHER = new User("Teacher", UserType.TEACHER);
     static CREATOR = new User("Creator", UserType.CREATOR);
+    static UNAUTHENTICATED = new User("Unauthenticated", UserType.UNAUTHENTICATED);
 
     static findUser(username) {
         switch (username.toLowerCase()) {
@@ -48,13 +49,13 @@ class Users {
             case "teacher": return Users.TEACHER;
             case "creator": return Users.CREATOR;
         }
-        return null;
+        return UserType.UNAUTHENTICATED;
     }
 }
 
 class Profile {
 
-    static DEFAULT_USER = Users.TEACHER;
+    static DEFAULT_USER = Users.UNAUTHENTICATED;//Users.STUDENT
 
     constructor() {
         this.currentUser = Profile.DEFAULT_USER;
@@ -69,7 +70,7 @@ class Profile {
     }
 
     isLoggedIn() {
-        return this.currentUser !== null;
+        return this.currentUser !== Users.UNAUTHENTICATED;
     }
 }
 
