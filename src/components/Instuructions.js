@@ -11,8 +11,8 @@ class Instuructions extends React.Component {
 
     render() {
         return (
-            <Col bgcolor="#ffffcc" className={"space"}>
-                <Row className={"text"}>Instructions Area</Row>
+            <Col className={"instructionsspace"}>
+                <p className={"text"}>Instructions Area</p>
             </Col>
         );
     }

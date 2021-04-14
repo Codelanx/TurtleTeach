@@ -10,8 +10,8 @@ class CodingSpace extends React.Component {
 
     render() {
         return (
-            <Col>
-                <Row className={"space"}>{this.props.text}</Row>
+            <Col className={"codespace"}>
+                <p className={"text"}>{this.props.text}</p>
             </Col>
         );
     }

@@ -11,7 +11,7 @@ class CodeBlockSpace extends React.Component {
 
     render() {
         return (
-            <Col className={"space"}>
+            <Col className={"blockspace"}>
                 <p className={"text"}>Pieces</p>
                 <Row><CodeBlock text={"Forward x"}/></Row>
                 <Row><CodeBlock text={"Backward x"}/></Row>

@@ -1,9 +1,10 @@
-.space {
+.debugspace {
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
     height: 200px;
     width: 400px;
+    background-color: #999999;
 
 }
 

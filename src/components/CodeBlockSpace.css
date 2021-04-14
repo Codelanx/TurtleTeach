@@ -1,9 +1,10 @@
-.space {
+.blockspace {
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
     height: 300px;
     width: 400px;
+    background-color: #99ffff;
 
 }
 

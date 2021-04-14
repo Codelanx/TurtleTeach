@@ -33,7 +33,7 @@ class Leaderboard extends React.Component {
         let you = (<Listing place={studentRank} you={"You:"} />);
 
         let trailing = [];
-        for (let i = 6; i < 17; i++) {
+        for (let i = 6; i < 24; i++) {
             if (i === studentRank) {
                 trailing.push(you);
                 continue;

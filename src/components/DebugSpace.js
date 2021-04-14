@@ -11,9 +11,9 @@ class DebugSpace extends React.Component {
 
     render() {
         return (
-            <Col bgcolor="#999999" className={"space"}>
-                <Row><PlayButtons/></Row>
-                <Row className={"text"}>Debug Area</Row>
+            <Col bgcolor="#999999" className={"debugspace"}>
+                <Row className={"text"}><Col xs={2}/><Col xs={8}><PlayButtons/></Col><Col xs={2}/></Row>
+                <Row className={"text"}><Col xs={2}/><Col xs={8}>Debug Area</Col><Col xs={2}/></Row>
             </Col>
         );
     }

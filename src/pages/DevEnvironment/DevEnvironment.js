@@ -15,26 +15,26 @@ class StudentEnv extends React.Component {
         return (
             <Col>
                 <Row xs="3">
-                    <Col>
+                    <Col xs={4}>
                         <Button>Help</Button>
                     </Col>
-                    <Col>
+                    <Col xs={4}>
                         <Button tag={Link} to="/ClassHome">Submit</Button>
                     </Col>
-                    <Col>
+                    <Col xs={4}>
                         <SearchBar placeholder={"Search Pieces"}/>
                     </Col>
 
                 </Row>
                 <Row>
-                    <Col>
+                    <Col xs={4}>
                         <Row><CodeBlockSpace/></Row>
                         <Row><Instuructions/></Row>
                     </Col>
-                    <Col>
+                    <Col xs={4}>
                         <CodingSpace text={"Coding Area - Student Drags Pieces Here"}/>
                     </Col>
-                    <Col>
+                    <Col xs={4}>
                         <Row><ExecutionSpace/></Row>
                         <Row><DebugSpace/></Row>
                     </Col>
@@ -50,14 +50,14 @@ class TeacherEnv extends React.Component {
         return (
             <Col>
                 <Row>
-                    <Col>
+                    <Col xs={4}>
                         <Row><GradeSpace/></Row>
                         <Row><Instuructions/></Row>
                     </Col>
-                    <Col>
+                    <Col xs={4}>
                         <CodingSpace text={"Coding Area - Student Code Shown Here"}/>
                     </Col>
-                    <Col>
+                    <Col xs={4}>
                         <Row><ExecutionSpace/></Row>
                         <Row><DebugSpace/></Row>
                     </Col>
