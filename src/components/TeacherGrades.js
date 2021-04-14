@@ -20,7 +20,7 @@ function PuzzleListing(props) {
 function StudentListing(props) {
     return (
         <Row className={"assignments-puzzle"}>
-            <Col xs={"5"}>{props.name}</Col>
+            <Col xs={"5"}><a href="/DevEnvironment" id="link">{props.name}</a></Col>
             <Col xs={"2"}>{props.completed}</Col>
             <Col xs={"2"}>{props.evaluated}</Col>
             <Col xs={"2"}>{props.date}</Col>
