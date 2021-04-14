@@ -109,46 +109,7 @@ class Login extends React.Component {
                                 <RegisterButton parent={this} />
                             </FormGroup>
 
-                            <div>
-                                <div>
-                                    Account Type:
-                                </div>
-                                <form onSubmit={this.formSubmit}>
-                                    <div className="radio">
-                                        <label>
-                                            <input
-                                                type="radio"
-                                                value="Student"
-                                                checked={this.state.selectedOption === "Student"}
-                                                onChange={this.onValueChange}
-                                            />
-                                            Student
-                                        </label>
-                                    </div>
-                                    <div className="radio">
-                                        <label>
-                                            <input
-                                                type="radio"
-                                                value="Teacher"
-                                                checked={this.state.selectedOption === "Teacher"}
-                                                onChange={this.onValueChange}
-                                            />
-                                            Teacher
-                                        </label>
-                                    </div>
-                                    <div className="radio">
-                                        <label>
-                                            <input
-                                                type="radio"
-                                                value="Content Creator"
-                                                checked={this.state.selectedOption === "Content Creator"}
-                                                onChange={this.onValueChange}
-                                            />
-                                            Content Creator
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
+
 
                         </div>
                     </Row>

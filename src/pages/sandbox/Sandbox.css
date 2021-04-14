@@ -1,16 +1,13 @@
 .Sandbox {
   text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 1560px;
-  height: 700px;
+
 
 }
 .PiecePicker {
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
-  height: 600px;
+  height: 700px;
   width: 500px;
 
 
@@ -20,7 +17,7 @@
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
-  height: 600px;
+  height: 700px;
   width: 500px;
 
 }
@@ -29,6 +26,10 @@
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
-  height: 600px;
+  height: 700px;
   width: 500px;
+}
+
+.Playback {
+  /*buttons on bottom */
 }

@@ -4,6 +4,8 @@ import SearchBar from "../../components/SearchBar";
 import {Button, ButtonGroup} from "reactstrap";
 import { Row, Col } from 'reactstrap';
 import CodeBlock from "../../components/CodeBlock";
+import ExecutionSpace from "../../components/ExecutionSpace";
+import PlayButtons from "../../components/PlayButtons";
 
 class Sandbox extends React.Component {
     render() {
@@ -27,17 +29,16 @@ class Sandbox extends React.Component {
                     <Col>
                         <div className="DragAndDrop">
                             <span>Drag and Drop</span>
+                            <ExecutionSpace />
                         </div>
                     </Col>
                     <Col>
                         <div className="TurtleWindow">
                             <span>Turtle Window</span>
-                            <div>
-                                <ButtonGroup>
-                                    <Button>Run</Button>
-                                    <Button>Pause</Button>
-                                </ButtonGroup>
+                            <div className="Playback">
+                                <PlayButtons/>
                             </div>
+
                         </div>
                     </Col>
                 </Row>
