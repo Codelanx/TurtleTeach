@@ -1,17 +1,18 @@
 import React from "react";
 import './TeacherAssignment.css';
-import {Col, Row, Table} from "reactstrap";
+import {Col, Row, Table, UncontrolledCollapse} from "reactstrap";
 
 function CourseListing(props) {
     return (
         <React.Fragment>
-        <Row className={"assignments-course"}>
-            <Col xs={"6"}>{props.name}</Col>
-            <Col xs={"2"}>{props.completed}</Col>
-            <Col xs={"2"}>{props.graded}</Col>
-            <Col xs={"2"}>{props.date}</Col>
-        </Row>
-        {props.children}
+            <Row className={"assignments-course"}>
+                <Col xs={"6"}><a href="#" id={props.id}>{props.name}</a></Col>
+                <Col xs={"2"}>{props.completed}</Col>
+                <Col xs={"2"}>{props.graded}</Col>
+                <Col xs={"2"}>{props.date}</Col>
+            </Row>
+            <UncontrolledCollapse toggler={props.toggler} defaultOpen={"True"}>{props.children}</UncontrolledCollapse>
+
         </React.Fragment>
     );
 }
@@ -38,51 +39,54 @@ class TeacherAssignment extends React.Component {
 
         return (
             <React.Fragment>
+                <Row className={"category"}>
+                    <Col xs={"6"}>Assignment</Col>
+                    <Col xs={"2"}>Completed</Col>
+                    <Col xs={"2"}>Graded</Col>
+                    <Col xs={"2"}>Due Date</Col>
+                </Row>
             <CourseListing name={"Swagatoni"}
                            completed={"03/24"}
                            graded={"02/24"}
-                           date={"04-30-21"}>
-                <PuzzleListing name={"Swagatoni"}
+                           date={"04-30-21"}
+                           id={"Swagatoni"}
+                            toggler={"#Swagatoni"}>
+                <PuzzleListing name={"Swag Flip"}
                                completed={"03/24"}
                                graded={"02/24"}
                                date={"04-30-21"} />
+                <PuzzleListing name={"Swagscape"}
+                               completed={"20/24"}
+                               graded={"18/24"}
+                               date={"04-20-21"} />
+                <PuzzleListing name={"Swag Slide"}
+                               completed={"15/24"}
+                               graded={"10/24"}
+                               date={"04-14-21"} />
             </CourseListing>
-            <Table bordered>
-                <thead>
-                <tr>
-                    <th>Assignment</th>
-                    <th>Completed</th>
-                    <th>Graded</th>
-                    <th>Due Date</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr bgcolor="#00ff00">
-                    <td></td>
-                    <td></td>
-                    <td>02/24</td>
-                    <td>04/30/21</td>
-                </tr>
-                <tr bgcolor="#bbbbbb">
-                    <td>Swag Flip</td>
-                    <td>20/24</td>
-                    <td>18/24</td>
-                    <td>04/20/21</td>
-                </tr>
-                <tr bgcolor="#bbbbbb">
-                    <td>Swag Slide</td>
-                    <td>15/24</td>
-                    <td>10/24</td>
-                    <td>04/25/21</td>
-                </tr>
-                <tr bgcolor="#bbbbbb">
-                    <td>Swagscape</td>
-                    <td>04/24</td>
-                    <td>02/24</td>
-                    <td>04/30/21</td>
-                </tr>
-                </tbody>
-            </Table>
+                <CourseListing name={"Turtle Gets Milk"}
+                               completed={"15/24"}
+                               graded={"10/24"}
+                               date={"04-12-21"}
+                               id={"TurtleGetsMilk"}
+                               toggler={"#TurtleGetsMilk"}>
+                    <PuzzleListing name={"Let Your Family Know"}
+                                   completed={"23/24"}
+                                   graded={"23/24"}
+                                   date={"04-01-21"} />
+                    <PuzzleListing name={"Leave For Store"}
+                                   completed={"22/24"}
+                                   graded={"21/24"}
+                                   date={"04-03-21"} />
+                    <PuzzleListing name={"Walk To Store"}
+                                   completed={"21/24"}
+                                   graded={"17/24"}
+                                   date={"04-05-21"} />
+                    <PuzzleListing name={"Take on New Identity"}
+                                   completed={"15/24"}
+                                   graded={"10/24"}
+                                   date={"04-10-21"} />
+                </CourseListing>
             </React.Fragment>
 
         );
