@@ -21,14 +21,14 @@ class TeacherStudentView extends React.Component {
                 <Col xs={"12"} md={"6"}>
                     <Row><h1>Student Roster</h1></Row>
                     <Row className={"student-roster"}>
-                        <StudentLabel />
-                        <StudentLabel />
-                        <StudentLabel />
-                        <StudentLabel />
-                        <StudentLabel />
-                        <StudentLabel />
-                        <StudentLabel />
-                        <StudentLabel />
+                        <StudentLabel checkbox={true} />
+                        <StudentLabel checkbox={true} />
+                        <StudentLabel checkbox={true} />
+                        <StudentLabel checkbox={true} />
+                        <StudentLabel checkbox={true} />
+                        <StudentLabel checkbox={true} />
+                        <StudentLabel checkbox={true} />
+                        <StudentLabel checkbox={true} />
                     </Row>
                 </Col>
                 <Col>

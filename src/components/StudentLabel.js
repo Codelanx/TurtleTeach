@@ -8,15 +8,17 @@ class StudentLabel extends React.Component {
 
     constructor(props) {
         super(props);
-
     }
 
     render() {
+        let checkbox = this.props.checkbox === true
+            ? (<Col xs={"1"} className={"fix-height"}>
+                <input type={"checkbox"} style={{height: "100%"}}/>
+               </Col>)
+            : null;
         return (
             <Row style={{padding: "0 0.5rem"}}>
-                <Col xs={"1"} className={"fix-height"}>
-                    <input type={"checkbox"} style={{height: "100%"}}/>
-                </Col>
+                {checkbox}
                 <Col xs={"3"} className={"fix-height student-roster-img"}>
                     <img src="/img/turtle.png" alt="this was supposed to be a turtle" className={"student-roster-image"} />
                 </Col>

@@ -8,14 +8,8 @@ import CardLayout from "../../components/CardLayout";
 
 class TeacherHome extends React.Component {
 
-    constructor() {
-        super();
-        this.myField = 42;
-    }
-
-    yolololololo() {
-        this.yolololololo();
-        console.log(this.myField);
+    constructor(props) {
+        super(props);
     }
 
     render() {
