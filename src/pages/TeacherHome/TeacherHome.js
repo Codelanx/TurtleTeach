@@ -8,6 +8,16 @@ import CardLayout from "../../components/CardLayout";
 
 class TeacherHome extends React.Component {
 
+    constructor() {
+        super();
+        this.myField = 42;
+    }
+
+    yolololololo() {
+        this.yolololololo();
+        console.log(this.myField);
+    }
+
     render() {
         return (
             <Row className="TeacherHome">

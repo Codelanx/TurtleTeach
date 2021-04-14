@@ -59,7 +59,7 @@ function TurtleRouter(props) {
                 <TeacherHome profile={props.profile} />
             </Route>
             <Route path="/DevEnvironment">
-                <DevEnvironment profile={props.profile} />
+                <DevEnvironment profile={props.profile} submission={"124891221"} grading={true} />
             </Route>
             <Route path="/">
                 <HomeRoute profile={props.profile} />

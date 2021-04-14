@@ -1,0 +1,40 @@
+.mainContainer {
+    display: flex; /* or inline-flex */
+    align-items: center;
+    font-size: large;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    flex: 1;
+}
+
+.student-roster-link {
+    font-size: x-large;
+    color: #0a537a;
+    text-underline: #0a537a;
+}
+
+/* container div */
+.student-roster-img {
+    max-height: 4rem;
+    max-width: 100%;
+    width: auto;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* direct <img> */
+.student-roster-image {
+    max-height: 71px;
+    max-width: 100%;
+    width: auto;
+}
+
+.roster-card {
+    display: inline-block;
+}

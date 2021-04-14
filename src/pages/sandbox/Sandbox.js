@@ -6,6 +6,7 @@ import { Row, Col } from 'reactstrap';
 import CodeBlock from "../../components/CodeBlock";
 import ExecutionSpace from "../../components/ExecutionSpace";
 import PlayButtons from "../../components/PlayButtons";
+import DebugSpace from "../../components/DebugSpace";
 
 class Sandbox extends React.Component {
     render() {
@@ -32,13 +33,14 @@ class Sandbox extends React.Component {
                         </div>
                     </Col>
                     <Col>
-                        <div className="TurtleWindow">
-                            <span>Turtle Window</span>
-                            <div className="Playback">
-                                <PlayButtons/>
+                        <Row>
+                            <div className="TurtleWindow">
+                                <span>Turtle Window</span>
                             </div>
-
-                        </div>
+                        </Row>
+                        <Row>
+                            <DebugSpace/>
+                        </Row>
                     </Col>
                 </Row>
             </div>
