@@ -7,61 +7,58 @@ import StudentLabel from "./StudentLabel";
 import Tutorial from "./Tutorial";
 
 
-var stu = 8;
-var num = 4;
+const stu = 8;
+const num = 4;
+
+function Rank(props) {
+    return (
+        <Col xs={num} className={"rank-font"}>#{props.value}</Col>
+    );
+}
+
+function Listing(props) {
+    let student = props.you === undefined
+        ? (<StudentLabel />)
+        : (<StudentLabel you={props.prefix} />);
+    return (
+        <Row className={"listing"} style={props.style}><Rank value={props.place}/><Col xs={stu}>{student}</Col></Row>
+    );
+}
+
+
 class Leaderboard extends React.Component {
-    
-
-
-
     render() {
 
+        let studentRank = 9;
+        let you = (<Listing place={studentRank} you={"You:"} />);
 
+        let trailing = [];
+        for (let i = 6; i < 17; i++) {
+            if (i === studentRank) {
+                trailing.push(you);
+                continue;
+            }
+            let next = (<Listing place={i} />);
+            trailing.push(next);
+        }
 
 
         return (
-
-            <div>
-                <Card>
-                    <CardBody className={"rank-font"}>
-                        <Row style={{backgroundColor: '#ffd700'}}><Col xs={num}>#1</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                        <Row style={{backgroundColor: '#C0C0C0'}}><Col xs={num}>#2</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                        <Row style={{backgroundColor: '#CD7f32'}}><Col xs={num}>#3</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                        <Row><Col xs={num}>#4</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                        <Row><Col xs={num}>#5</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                    </CardBody>
-                </Card>
-
-
-                <UncontrolledCollapse toggler="#leaderboard" defaultOpen="True">
-                    <div id="leaderboard" >
-                        <a href="#" className="fill-div" onClick={'hideText()'}>...</a>
-                    </div>
-                    <Row className="rank-font"><Col xs="2">#9</Col><Col xs="8"><StudentLabel you={"You:"}/></Col></Row>
+            <div class={"leaderboard-container"}>
+                <Listing place={1} style={{backgroundColor: '#ffd700'}}/>
+                <Listing place={2} style={{backgroundColor: '#C0C0C0'}}/>
+                <Listing place={3} style={{backgroundColor: '#CD7f32'}}/>
+                <Listing place={4} />
+                <Listing place={5} />
+                <UncontrolledCollapse id="leaderboard-toggle" toggler="#leaderboard-toggle" defaultOpen={true} className={"row"}>
+                    <a href="#" className="fill-div">...</a>
                 </UncontrolledCollapse>
-
-
-
-                <UncontrolledCollapse toggler="#leaderboard">
-                    <Card>
-                        <CardBody className={"rank-font"}>
-                            <Row><Col xs={num}>#6</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                            <Row><Col xs={num}>#7</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                            <Row><Col xs={num}>#8</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                            <Row><Col xs={num}>#9</Col><Col xs={stu}><StudentLabel you={"You:"}/></Col></Row>
-                            <Row><Col xs={num}>#10</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                            <Row><Col xs={num}>#11</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                            <Row><Col xs={num}>#12</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                            <Row><Col xs={num}>#13</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                            <Row><Col xs={num}>#14</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                            <Row><Col xs={num}>#15</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                            <Row><Col xs={num}>#16</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                            <Row><Col xs={num}>#17</Col><Col xs={stu}><StudentLabel/></Col></Row>
-                        </CardBody>
-                    </Card>
+                <UncontrolledCollapse toggler="#leaderboard-toggle" defaultOpen={true}>
+                    {you}
                 </UncontrolledCollapse>
-
-
+                <UncontrolledCollapse toggler="#leaderboard-toggle">
+                    {trailing}
+                </UncontrolledCollapse>
             </div>
         );
     }

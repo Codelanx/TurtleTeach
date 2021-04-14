@@ -2,6 +2,9 @@
     font-size: 250%;
     font-weight: bold;
     text-align: center;
+}
+
+.listing {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -16,20 +19,33 @@
 
 }
 
-#leaderboard {
+#leaderboard-toggle {
     background-color: #ffffff;
-    width: 800px;
-    height: 25px;
+    height: 2rem;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid #eee;
+    cursor: pointer;
 }
+
+#leaderboard-toggle > a {
+    padding: 0;
+    margin: 0;
+}
+
 a.fill-div {
     display: block;
-    height: 50%;
-    width: 100%;
     text-decoration: none;
     font-size: 125%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+.leaderboard-container {
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
 }
 
 
