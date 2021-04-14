@@ -11,42 +11,23 @@ class TeacherStudentView extends React.Component {
     }
 
     render() {
+        for (let i = 0; i < 10; i++) {
+
+        }
 
 
         return (
             <Row>
-                <Col>
+                <Col xs={"12"} md={"6"}>
                     <Row><h1>Student Roster</h1></Row>
-                    <Row>
-                        <Table bordered>
-                            <tbody>
-                            <tr>
-                                <th scope="row"><StudentLabel/></th>
-                            </tr>
-                            <tr>
-                                <th scope="row"><StudentLabel/></th>
-                            </tr>
-                            <tr>
-                                <th scope="row"><StudentLabel/></th>
-                            </tr>
-                            <tr>
-                                <th scope="row"><StudentLabel/></th>
-                            </tr>
-                            <tr>
-                                <th scope="row"><StudentLabel/></th>
-                            </tr>
-                            <tr>
-                                <th scope="row"><StudentLabel/></th>
-                            </tr>
-                            <tr>
-                                <th scope="row"><StudentLabel/></th>
-                            </tr>
-                            <tr>
-                                <th scope="row"><StudentLabel/></th>
-                            </tr>
-                            </tbody>
-                        </Table>
-                    </Row>
+                    <StudentLabel/>
+                    <StudentLabel/>
+                    <StudentLabel/>
+                    <StudentLabel/>
+                    <StudentLabel/>
+                    <StudentLabel/>
+                    <StudentLabel/>
+                    <StudentLabel/>
                 </Col>
                 <Col>
                     <Col xs={12}>

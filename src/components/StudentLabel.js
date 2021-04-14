@@ -1,6 +1,6 @@
 import React from "react";
-import './StundentLabel.css';
-import {Button} from "reactstrap";
+import './StudentLabel.css';
+import {Button, Col, Row} from "reactstrap";
 import {Link} from "react-router-dom";
 import ContentCard from "./ContentCard";
 
@@ -13,33 +13,21 @@ class StudentLabel extends React.Component {
 
     render() {
         return (
-            <div>
-                <div id="mainContainer">
-                    <div>
-                        <img src="/img/turtle.png" alt="this was supposed to be a turtle" width="113" height="71" />
-                    </div>
-
-                    <div id="subContainer" class="item">
-                        <div>
-                            <a href="#top" id="link">Student Name</a>
-                        </div>
-                        <div>
-                            <i>student@email.com</i>
-                        </div>
-                    </div>
-
-                    <div id="subContainer">
-                        <div>
-                            Last Online:
-                        </div>
-                        <div>
-                            Jan-20-21
-                        </div>
-                    </div>
-                </div>
-
-                {this.props.text}
-            </div>
+            <Row>
+                <Col xs={"3"} className={"student-roster-img"}>
+                    <img src="/img/turtle.png" alt="this was supposed to be a turtle" className={"student-roster-image"} />
+                </Col>
+                <Col xs={"6"}>
+                    <a href="#" className={"student-roster-link"}>Student Name</a>
+                    <br />
+                    <i>student@email.com</i>
+                </Col>
+                <Col xs={"3"}>
+                    Last Online:
+                    <br />
+                    Jan-20-21
+                </Col>
+            </Row>
         );
     }
 }

@@ -50,21 +50,16 @@ const TeacherTab = (props) => {
             </Nav>
             <TabContent activeTab={activeTab}>
                 <TabPane tabId="1">
-                    <Row>
-                        <TeacherStudentView/>
-                    </Row>
+                    <TeacherStudentView />
                 </TabPane>
                 <TabPane tabId="2">
-                    <TeacherAssignment/>
+                    <TeacherAssignment />
                 </TabPane>
                 <TabPane tabId="3">
-                    <Row>
-                        <TeacherGrades/>
-                    </Row>
+                    <TeacherGrades />
                 </TabPane>
                 <TabPane tabId="4">
-                    <Row><Tutorial/>
-                    </Row>
+                    <Tutorial />
                 </TabPane>
             </TabContent>
         </div>

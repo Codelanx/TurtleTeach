@@ -43,6 +43,9 @@ class Testing extends React.Component {
                     <ListGroupItem>
                         <Link to="/TeacherHome">Teacher Home Page</Link>
                     </ListGroupItem>
+                    <ListGroupItem>
+                        <Link to="/DevEnvironment">Dev Environment</Link>
+                    </ListGroupItem>
                 </ListGroup>
                 {/* ContentCard */}
             </List>

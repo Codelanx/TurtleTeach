@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './ClassHome.css';
 import StudentTab from "../../components/StudentTab";
 import TeacherTab from "../../components/TeacherTab";
@@ -9,7 +9,7 @@ class StudentHome extends React.Component {
         return (
             <div className="ClassHome">
                 <StudentTab/>
-                <a href="/StudentHome">Home</a>
+                <Link to={"/"}>Home</Link>
             </div>
         );
     }
@@ -20,7 +20,7 @@ class TeacherHome extends React.Component {
         return (
             <div className="ClassHome">
                 <TeacherTab/>
-                <a href="/TeacherHome">Home</a>
+                <Link to={"/"}>Home</Link>
             </div>
         );
     }
