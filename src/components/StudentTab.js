@@ -7,29 +7,28 @@ import StudentLabel from "./StudentLabel";
 import Tutorial from "./Tutorial";
 
 
-
+var stu = 8;
+var num = 4;
 class Leaderboard extends React.Component {
-
+    
 
 
 
     render() {
-        var text = "rank-font";
 
-        function hideText(){
-            text = "hidden";
-        }
+
+
 
         return (
 
             <div>
                 <Card>
                     <CardBody className={"rank-font"}>
-                        <Row style={{backgroundColor: '#ffd700'}}><Col xs={2.5}>#1</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                        <Row style={{backgroundColor: '#C0C0C0'}}><Col xs={2.5}>#2</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                        <Row style={{backgroundColor: '#CD7f32'}}><Col xs={2.5}>#3</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                        <Row><Col xs={2.5}>#4</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                        <Row><Col xs={2.5}>#5</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                        <Row style={{backgroundColor: '#ffd700'}}><Col xs={num}>#1</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                        <Row style={{backgroundColor: '#C0C0C0'}}><Col xs={num}>#2</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                        <Row style={{backgroundColor: '#CD7f32'}}><Col xs={num}>#3</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                        <Row><Col xs={num}>#4</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                        <Row><Col xs={num}>#5</Col><Col xs={stu}><StudentLabel/></Col></Row>
                     </CardBody>
                 </Card>
 
@@ -46,18 +45,18 @@ class Leaderboard extends React.Component {
                 <UncontrolledCollapse toggler="#leaderboard">
                     <Card>
                         <CardBody className={"rank-font"}>
-                            <Row><Col xs={2.5}>#6</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                            <Row><Col xs={2.5}>#7</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                            <Row><Col xs={2.5}>#8</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                            <Row><Col xs={2.5}>#9</Col><Col xs={7.5}><StudentLabel you={"You:"}/></Col></Row>
-                            <Row><Col xs={2.5}>#10</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                            <Row><Col xs={2.5}>#11</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                            <Row><Col xs={2.5}>#12</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                            <Row><Col xs={2.5}>#13</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                            <Row><Col xs={2.5}>#14</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                            <Row><Col xs={2.5}>#15</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                            <Row><Col xs={2.5}>#16</Col><Col xs={7.5}><StudentLabel/></Col></Row>
-                            <Row><Col xs={2.5}>#17</Col><Col xs={7.5}><StudentLabel/></Col></Row>
+                            <Row><Col xs={num}>#6</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                            <Row><Col xs={num}>#7</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                            <Row><Col xs={num}>#8</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                            <Row><Col xs={num}>#9</Col><Col xs={stu}><StudentLabel you={"You:"}/></Col></Row>
+                            <Row><Col xs={num}>#10</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                            <Row><Col xs={num}>#11</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                            <Row><Col xs={num}>#12</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                            <Row><Col xs={num}>#13</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                            <Row><Col xs={num}>#14</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                            <Row><Col xs={num}>#15</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                            <Row><Col xs={num}>#16</Col><Col xs={stu}><StudentLabel/></Col></Row>
+                            <Row><Col xs={num}>#17</Col><Col xs={stu}><StudentLabel/></Col></Row>
                         </CardBody>
                     </Card>
                 </UncontrolledCollapse>
