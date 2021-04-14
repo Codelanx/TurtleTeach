@@ -4,8 +4,9 @@ import Login from "./pages/login/Login";
 import Customize from "./pages/customize/Customize";
 import Course from "./pages/course/Course";
 import Sandbox from "./pages/sandbox/Sandbox";
-import Landing from "./pages/landing/Landing";
+import isLogged from "./pages/landing/Landing";
 import Testing from "./pages/Testing";
+import Landing from "./pages/landing/Landing";
 import ComponentPage from "./pages/ComponentPage";
 import ClassHome from "./pages/ClassHome/ClassHome";
 import StudentHome from "./pages/StudentHome/StudentHome";
@@ -40,9 +41,6 @@ function TurtleRouter(props) {
             <Route path="/login">
                 <Login profile={props.profile} />
             </Route>
-            <Route path="/landing">
-                <Landing profile={props.profile} />
-            </Route>
             <Route path="/test/component">
                 <ComponentPage profile={props.profile} />
             </Route>
@@ -62,7 +60,7 @@ function TurtleRouter(props) {
                 <DevEnvironment profile={props.profile} submission={"124891221"} grading={true} />
             </Route>
             <Route path="/">
-                <HomeRoute profile={props.profile} />
+                <Landing profile={props.profile} />
             </Route>
         </Switch>
     );
