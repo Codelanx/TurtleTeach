@@ -21,9 +21,9 @@ class ContentCard extends React.Component {
 
                     <div id="BottomTextClass">
                         <Row >
-                            <Col><a href={this.props.link} id="link" >{this.props.course}</a></Col>
-                            <Col>{this.props.grade}</Col>
-                            <Col className={"notifications"}>{this.props.notifications}</Col>
+                            <Col xs={8}><a href={this.props.link} id="link" >{this.props.course}</a></Col>
+                            <Col xs={4} className={"gradeText"}>{this.props.grade}</Col>
+                            <Col className={"notifications"} xs={2}>{this.props.notifications}</Col>
                         </Row>
                     </div>
                     <div>

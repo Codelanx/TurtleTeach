@@ -6,3 +6,9 @@
 .notifications{
     color: red;
 }
+
+.gradeText{
+    font-weight: bold;
+    font-size: 150%;
+}
+
