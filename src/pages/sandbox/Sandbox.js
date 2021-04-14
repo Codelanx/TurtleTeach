@@ -7,17 +7,18 @@ import CodeBlock from "../../components/CodeBlock";
 import ExecutionSpace from "../../components/ExecutionSpace";
 import PlayButtons from "../../components/PlayButtons";
 import DebugSpace from "../../components/DebugSpace";
+import CodingSpace from "../../components/CodingSpace";
 
 class Sandbox extends React.Component {
     render() {
         return (
             <div className="Sandbox">
                 <h1>Sandbox</h1>
+                <Row><Col xs={8}/><Col xs={4}><SearchBar placeholder={"Search Pieces"}/></Col></Row>
                 <Row xs="3">
-                    <Col>
+                    <Col xs={4}>
                         <div className="PiecePicker">
                             <span>Piece Selection</span>
-                            <SearchBar>Search</SearchBar>
                             <div><CodeBlock text={"Forward x"}/></div>
                             <div><CodeBlock text={"Backward x"}/></div>
                             <div><CodeBlock text={"Turn Right x"}/></div>
@@ -27,16 +28,12 @@ class Sandbox extends React.Component {
                             <div><CodeBlock text={"Speed x"}/></div>
                         </div>
                     </Col>
-                    <Col>
-                        <div className="DragAndDrop">
-                            <span>Drag and Drop</span>
-                        </div>
+                    <Col xs={4}>
+                        <CodingSpace text={"Drag and Drop"}/>
                     </Col>
-                    <Col>
+                    <Col xs={4}>
                         <Row>
-                            <div className="TurtleWindow">
-                                <span>Turtle Window</span>
-                            </div>
+                            <ExecutionSpace/>
                         </Row>
                         <Row>
                             <DebugSpace/>
