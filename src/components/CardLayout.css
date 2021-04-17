@@ -1,0 +1,22 @@
+.card-layout {
+    border-radius: 3px;
+    border: 1px solid #333;
+    padding: 0 15px 0 40px;
+    /* top, right, bottom, left */
+}
+
+.card-category {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-category-title {
+    font-size: 36pt;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.card-category-listing {
+    display: flex;
+    flex-direction: row;
+}

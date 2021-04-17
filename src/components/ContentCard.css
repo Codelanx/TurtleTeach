@@ -1,14 +1,15 @@
-#BottomTextClass {
-    display: flex;
-    flex-direction: column;
+.notifications {
+    background-color: red;
 }
 
-.notifications{
-    color: red;
-}
-
-.gradeText{
+.gradeText {
     font-weight: bold;
     font-size: 150%;
 }
 
+.card-image {
+    max-width: 20rem;
+    max-height: 12rem;
+    height: 100%;
+    width: 100%;
+}

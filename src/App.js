@@ -36,9 +36,9 @@ function App() {
     return (
         <React.Fragment>
             <Navigation profile={prof} />
-            <div id="content" className="container col-md-9 col-lg-10">
+            <Col id={"content"} className={"container"} md={"12"} lg={"10"}>
                 <TurtleRouter profile={prof} />
-            </div>
+            </Col>
         </React.Fragment>
     );
 }

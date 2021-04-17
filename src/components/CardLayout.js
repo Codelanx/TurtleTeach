@@ -14,11 +14,11 @@ class CardCategory extends React.Component {
 
     render() {
         return (
-            <Row>
-                <Row>
+            <Row className={"card-category"}>
+                <Row className={"card-category-title"}>
                     {this.props.title}
                 </Row>
-                <Row>
+                <Row className={"card-category-listing"}>
                     {this.props.children}
                 </Row>
             </Row>
@@ -46,7 +46,7 @@ class CardLayout extends React.Component {
 
     render() {
         return (
-            <Col xs={"12"} md={"8"}>
+            <Col xs={"12"} className={"card-layout"}>
                 {this.props.children}
             </Col>
         );

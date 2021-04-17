@@ -12,7 +12,7 @@ class ContentCard extends React.Component {
     render() {
         return (
             <Card>
-                <CardImg src="/img/turtle.png" alt="this was supposed to be a turtle" width="100" height="350" />
+                <CardImg src="/img/turtle.png" alt="this was supposed to be a turtle" className={"card-image"}/>
                 <CardBody>
                     <Row>
                         <Col xs={"10"}>
