@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import './StudentTab.css';
+import './TeacherTab.css';
 import TeacherAssignment from "./TeacherAssignment";
 import TeacherGrades from "./TeacherGrades";
 import TeacherStudentView from "./TeacherStudentView";
@@ -13,12 +13,14 @@ const TeacherTab = (props) => {
         if(activeTab !== tab) setActiveTab(tab);
     }
 
+
     return (
         <div>
             <Nav tabs className="nav-fill">
                 <NavItem>
                     <NavLink
                         onClick={() => { toggle('1'); }}
+                        className={{active: activeTab==='1'}}
                     >
                         My Students
                     </NavLink>
@@ -27,29 +29,30 @@ const TeacherTab = (props) => {
                     <NavLink
 
                         onClick={() => { toggle('2'); }}
+                        className={{active: activeTab==='2'}}
                     >
                        Assignments
                     </NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink
-
                         onClick={() => { toggle('3'); }}
+                        className={{active: activeTab==='3'}}
                     >
                         Grading
                     </NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink
-
                         onClick={() => { toggle('4'); }}
+                        className={{active: activeTab==='4'}}
                     >
                         Tutorials
                     </NavLink>
                 </NavItem>
             </Nav>
             <TabContent activeTab={activeTab}>
-                <TabPane tabId="1">
+                <TabPane tabId="1" >
                     <TeacherStudentView />
                 </TabPane>
                 <TabPane tabId="2">

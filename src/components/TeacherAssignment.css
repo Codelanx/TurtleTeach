@@ -12,9 +12,11 @@
 }
 
 .category {
-    background-color: #00ff00;
+    background-color: #ffffff;
     padding: 1rem 0;
-    border-top: 1px solid #00bb00;
+
+    border: 1px solid #999;
+
     font-size: 150%;
     font-weight: bold;
 }

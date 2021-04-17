@@ -14,6 +14,9 @@ class TurtleButton extends React.Component {
         if (this.props.expand) {
             out += " col-12 turtle-button-expanded";
         }
+        else if (this.props.medium) {
+            out += " col-12 turtle-button-medium";
+        }
 
         return (
             <Button className={out} >

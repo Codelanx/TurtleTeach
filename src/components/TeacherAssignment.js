@@ -1,6 +1,7 @@
 import React from "react";
 import './TeacherAssignment.css';
 import {Col, Row, Table, UncontrolledCollapse} from "reactstrap";
+import TurtleButton from "./TurtleButton";
 
 function CourseListing(props) {
     return (
@@ -39,6 +40,11 @@ class TeacherAssignment extends React.Component {
 
         return (
             <React.Fragment>
+                <Row>
+                    <Col xs={4} md={3}><TurtleButton medium>Find New Courses</TurtleButton></Col>
+                    <Col xs={4} md={3}><TurtleButton medium>Find New Puzzles</TurtleButton></Col>
+                    <Col xs={4} md={3}><TurtleButton medium>Edit Assignments</TurtleButton></Col>
+                </Row>
                 <Row className={"category"}>
                     <Col xs={"6"}>Assignment</Col>
                     <Col xs={"2"}>Completed</Col>
@@ -82,7 +88,7 @@ class TeacherAssignment extends React.Component {
                                    completed={"21/24"}
                                    graded={"17/24"}
                                    date={"04-05-21"} />
-                    <PuzzleListing name={"Take on New Identity"}
+                    <PuzzleListing name={"Buy The Milk"}
                                    completed={"15/24"}
                                    graded={"10/24"}
                                    date={"04-10-21"} />
