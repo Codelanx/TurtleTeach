@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
     render(){
         const BarStyling = {width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
         return (
-            <Row>
+            <Row className={"searchbar"}>
                 <Col xs={2}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          className="" viewBox="0 0 16 16">
