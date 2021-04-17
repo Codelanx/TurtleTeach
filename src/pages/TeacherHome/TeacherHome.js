@@ -4,6 +4,9 @@ import {
     Row, Button
 } from 'reactstrap';
 import CardLayout from "../../components/CardLayout";
+import CardCategory from "../../components/CardLayout";
+import ContentCard from "../../components/ContentCard";
+import Course from "../../Course";
 
 
 class TeacherHome extends React.Component {
@@ -13,12 +16,18 @@ class TeacherHome extends React.Component {
     }
 
     render() {
+        let courses = Course.getCourses();
         return (
             <Row className="TeacherHome">
                 <Row>
                     <Button>Add New Class</Button>
                 </Row>
                 <Row>
+                    <CardLayout>
+                        <CardCategory>
+                            <ContentCard course={courses[0]}></ContentCard>
+                        </CardCategory>
+                    </CardLayout>
                     <CardLayout topText={"Current Teaching"} class1={"Turtle Racing"} date1={"Jan-Jun 2021"} notifications1={"10"} class2={"Turtle Ethics"} date2={"Jan-Jun 2021"} notifications2={"50"}
                                 bottomText={"Previous Taught"} class3={"Introduction"} date3={"Aug 2020"} class4={"Control Statements"} date4={"Aug-Dec 2020"} class5={"Shell Dynamics"} date5={"Aug-Dec 2020"}
                                  class6={"Turtle Ethics"} date6={"Aug-Dec 2020"} link={"/ClassHome"}/>

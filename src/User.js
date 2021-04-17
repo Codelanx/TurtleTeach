@@ -55,7 +55,7 @@ class Users {
 class Profile {
 
     constructor() {
-        this.currentUser = null; //Users.STUDENT or Users.TEACHER
+        this.currentUser = Users.TEACHER; //Users.STUDENT or Users.TEACHER
     }
 
     getCurrentUser() {
