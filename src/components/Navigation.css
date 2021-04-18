@@ -1,3 +1,39 @@
+.navbar-avatar > .avatar-level-badge,
+.navbar-avatar > .avatar-notif-badge {
+    position: absolute;
+    text-align: center;
+    vertical-align: center;
+    justify-content: center;
+    text-overflow: clip;
+    display: flex;
+    bottom: -10px;
+    right: -10px;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    flex-direction: column;
+}
+
+i {
+    font-style: inherit;
+}
+
+.navbar-avatar > .avatar-level-badge {
+    color: #fff;
+}
+
+.navbar-avatar > .avatar-notif-badge {
+    background-color: #ffafaf;
+    color: #111;
+    top: -10px;
+    right: -10px;
+    border: 1px solid #333;
+    height: 30px;
+    width: 30px;
+    padding: 0.2rem;
+    border-radius: 50%;
+ }
+
 .turtle-nav {
     background-color: #04a43c;
     color: #fff;
@@ -47,8 +83,33 @@
 }
 
 .nav-dropdown > button > span {
-    display: inline-block !important;
     /*transform: scaleY(0.6666);*/
+}
+
+.nav-dropdown > button > div {
+}
+
+.nav-dropdown > button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-avatar {
+    display: inline-block;
+    position: relative;
+    align-self: center;
+    margin-right: 0.5rem;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+
+.navbar-avatar > img {
+    max-height: 4rem;
+    max-width: 4rem;
+    overflow: hidden;
+    width: auto;
+    height: auto;
 }
 
 .level-badge {

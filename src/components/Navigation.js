@@ -15,6 +15,7 @@ import {
     NavLink
 } from "reactstrap";
 import {Link} from "react-router-dom";
+import {UserType} from "../User";
 
 function LevelBadge(props) {
     return (
@@ -22,6 +23,33 @@ function LevelBadge(props) {
             {props.children}
         </div>
     );
+}
+
+function AvatarBadge(props) {
+    if (!props.profile.isLoggedIn()) {
+        return null;
+    }
+    let user = props.profile.getCurrentUser();
+    switch (user.getUserType()) {
+        case UserType.STUDENT:
+            return (
+                <div className={"avatar-level-badge"}>
+                    <i className={"bi bi-star-fill"}>
+                        {props.children}
+                    </i>
+                </div>
+            );
+            break;
+        case UserType.TEACHER:
+            return (
+                <div className={"avatar-notif-badge"}>
+                    {props.children}
+                </div>
+            );
+            break;
+        default:
+            return null;
+    }
 }
 
 
@@ -32,16 +60,18 @@ class ProfilePicture extends React.Component {
     }
 
     render() {
-        var prof = this.props.profile;
-        if (!prof.isLoggedIn() || prof.getCurrentUser().isCreator()) {
+        if (!this.props.profile.isLoggedIn()) {
             return null;
         }
-        else if (prof.getCurrentUser().isTeacher()){
-            return (<CardImg src="/img/turtle.png" alt="this was supposed to be a turtle" className={"profile-image"}/>)
-        }
-        else{
-            return (<div><CardImg src="/img/turtle.png" alt="this was supposed to be a turtle" className={"profile-image"}/><p className={"level-badge"}>7</p></div>)
-        }
+        let avatar = "/img/turtle.png";
+        return (
+            <div className={"navbar-avatar"}>
+                <img src={avatar} />
+                <AvatarBadge profile={this.props.profile}>
+                    42
+                </AvatarBadge>
+            </div>
+        );
     }
 }
 
@@ -92,7 +122,10 @@ class AccountDropdown extends React.Component {
         }
         return (
             <Dropdown className="nav-dropdown" isOpen={this.state.isOpen} toggle={this.toggle} >
-                <DropdownToggle caret><span>{this.props.profile.getCurrentUser().getUsername()}</span></DropdownToggle>
+                <DropdownToggle caret>
+                    <ProfilePicture profile={this.props.profile} />
+                    <span>{this.props.profile.getCurrentUser().getUsername()}</span>
+                </DropdownToggle>
                 <DropdownMenu right>
                     <Link to={"/account"}><DropdownItem>Account Settings</DropdownItem></Link>
                     <Link to={"/customize"}><DropdownItem>Customize Turtle</DropdownItem></Link>
