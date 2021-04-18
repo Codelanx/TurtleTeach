@@ -7,9 +7,28 @@
     font-size: 150%;
 }
 
+.card-text {
+
+}
+
+.card-notif-badge {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    background-color: #ffcccc;
+    border: 1px solid #333;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    vertical-align: center;
+    text-overflow: clip;
+    padding: 0.2rem;
+    border-radius: 50%;
+}
+
 .card-image {
-    max-width: 20rem;
-    max-height: 12rem;
+    max-width: 15rem;
+    max-height: 9rem;
     height: 100%;
     width: 100%;
 }

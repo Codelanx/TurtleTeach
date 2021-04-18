@@ -6,6 +6,7 @@ import {
 import CardLayout, {CardCategory} from "../../components/CardLayout";
 import ContentCard from "../../components/ContentCard";
 import Course from "../../Course";
+import TurtleButton from "../../components/TurtleButton";
 
 
 class TeacherHome extends React.Component {
@@ -17,8 +18,11 @@ class TeacherHome extends React.Component {
     render() {
         let courses = Course.getCourses();
         return (
-            <Row className="TeacherHome">
-                <Col xs={"12"} md={"8"}>
+            <React.Fragment>
+                <Row className={"d-flex flex-row-reverse"}>
+                    <TurtleButton className={"col-4 turtle-button-expanded"}>Add New Class</TurtleButton>
+                </Row>
+                <Row>
                     <CardLayout>
                         <CardCategory title={"Current Classes"}>
                             <ContentCard course={courses[0]} />
@@ -31,13 +35,8 @@ class TeacherHome extends React.Component {
                             <ContentCard course={courses[0]} />
                         </CardCategory>
                     </CardLayout>
-                </Col>
-                <Col>
-                    <Button>Add New Class</Button>
-                </Col>
-
-
-            </Row>
+                </Row>
+            </React.Fragment>
         );
     }
 }
