@@ -5,9 +5,56 @@
     margin-bottom: 1rem;
 }
 
+.nav-dropdown {
+    background-color: #04a43c;
+}
+
+.nav-item {
+}
+
+.nav-dropdown > div {
+    color: #111;
+    /*margin-top: 0.4rem;*/
+}
+
+.nav-dropdown > div > button > a {
+    color: #111;
+}
+
+.nav-dropdown > div > button {
+    padding-left: 1rem;
+}
+
+
+.nav-dropdown > button {
+    background-color: #04a43c;
+    transform: scaleY(1.5);
+    border: none;
+    border-radius: 0;
+}
+
+.nav-dropdown > button > span {
+    display: inline-block !important;
+    transform: scaleY(0.6666);
+}
+
+.nav-dropdown > button:hover,
+.nav-dropdown > button:focus {
+    background-color: #06d049;
+}
+
+.nav-dropdown > button:active,
+.nav-dropdown > button:active:not(:disabled):not(.disabled) {
+    background-color: #038832;
+}
+
+.logo-link:first-child {
+    transform: translateX(50%);
+}
+
 .logo {
     margin-top: .7rem;
-    margin-bottom: -.7rem;
+    margin-bottom: -.2rem;
     width: 100px;
     height: auto;
     transform: scale(1.8);

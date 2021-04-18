@@ -32,8 +32,8 @@ class ClassDropdown extends React.Component {
             return null;
         }
         return (
-            <Dropdown isOpen={this.state.isOpen} toggle={this.toggle} >
-                <DropdownToggle caret>My Classes</DropdownToggle>
+            <Dropdown className="nav-dropdown" isOpen={this.state.isOpen} toggle={this.toggle} >
+                <DropdownToggle caret><span>My Classes</span></DropdownToggle>
                 <DropdownMenu right>
                     <DropdownItem><Link to={"/class/101"}>Class 1</Link></DropdownItem>
                     <DropdownItem><Link to={"/class/102"}>Class 2</Link></DropdownItem>
@@ -57,11 +57,11 @@ class AccountDropdown extends React.Component {
 
     render() {
         if (!this.props.profile.isLoggedIn()) {
-            return (<Link to={"/login"}>Login / Register</Link>);
+            return (<Link to={"/login"}><span>Login / Register</span></Link>);
         }
         return (
-            <Dropdown isOpen={this.state.isOpen} toggle={this.toggle} >
-                <DropdownToggle caret>{this.props.profile.getCurrentUser().getUsername()}</DropdownToggle>
+            <Dropdown className="nav-dropdown" isOpen={this.state.isOpen} toggle={this.toggle} >
+                <DropdownToggle caret><span>{this.props.profile.getCurrentUser().getUsername()}</span></DropdownToggle>
                 <DropdownMenu right>
                     <DropdownItem><Link to={"/account"}>Account Settings</Link></DropdownItem>
                     <DropdownItem><Link to={"/customize"}>Customize Turtle</Link></DropdownItem>
@@ -74,16 +74,26 @@ class AccountDropdown extends React.Component {
 
 class LeftBar extends React.Component {
 
+    static IS_TESTING = false
+
     constructor(props) {
         super(props);
     }
 
     render() {
-        let link = this.props.profile.isLoggedIn()
-            ? (<Link to="/test">Testing Page</Link>)
-            : (<Link to="/sandbox">Try it Now!</Link>);
+        let link = null;
+        if (this.props.profile.isLoggedIn()) {
+            if (LeftBar.IS_TESTING) {
+                link = (<Link to="/test">Testing Page</Link>);
+            }
+        } else {
+            link = (<Link to="/sandbox">Try it Now!</Link>);
+        }
+        if (link === null) {
+            return null;
+        }
         return (
-            <Nav justified={"left"}>
+            <Nav className={"nopad"} justified={"left"}>
                 <NavItem>
                     <NavLink>
                         {link}
@@ -111,12 +121,12 @@ class Navigation extends React.Component {
     render() {
         return (
             <div className="turtle-nav">
-                <Navbar expand="md">
+                <Navbar expand="md" className={"no-pad"}>
                     <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar className={"justify-content-md-between"}>
+                    <Collapse isOpen={this.state.isOpen} navbar className={"no-pad justify-content-md-between turtle-navbar"}>
                         <LeftBar profile={this.props.profile} />
-                        <Link className={"no-pad no-margin"} to={"/"}><img className={"logo"} src={"/img/logo_inverted.png"} alt={"Click logo to return to home screen"} /></Link>
-                        <Nav>
+                        <Link className={"no-pad no-margin logo-link"} to={"/"}><img className={"logo"} src={"/img/logo_inverted.png"} alt={"Click logo to return to home screen"} /></Link>
+                        <Nav className={"no-pad"}>
                             <NavItem>
                                 <ClassDropdown profile={this.props.profile} />
                             </NavItem>

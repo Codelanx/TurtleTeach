@@ -7,7 +7,6 @@ class Assignment {
         new Assignment("Skyracing with Snakes", "03/12", "B+"),
         new Assignment("Dodge the Dog", "05/16", "B-"),
         new Assignment("Flip the Turtle", "05/21", "A-")
-
     ];
 
     constructor(name, dueDate, grade) {
