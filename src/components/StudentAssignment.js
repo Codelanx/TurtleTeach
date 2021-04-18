@@ -1,7 +1,7 @@
 import React from "react";
 import './StudentAssignment.css';
 import './ContentCard';
-import {Table, Col, Row} from "reactstrap";
+import {Table, Col, Row, Container} from "reactstrap";
 import ContentCard from "./ContentCard";
 
 class UpcomingAssignment extends React.Component {
@@ -13,7 +13,7 @@ class UpcomingAssignment extends React.Component {
         return (
             <Col>
 
-                <Row>Upcoming Assignments
+                <Row className={"categories"}>Upcoming Assignments
                 </Row>
                 <Table striped>
                     <tbody>
@@ -39,13 +39,13 @@ class PreviousAssignment extends React.Component {
     render() {
         return (
             <Col>
-                <Row>Past Assignments
+                <Row className={"categories"}>Past Assignments
                 </Row>
             <Table striped>
                 <tbody>
-                <tr><th scope="row">Swag Flip</th></tr>
-                <tr><th scope="row">Swag Slide</th></tr>
-                <tr><th scope="row">Swagscape</th></tr>
+                <tr><th scope="row">Slow and Curious</th></tr>
+                <tr><th scope="row">Tarantula Trap</th></tr>
+                <tr><th scope="row">Blue Lagoon</th></tr>
                 </tbody>
             </Table>
             </Col>
@@ -64,6 +64,13 @@ class StudentAssignment extends React.Component {
 
 
         return (
+            // <Container>
+            // <Row>
+            //     <Col>Current Puzzles</Col>
+            //     <Col>Upcoming Puzzles</Col>
+            // </Row>
+            //     <Row></Row>
+            // </Container>
             <Table borderless>
                 <tr>
                     <td>

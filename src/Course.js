@@ -2,7 +2,7 @@ class Assignment {
 
     static ASSIGNMENTS = [
         new Assignment("Slow and Curious", "04/20", "B"),
-        new Assignment("Tarantula Trp", "05/01", "A"),
+        new Assignment("Tarantula Trap", "05/01", "A"),
         new Assignment("Blue Lagoon", "04/25", "C"),
         new Assignment("Skyracing with Snakes", "03/12", "B+"),
         new Assignment("Dodge the Dog", "05/16", "B-"),
