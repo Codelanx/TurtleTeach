@@ -16,7 +16,7 @@ class GradeSpace extends React.Component {
 
                 <p className={"text"}>Student: Jimmy Longbottom</p>
                 <p className={"text"}>
-                    Grade: [<input type="text" name="Grade" width="10" />]/100
+                    Grade: [<input type="text" name="Grade" className={"gradeInput"} />]/100
                 </p>
                 <p className={"text"}><Button tag={Link} to="/ClassHome">Submit Grade</Button></p>
             </Col>

@@ -13,17 +13,17 @@ function CourseListing(props) {
 
     return (
         <React.Fragment>
-            <Row>
-                <Col xs={1} className={"Collapse"}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            <Row className={"assignments-course"}>
+                <Col xs={"1"} className={"Collapse"} id={props.id}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                          className="bi bi-arrows-collapse" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                               d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"/>
                     </svg></Col>
-                <Col xs={"5"} className={"assignments-course"}>{props.name}</Col>
-                <Col xs={"2"} className={"assignments-course"}>{props.completed}</Col>
-                <Col xs={"2"} className={"assignments-course"}>{props.graded}</Col>
-                <Col xs={"2"} className={"assignments-course"}>{props.date}</Col>
+                <Col xs={"5"}>{props.name}</Col>
+                <Col xs={"2"}>{props.completed}</Col>
+                <Col xs={"2"}>{props.graded}</Col>
+                <Col xs={"2"}>{props.date}</Col>
             </Row>
             <UncontrolledCollapse toggler={props.toggler} defaultOpen={"True"}>{props.children}</UncontrolledCollapse>
 

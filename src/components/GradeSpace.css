@@ -9,6 +9,11 @@
 
 }
 
+.gradeInput{
+    width: 40px;
+    height: 25px;
+}
+
 .text {
     text-align: center;
     font-size: 125%;
