@@ -3,9 +3,21 @@ import './StudentHome.css';
 import {
     Row, Col, Button
 } from 'reactstrap';
-import CardLayout from "../../components/CardLayout";
+import CardLayout, {CardCategory} from "../../components/CardLayout";
 import {Link} from "react-router-dom";
+import TurtleButton from "../../components/TurtleButton";
+import ContentCard from "../../components/ContentCard";
+import Course from "../../Course";
 
+function AvatarContainer(props) {
+    return (
+        <Row className={"avatar-container"}>
+            <Link to={"/customize"}>
+                <img className={"customize-avatar"} src={"/img/turtle.png"} alt="this was supposed to be the users profile image" />
+            </Link>
+        </Row>
+    );
+}
 
 class StudentHome extends React.Component {
 
@@ -20,29 +32,30 @@ class StudentHome extends React.Component {
 
 
     render() {
+        let courses = Course.getCourses();
         return (
-            <Row className="StudentHome">
-                <Col xs={10}>
-                <CardLayout topText={"Current Classes"} class2={"Turtle Racing"} date1={"Jan-Jun 2021"} grade1={"A"} class1={"Turtle Ethics"} date2={"Jan-Jun 2021"} grade2={"F"}
-                            bottomText={"Previous Classes"} class3={"Introduction"} date3={"Aug 2020"} grade3={"A"} class4={"Control Statements"} date4={"Aug-Dec 2020"} grade4={"B+"} class5={"Shell Dynamics"} date5={"Aug-Dec 2020"}
-                            grade5={"B-"} class6={"Turtle Genetics"} date6={"Aug-Dec 2020"} grade6={"D"} link={"/ClassHome"}/>
+            <Row className={"nopad"}>
+                <Col xs={"12"} md={"8"}>
+                    <CardLayout>
+                        <CardCategory title={"Current Classes"}>
+                            <ContentCard course={courses[0]} showGrade />
+                            <ContentCard course={courses[0]} showGrade />
+                        </CardCategory>
+                        <CardCategory title={"Previous Classes"}>
+                            <ContentCard course={courses[0]} showGrade />
+                            <ContentCard course={courses[0]} showGrade />
+                            <ContentCard course={courses[0]} showGrade />
+                            <ContentCard course={courses[0]} showGrade />
+                        </CardCategory>
+                    </CardLayout>
                 </Col>
-                <Col xs={1}>
-                    <Row>
-                    <img src="/img/turtle.png" alt="this was supposed to be the users profile image" width="100" height="100" />
-                    </Row>
-                    <Row>
-                        <Button tag={Link} to="/customize">Customize</Button>
-                    </Row>
-                    <Row>
-                        <Button tag={Link} to="/sandbox">Free Range </Button>
-                    </Row>
-                    <Row>
-                        <Button>Other Puzzles </Button>
-                    </Row>
-
+                <Col xs={"12"} md={"4"}>
+                    <span>My Avatar:</span>
+                    <AvatarContainer />
+                    <Link to={"/customize"}><TurtleButton expand>Customize</TurtleButton></Link>
+                    <Link to={"/sandbox"}><TurtleButton expand>Free Range</TurtleButton></Link>
+                    <Link to={"#"}><TurtleButton expand>More Puzzles</TurtleButton></Link>
                 </Col>
-
             </Row>
         );
     }
