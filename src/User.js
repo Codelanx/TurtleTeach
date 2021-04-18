@@ -43,12 +43,15 @@ class Users {
     static CREATOR = new User("Creator", UserType.CREATOR);
 
     static findUser(username) {
+        if (username === null || username === undefined) {
+            return null;
+        }
         switch (username.toLowerCase()) {
             case "student": return Users.STUDENT;
             case "teacher": return Users.TEACHER;
             case "creator": return Users.CREATOR;
+            default: return null;
         }
-        return null;
     }
 }
 
@@ -57,6 +60,19 @@ class Profile {
     constructor() {
         this.currentUser = null; //Users.STUDENT or Users.TEACHER
         this.components = [];
+        if (document.cookie) {
+            let vals = document.cookie.split(";");
+            let backRef = this;
+            vals.forEach((val) => {
+                let v = val.split("=");
+                if (v.length < 2) {
+                    return;
+                }
+                if (v[0] === "user") {
+                    this.currentUser = Users.findUser(v[1]);
+                }
+            });
+        }
     }
 
     getCurrentUser() {
@@ -72,6 +88,11 @@ class Profile {
         this.components.forEach((comp) => {
             comp.forceUpdate();
         });
+        let name = null;
+        if (back !== null) {
+            name = back.getUsername();
+        }
+        document.cookie = "user=" + name + ";";
         return back;
     }
 

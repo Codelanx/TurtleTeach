@@ -28,8 +28,44 @@ function RegisterButton(props) {
     );
 }
 
-class Login extends React.Component {
+function RegisterForm(props) {
+    return (
+        <div className="Register">
+            <FormGroup>
+                <Label for={"Name"}>Name</Label>
+                <Input type={"Name"} name={"Name"} id={"Name"} placeholder={"John Doe"}/>
+            </FormGroup>
+            <FormGroup>
+                <Label for={"email2"}>Email</Label>
+                <Input type={"email"} name={"email2"} id={"email2"}
+                       placeholder={"raphael@turtle.teach"}/>
+            </FormGroup>
+            <FormGroup>
+                <Label for={"password"}>Password</Label>
+                <Input type={"password"} name={"password2"} id={"password2"}/>
+            </FormGroup>
+            <FormGroup>
+                <RegisterButton parent={this}/>
+            </FormGroup>
 
+        </div>
+    );
+}
+
+function Register(props) {
+    return (
+        <div>
+            <div className={"col-6 container-fluid"}>
+                <h1>Register:</h1>
+                <Row className={"loginArea justify-content-center"}>
+                    <RegisterForm />
+                </Row>
+            </div>
+        </div>
+    );
+}
+
+class Login extends React.Component {
 
     constructor(props) {
         super(props);
@@ -82,28 +118,7 @@ class Login extends React.Component {
                             </FormGroup>
                         </div>
 
-                        <span>New user? Register Below</span>
-
-                        <div className="Register">
-                            <FormGroup>
-                                <Label for={"Name"}>Name</Label>
-                                <Input type={"Name"} name={"Name"} id={"Name"} placeholder={"John Doe"}/>
-                            </FormGroup>
-                            <FormGroup>
-                                <Label for={"email2"}>Email</Label>
-                                <Input type={"email"} name={"email2"} id={"email2"}
-                                       placeholder={"raphael@turtle.teach"}/>
-                            </FormGroup>
-                            <FormGroup>
-                                <Label for={"password"}>Password</Label>
-                                <Input type={"password"} name={"password2"} id={"password2"}/>
-                            </FormGroup>
-                            <FormGroup>
-                                <RegisterButton parent={this}/>
-                            </FormGroup>
-
-
-                        </div>
+                        <span>New user? <Link to={"/login/register"}>Register Now!</Link></span>
                     </Row>
                 </div>
             </React.Fragment>
@@ -112,3 +127,6 @@ class Login extends React.Component {
 }
 
 export default Login;
+export {
+    Register
+};

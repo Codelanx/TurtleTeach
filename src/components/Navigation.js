@@ -66,9 +66,9 @@ class ClassDropdown extends React.Component {
             <Dropdown className="nav-dropdown" isOpen={this.state.isOpen} toggle={this.toggle} >
                 <DropdownToggle caret><span>My Classes</span></DropdownToggle>
                 <DropdownMenu right>
-                    <DropdownItem><Link to={"/class/101"}>Class 1</Link></DropdownItem>
-                    <DropdownItem><Link to={"/class/102"}>Class 2</Link></DropdownItem>
-                    <DropdownItem><Link to={"/class/103"}>Class 3</Link></DropdownItem>
+                    <Link to={"/class/101"}><DropdownItem>Class 1</DropdownItem></Link>
+                    <Link to={"/class/102"}><DropdownItem>Class 2</DropdownItem></Link>
+                    <Link to={"/class/103"}><DropdownItem>Class 3</DropdownItem></Link>
                 </DropdownMenu>
             </Dropdown>
         );
@@ -94,9 +94,9 @@ class AccountDropdown extends React.Component {
             <Dropdown className="nav-dropdown" isOpen={this.state.isOpen} toggle={this.toggle} >
                 <DropdownToggle caret><span>{this.props.profile.getCurrentUser().getUsername()}</span></DropdownToggle>
                 <DropdownMenu right>
-                    <DropdownItem><Link to={"/account"}>Account Settings</Link></DropdownItem>
-                    <DropdownItem><Link to={"/customize"}>Customize Turtle</Link></DropdownItem>
-                    <DropdownItem><Link to={"/logout"}>Sign Out</Link></DropdownItem>
+                    <Link to={"/account"}><DropdownItem>Account Settings</DropdownItem></Link>
+                    <Link to={"/customize"}><DropdownItem>Customize Turtle</DropdownItem></Link>
+                    <Link to={"/logout"}><DropdownItem>Sign Out</DropdownItem></Link>
                 </DropdownMenu>
             </Dropdown>
         );
@@ -143,6 +143,7 @@ class Navigation extends React.Component {
         this.state = {
             isOpen: false,
         };
+        this.isAuth = !!props.isAuth;
     }
 
     toggle() {
@@ -150,24 +151,27 @@ class Navigation extends React.Component {
     }
 
     render() {
+        let rightNav = null;
+        if (!this.isAuth) {
+            rightNav = (
+                <Nav className={"no-pad"}>
+                    <NavItem>
+                        <ClassDropdown profile={this.props.profile} />
+                    </NavItem>
+                    <NavItem>
+                        <AccountDropdown profile={this.props.profile} />
+                    </NavItem>
+                </Nav>
+            );
+        }
         return (
             <div className="turtle-nav">
-                <Navbar expand="md" className={"no-pad"}>
+                <Navbar expand="md" className={"turtle-navbar"}>
                     <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar className={"no-pad justify-content-md-between turtle-navbar"}>
+                    <Collapse isOpen={this.state.isOpen} navbar className={"justify-content-md-between"}>
                         <LeftBar profile={this.props.profile} />
                         <Link className={"no-pad no-margin logo-link"} to={"/"}><img className={"logo"} src={"/img/logo_inverted.png"} alt={"Click logo to return to home screen"} /></Link>
-                        <Nav className={"no-pad"}>
-                            <NavItem>
-                                <ClassDropdown profile={this.props.profile} />
-                            </NavItem>
-                            <NavItem>
-                                <ProfilePicture profile={this.props.profile}/>
-                            </NavItem>
-                            <NavItem>
-                                <AccountDropdown profile={this.props.profile} />
-                            </NavItem>
-                        </Nav>
+                        {rightNav}
                     </Collapse>
                 </Navbar>
             </div>

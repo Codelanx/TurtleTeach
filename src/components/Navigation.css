@@ -5,6 +5,11 @@
     margin-bottom: 1rem;
 }
 
+.turtle-navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .nav-dropdown {
     background-color: #04a43c;
 }
@@ -36,14 +41,14 @@
 
 .nav-dropdown > button {
     background-color: #04a43c;
-    transform: scaleY(1.5);
+    /*transform: scaleY(1.5);*/
     border: none;
     border-radius: 0;
 }
 
 .nav-dropdown > button > span {
     display: inline-block !important;
-    transform: scaleY(0.6666);
+    /*transform: scaleY(0.6666);*/
 }
 
 .level-badge {
@@ -71,16 +76,21 @@
     background-color: #038832;
 }
 
-.logo-link:first-child {
-    transform: translateX(50%);
+.turtle-navbar > div {
+    align-items: stretch;
+}
+
+.turtle-navbar > div > ul > li,
+.turtle-navbar > div > ul > li > div:first-child {
+    display: flex;
 }
 
 .logo {
-    margin-top: .7rem;
-    margin-bottom: -.2rem;
-    width: 100px;
+    margin-bottom: -1rem;
+    max-width: 100%;
+    max-height: 5rem;
     height: auto;
-    transform: scale(1.8);
+    width: auto;
 }
 
 .no-pad {

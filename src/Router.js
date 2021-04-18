@@ -1,6 +1,6 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
-import Login from "./pages/login/Login";
+import Login, {Register} from "./pages/login/Login";
 import Customize from "./pages/customize/Customize";
 import Course from "./pages/course/Course";
 import Sandbox from "./pages/sandbox/Sandbox";
@@ -11,6 +11,15 @@ import ClassHome from "./pages/ClassHome/ClassHome";
 import StudentHome from "./pages/StudentHome/StudentHome";
 import TeacherHome from "./pages/TeacherHome/TeacherHome";
 import DevEnvironment from "./pages/DevEnvironment/DevEnvironment";
+import {Redirect} from "react-router";
+
+function LogoutRedirect(props) {
+    props.profile.setCurrentUser(null);
+    return (
+        <Redirect to={"/"} />
+    )
+}
+
 
 function HomeRoute(props) {
     if (false) { //TODO: REMOVE
@@ -37,8 +46,14 @@ function TurtleRouter(props) {
             <Route path="/customize">
                 <Customize profile={props.profile} />
             </Route>
+            <Route path="/login/register">
+                <Register profile={props.profile} />
+            </Route>
             <Route path="/login">
                 <Login profile={props.profile} />
+            </Route>
+            <Route path="/logout">
+                <LogoutRedirect profile={props.profile} />
             </Route>
             <Route path="/test/component">
                 <ComponentPage profile={props.profile} />
