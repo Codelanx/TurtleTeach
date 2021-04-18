@@ -12,6 +12,7 @@ import StudentHome from "./pages/StudentHome/StudentHome";
 import TeacherHome from "./pages/TeacherHome/TeacherHome";
 import DevEnvironment from "./pages/DevEnvironment/DevEnvironment";
 import {Redirect} from "react-router";
+import {UserType} from "./User";
 
 function LogoutRedirect(props) {
     props.profile.setCurrentUser(null);
@@ -22,16 +23,17 @@ function LogoutRedirect(props) {
 
 
 function HomeRoute(props) {
-    if (false) { //TODO: REMOVE
-        return (
-            <Testing profile={props.profile} />
-        );
-    }
     if (!props.profile.isLoggedIn()) {
         return (<Landing profile={props.profile} />);
     }
-    //TODO: Other conditionals
-    return (<Course profile={props.profile} />);
+    switch (props.profile.getCurrentUser().getUserType()) {
+        case UserType.STUDENT:
+            return (<StudentHome profile={props.profile} />)
+        case UserType.TEACHER:
+            return (<TeacherHome profile={props.profile} />)
+        default:
+            return (<Landing profile={props.profile} />)
+    }
 }
 
 function TurtleRouter(props) {
@@ -73,8 +75,11 @@ function TurtleRouter(props) {
             <Route path="/DevEnvironment">
                 <DevEnvironment profile={props.profile} submission={"124891221"} grading={true} />
             </Route>
-            <Route path="/">
+            <Route path="/landing">
                 <Landing profile={props.profile} />
+            </Route>
+            <Route path="/">
+                <HomeRoute profile={props.profile} />
             </Route>
         </Switch>
     );

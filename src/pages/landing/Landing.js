@@ -1,8 +1,6 @@
 import React from "react";
 import './Landing.css';
 import {Carousel, CarouselCaption, CarouselControl, CarouselIndicators, CarouselItem} from "reactstrap";
-import StudentHome from "../StudentHome/StudentHome";
-import TeacherHome from "../TeacherHome/TeacherHome";
 
 class Landing extends React.Component {
 
@@ -86,25 +84,4 @@ class Landing extends React.Component {
 }
 
 
-class isLogged extends React.Component {
-    render() {
-        function whichLanding(profile){
-
-            if(profile.isLoggedIn()) {
-                if(profile.getCurrentUser().isTeacher()) {
-                    return (
-                        <TeacherHome/>
-                    );
-                }
-                return (<StudentHome/>);
-            }
-            return (<Landing profile/>);
-        }
-
-        return (whichLanding(this.props.profile));
-
-    }
-}
-
-
-export default isLogged;
+export default Landing;

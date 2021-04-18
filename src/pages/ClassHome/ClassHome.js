@@ -31,9 +31,6 @@ class ClassHome extends React.Component {
         super(props);
     }
 
-
-
-
     render() {
 
         function whichHome(profile){
