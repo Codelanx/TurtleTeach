@@ -1,6 +1,6 @@
 import React from "react";
 import './TurtleButton.css';
-import {Badge, Button, Input, InputGroup, Nav, NavItem, NavLink} from "reactstrap";
+import {Button} from "reactstrap";
 
 function TurtleButton(props) {
     let out = "";
