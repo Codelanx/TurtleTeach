@@ -38,14 +38,14 @@ class StudentHome extends React.Component {
                 <Col xs={"12"} md={"8"}>
                     <CardLayout>
                         <CardCategory title={"Current Classes"}>
-                            <ContentCard course={courses[0]} showGrade />
-                            <ContentCard course={courses[0]} showGrade />
+                            <ContentCard course={courses[1]} showGrade />
+                            <ContentCard course={courses[3]} showGrade />
                         </CardCategory>
                         <CardCategory title={"Previous Classes"}>
+                            <ContentCard course={courses[2]} showGrade />
                             <ContentCard course={courses[0]} showGrade />
-                            <ContentCard course={courses[0]} showGrade />
-                            <ContentCard course={courses[0]} showGrade />
-                            <ContentCard course={courses[0]} showGrade />
+                            <ContentCard course={courses[5]} showGrade />
+                            <ContentCard course={courses[4]} showGrade />
                         </CardCategory>
                     </CardLayout>
                 </Col>

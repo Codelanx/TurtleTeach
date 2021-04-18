@@ -26,13 +26,13 @@ class TeacherHome extends React.Component {
                     <CardLayout>
                         <CardCategory title={"Current Classes"}>
                             <ContentCard course={courses[0]} showBadge />
-                            <ContentCard course={courses[0]} showBadge />
+                            <ContentCard course={courses[1]} showBadge />
                         </CardCategory>
                         <CardCategory title={"Previous Classes"}>
-                            <ContentCard course={courses[0]} showBadge />
-                            <ContentCard course={courses[0]} showBadge />
-                            <ContentCard course={courses[0]} showBadge />
-                            <ContentCard course={courses[0]} showBadge />
+                            <ContentCard course={courses[2]} showBadge />
+                            <ContentCard course={courses[3]} showBadge />
+                            <ContentCard course={courses[4]} showBadge />
+                            <ContentCard course={courses[5]} showBadge />
                         </CardCategory>
                     </CardLayout>
                 </Row>
