@@ -12,6 +12,8 @@ function LoginButton(props) {
         if (props.parent.profile.setCurrentUser(props.parent.state.email) !== null) {
             history.push('/');
             //redir = (<Redirect to={'/'} />);
+        } else {
+            //TODO: Incorrect user name or password feedback
         }
     }
 
