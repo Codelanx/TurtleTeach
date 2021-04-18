@@ -17,14 +17,6 @@ import {
 import {Link} from "react-router-dom";
 import {UserType} from "../User";
 
-function LevelBadge(props) {
-    return (
-        <div className={"level-badge"}>
-            {props.children}
-        </div>
-    );
-}
-
 function AvatarBadge(props) {
     if (!props.profile.isLoggedIn()) {
         return null;
@@ -51,8 +43,6 @@ function AvatarBadge(props) {
             return null;
     }
 }
-
-
 
 class ProfilePicture extends React.Component {
     constructor(props) {
@@ -138,7 +128,7 @@ class AccountDropdown extends React.Component {
 
 class LeftBar extends React.Component {
 
-    static IS_TESTING = false
+    static IS_TESTING = true;
 
     constructor(props) {
         super(props);

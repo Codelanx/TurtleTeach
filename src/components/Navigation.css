@@ -141,8 +141,13 @@ i {
     align-items: stretch;
 }
 
-.turtle-navbar > div > ul > li,
-.turtle-navbar > div > ul > li > div:first-child {
+.turtle-navbar > div > ul > li {
+    display: flex;
+    align-items: center;
+}
+
+.turtle-navbar > div > ul > li > a,
+.turtle-navbar > div > ul > li > div {
     display: flex;
 }
 
