@@ -98,7 +98,7 @@ class Navigation extends React.Component {
 
     constructor(props) {
         super(props);
-
+        this.props.profile.registerComponentUpdates(this);
         this.state = {
             isOpen: false,
         };

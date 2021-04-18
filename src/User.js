@@ -55,15 +55,24 @@ class Users {
 class Profile {
 
     constructor() {
-        this.currentUser = Users.STUDENT; //Users.STUDENT or Users.TEACHER
+        this.currentUser = null; //Users.STUDENT or Users.TEACHER
+        this.components = [];
     }
 
     getCurrentUser() {
         return this.currentUser;
     }
 
+    registerComponentUpdates(component) {
+        this.components.push(component);
+    }
+
     setCurrentUser(username) {
-        return this.currentUser = Users.findUser(username);
+        let back = this.currentUser = Users.findUser(username);
+        this.components.forEach((comp) => {
+            comp.forceUpdate();
+        });
+        return back;
     }
 
     isLoggedIn() {
