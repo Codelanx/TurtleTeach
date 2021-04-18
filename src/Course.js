@@ -1,3 +1,24 @@
+class Assignment {
+
+    static ASSIGNMENTS = [
+        new Assignment("yolo"),
+        new Assignment("pants")
+    ];
+
+    constructor(name) {
+        this._name = name;
+    }
+
+
+    get name() {
+        return this._name;
+    }
+
+    static getAssignments() {
+        return Assignment.ASSIGNMENTS;
+    }
+}
+
 class Course {
 
     /*
