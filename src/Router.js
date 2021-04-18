@@ -2,7 +2,6 @@ import React from "react";
 import {Route, Switch} from "react-router-dom";
 import Login, {Register} from "./pages/login/Login";
 import Customize from "./pages/customize/Customize";
-import Course from "./pages/course/Course";
 import Sandbox from "./pages/sandbox/Sandbox";
 import Testing from "./pages/Testing";
 import Landing from "./pages/landing/Landing";
@@ -11,8 +10,9 @@ import ClassHome from "./pages/ClassHome/ClassHome";
 import StudentHome from "./pages/StudentHome/StudentHome";
 import TeacherHome from "./pages/TeacherHome/TeacherHome";
 import DevEnvironment from "./pages/DevEnvironment/DevEnvironment";
-import {Redirect} from "react-router";
+import {Redirect, useParams} from "react-router";
 import {UserType} from "./User";
+import Course from "./Course";
 
 function LogoutRedirect(props) {
     props.profile.setCurrentUser(null);
@@ -28,12 +28,23 @@ function HomeRoute(props) {
     }
     switch (props.profile.getCurrentUser().getUserType()) {
         case UserType.STUDENT:
-            return (<StudentHome profile={props.profile} />)
+            return (<StudentHome profile={props.profile} />);
         case UserType.TEACHER:
-            return (<TeacherHome profile={props.profile} />)
+            return (<TeacherHome profile={props.profile} />);
         default:
-            return (<Landing profile={props.profile} />)
+            return (<Landing profile={props.profile} />);
     }
+}
+
+function ClassRoute(props) {
+    let {id} = useParams();
+    let course = Course.findCourse(id);
+    if (course === null) {
+        course = Course.getCourses()[0];
+    }
+    return (
+        <ClassHome profile={props.profile} course={course} />
+    );
 }
 
 function TurtleRouter(props) {
@@ -42,8 +53,8 @@ function TurtleRouter(props) {
             <Route path="/sandbox">
                 <Sandbox profile={props.profile} />
             </Route>
-            <Route path="/class/:classID">
-                <Course profile={props.profile} />
+            <Route path="/class/:id">
+                <ClassRoute profile={props.profile} />
             </Route>
             <Route path="/customize">
                 <Customize profile={props.profile} />

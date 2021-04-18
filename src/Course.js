@@ -58,6 +58,19 @@ class Course {
         this._teacherNotifCount = teacherNotifCount;
     }
 
+    static findCourse(id) {
+        if (id === null || id === undefined) {
+            return null;
+        }
+        let c = Course.COURSES.find((course) => {
+            return course.id.toLowerCase() === id;
+        });
+        if (c === undefined) {
+            c = null;
+        }
+        return c;
+    }
+
     get id() {
         return this._id;
     }
@@ -84,3 +97,6 @@ class Course {
 }
 
 export default Course;
+export {
+    Assignment
+};
