@@ -34,7 +34,7 @@ function AvatarBadge(props) {
         case UserType.STUDENT:
             return (
                 <div className={"avatar-level-badge"}>
-                    <i className={"bi bi-star-fill"}>
+                    <i className={"bi bi-star-fill level"}>
                         {props.children}
                     </i>
                 </div>
