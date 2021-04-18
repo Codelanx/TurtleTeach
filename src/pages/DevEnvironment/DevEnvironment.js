@@ -9,27 +9,26 @@ import Instuructions from "../../components/Instuructions";
 import { Link } from "react-router-dom";
 import {Button, Row, Col} from "reactstrap";
 import CodingSpace from "../../components/CodingSpace";
+import TurtleButton from "../../components/TurtleButton";
 
 class StudentEnv extends React.Component {
     render() {
         return (
             <Col>
                 <Row xs="3">
-                    <Col xs={4}>
-                        <Button>Help</Button>
-                    </Col>
-                    <Col xs={4}>
-                        <Button tag={Link} to="/ClassHome">Submit</Button>
-                    </Col>
-                    <Col xs={4}>
-                        <SearchBar placeholder={"Search Pieces"}/>
-                    </Col>
+
+                        <TurtleButton className={"help"}>Help</TurtleButton>
+
+                        <Link to={"/classHome"} className={"center"}><TurtleButton className={"button-size"}>Submit</TurtleButton></Link>
+
+                        <SearchBar placeholder={"Search Pieces"} className={"searchbar"}/>
+
 
                 </Row>
                 <Row>
                     <Col xs={4}>
-                        <Row><CodeBlockSpace/></Row>
-                        <Row><Instuructions/></Row>
+                        <Row><CodeBlockSpace className={"left-side"}/></Row>
+                        <Row><Instuructions className={"left-side"}/></Row>
                     </Col>
                     <Col xs={4}>
                         <CodingSpace text={"Coding Area - Student Drags Pieces Here"}/>

@@ -1,0 +1,26 @@
+.searchbar{
+    margin-right: 0;
+    margin-left: auto;
+    max-height: 50px;
+}
+
+.help{
+    margin-right: auto;
+    margin-left: 0;
+    max-width: 125px;
+    max-height: 50px;
+}
+
+.center{
+    margin-right: -30%;
+    margin-left: auto;
+}
+
+.button-size{
+    max-width: 125px;
+    min-width: 125px;
+}
+
+.left-side{
+    min-width: 400px;
+}

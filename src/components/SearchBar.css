@@ -1,5 +1,10 @@
 .searchbar{
     border: 1px solid #666;
     border-radius: 5px;
-    padding: 0 .4rem;
+    padding: 0 0rem;
+}
+
+.search-icon{
+    min-width: 30px;
+    height: 100%;
 }

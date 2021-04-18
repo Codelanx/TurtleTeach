@@ -14,9 +14,9 @@ class Sandbox extends React.Component {
         return (
             <div className="Sandbox">
                 <h1>Sandbox</h1>
-                <Row><Col xs={8}/><Col xs={4}><SearchBar placeholder={"Search Pieces"}/></Col></Row>
+                <Row><SearchBar placeholder={"Search Pieces"} className={"searchbar"}/></Row>
                 <Row xs="3">
-                    <Col xs={4}>
+                    <Col className={"padding"}>
                         <div className="PiecePicker">
                             <span>Piece Selection</span>
                             <div><CodeBlock text={"Forward x"}/></div>
@@ -28,10 +28,10 @@ class Sandbox extends React.Component {
                             <div><CodeBlock text={"Speed x"}/></div>
                         </div>
                     </Col>
-                    <Col xs={4}>
-                        <CodingSpace text={"Drag and Drop"}/>
+                    <Col>
+                        <CodingSpace text={"Drag and Drop"} className={"codingSpace"}/>
                     </Col>
-                    <Col xs={4}>
+                    <Col>
                         <Row>
                             <ExecutionSpace/>
                         </Row>

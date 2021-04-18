@@ -3,15 +3,29 @@
 
 
 }
+.padding{
 
+
+}
+
+.codingSpace{
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 600px;
+  width: 400px;
+  background-color: #bbffbb;
+
+}
 
 .PiecePicker {
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
   height: 600px;
-  width: 400px;
+  min-width: 400px;
   background-color: #99ffff;
+
 
 
 }
@@ -21,7 +35,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   height: 800px;
-  width: 500px;
+  width: 400px;
 
 }
 
@@ -30,9 +44,14 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   height: 500px;
-  width: 550px;
+  width: 400px;
 }
 
 .Playback {
   /*buttons on bottom */
+}
+
+.searchbar{
+  margin-right: 0;
+  margin-left: auto;
 }
