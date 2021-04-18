@@ -1,6 +1,7 @@
 import React from "react";
 import './ContentCard.css';
 import {Card, CardImg, Button, Col, Row, CardBody} from "reactstrap";
+import {Redirect, useHistory} from "react-router";
 import { Link } from "react-router-dom";
 
 function CardBadge(props) {
@@ -11,6 +12,7 @@ function CardBadge(props) {
     );
 }
 
+
 class ContentCard extends React.Component {
 
     constructor(props) {
@@ -19,9 +21,9 @@ class ContentCard extends React.Component {
         this.showGrade = !!props.showGrade;
     }
 
-    redirect() {
-        let next = "/class/" + this.props.course.id;
-        //TODO: open next page
+    redirect(course) {
+        let next = "/class/" + course.id;
+        //TODO Make this function work
     }
 
     render() {
@@ -32,15 +34,15 @@ class ContentCard extends React.Component {
         let grade = null;
         let textSize = "12";
         if (this.showGrade) {
-            textSize = "10";
+            textSize = "9";
             grade = (
-                <Col xs={"2"} className={"gradeText"}>
+                <Col xs={"3"} className={"gradeText"}>
                     {this.props.course.currentGrade}
                 </Col>
             );
         }
         return (
-            <Card onClick={this.redirect}>
+            <Card onClick={this.redirect(this.props.course)}>
                 <CardImg src="/img/turtle.png" alt="this was supposed to be a turtle" className={"card-image"}/>
                 <CardBody>
                     <Row>
