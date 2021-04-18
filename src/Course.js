@@ -44,10 +44,10 @@ class Course {
     static COURSES = [
         new Course("15124", "Turtle Racing", "Jan - Jun 2021", "A", "99+"), //TODO: Fill out
         new Course("15284", "Turtle Ethics", "Jan - Jun 2021", "B", "76"),
-        new Course("14902", "Introduction", "Aug - Dec 202O", "A", "24"),
-        new Course("14029", "Control Statements", "Aug - Dec 202O", "A", "12"),
-        new Course("14023", "Shell Dynamics", "Aug - Dec 202O", "C+", "5"),
-        new Course("14619", "Turtle Ethics", "Aug - Dec 202O", "F", "1")
+        new Course("14902", "Introduction", "Aug - Dec 2020", "A", "24"),
+        new Course("14029", "Control Statements", "Aug - Dec 2020", "A", "12"),
+        new Course("14023", "Shell Dynamics", "Aug - Dec 2020", "C+", "5"),
+        new Course("14619", "Turtle Ethics", "Aug - Dec 2020", "F", "1")
     ];
 
     constructor(id, title, dates, currentGrade, teacherNotifCount) {
