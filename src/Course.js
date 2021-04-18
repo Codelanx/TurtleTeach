@@ -1,17 +1,32 @@
 class Assignment {
 
     static ASSIGNMENTS = [
-        new Assignment("yolo"),
-        new Assignment("pants")
+        new Assignment("Slow and Curious", "04/20", "B"),
+        new Assignment("Tarantula Trp", "05/01", "A"),
+        new Assignment("Blue Lagoon", "04/25", "C"),
+        new Assignment("Skyracing with Snakes", "03/12", "B+"),
+        new Assignment("Dodge the Dog", "05/16", "B-"),
+        new Assignment("Flip the Turtle", "05/21", "A-")
+
     ];
 
-    constructor(name) {
+    constructor(name, dueDate, grade) {
         this._name = name;
+        this._dueDate = dueDate;
+        this._grade = grade;
     }
 
 
     get name() {
         return this._name;
+    }
+
+    get dueDate() {
+        return this._dueDate;
+    }
+
+    get grade() {
+        return this._grade;
     }
 
     static getAssignments() {
