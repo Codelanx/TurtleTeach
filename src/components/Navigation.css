@@ -12,6 +12,14 @@
 .nav-item {
 }
 
+.profile-image{
+    max-width: 4rem;
+    max-height: 3rem;
+    height: 100%;
+    width: 100%;
+
+}
+
 .nav-dropdown > div {
     color: #111;
     /*margin-top: 0.4rem;*/
@@ -36,6 +44,21 @@
 .nav-dropdown > button > span {
     display: inline-block !important;
     transform: scaleY(0.6666);
+}
+
+.level-badge {
+    position: absolute;
+    top: 5px;
+    right: 95px;
+    background-color: #ffcccc;
+    border: 1px solid #333;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: text-top;
+    text-overflow: clip;
+    padding: 0;
+    border-radius: 50%;
 }
 
 .nav-dropdown > button:hover,

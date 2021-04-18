@@ -3,6 +3,7 @@ import './Navigation.css';
 import {
     Badge,
     Button,
+    CardImg,
     Collapse,
     Dropdown, DropdownItem, DropdownMenu, DropdownToggle,
     Input,
@@ -14,6 +15,36 @@ import {
     NavLink
 } from "reactstrap";
 import {Link} from "react-router-dom";
+
+function LevelBadge(props) {
+    return (
+        <div className={"level-badge"}>
+            {props.children}
+        </div>
+    );
+}
+
+
+
+class ProfilePicture extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        var prof = this.props.profile;
+        if (!prof.isLoggedIn() || prof.getCurrentUser().isCreator()) {
+            return null;
+        }
+        else if (prof.getCurrentUser().isTeacher()){
+            return (<CardImg src="/img/turtle.png" alt="this was supposed to be a turtle" className={"profile-image"}/>)
+        }
+        else{
+            return (<div><CardImg src="/img/turtle.png" alt="this was supposed to be a turtle" className={"profile-image"}/><p className={"level-badge"}>7</p></div>)
+        }
+    }
+}
+
 
 class ClassDropdown extends React.Component {
 
@@ -129,6 +160,9 @@ class Navigation extends React.Component {
                         <Nav className={"no-pad"}>
                             <NavItem>
                                 <ClassDropdown profile={this.props.profile} />
+                            </NavItem>
+                            <NavItem>
+                                <ProfilePicture profile={this.props.profile}/>
                             </NavItem>
                             <NavItem>
                                 <AccountDropdown profile={this.props.profile} />
