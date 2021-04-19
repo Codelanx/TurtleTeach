@@ -12,8 +12,9 @@ class TeacherStudentView extends React.Component {
     }
 
     render() {
+        let list = [];
         for (let i = 0; i < 10; i++) {
-
+            list.push(<StudentLabel checkbox={true} showEmail={true} lastOnline={true} />);
         }
 
 
@@ -22,14 +23,7 @@ class TeacherStudentView extends React.Component {
                 <Col sm={"12"} md={"6"}>
                     <Row><h1>Student Roster</h1></Row>
                     <Row className={"student-roster"}>
-                        <StudentLabel checkbox={true} showEmail={true} lastOnline={true} />
-                        <StudentLabel checkbox={true} showEmail={true} lastOnline={true} />
-                        <StudentLabel checkbox={true} showEmail={true} lastOnline={true} />
-                        <StudentLabel checkbox={true} showEmail={true} lastOnline={true} />
-                        <StudentLabel checkbox={true} showEmail={true} lastOnline={true} />
-                        <StudentLabel checkbox={true} showEmail={true} lastOnline={true} />
-                        <StudentLabel checkbox={true} showEmail={true} lastOnline={true} />
-                        <StudentLabel checkbox={true} showEmail={true} lastOnline={true} />
+                        {list}
                     </Row>
                 </Col>
                 <Col sm={"12"} md={"6"} className={"area"}>

@@ -8,14 +8,29 @@ class StudentLabel extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {checked: false};
     }
 
+    check = () => {
+        console.log("check method");
+        this.setState({checked: !this.state.checked});
+    };
+
     render() {
-        let checkbox = this.props.checkbox === true
-            ? (<Col xs={"1"} className={"fix-height"}>
-                <input type={"checkbox"} style={{height: "100%"}} />
-            </Col>)
-            : null;
+        let checkbox = null;
+        if (!!this.props.checkbox) {
+            let box;
+            if (this.state.checked) {
+                box = (<input type={"checkbox"} style={{height: "100%"}} checked/>);
+            } else {
+                box = (<input type={"checkbox"} style={{height: "100%"}} />);
+            }
+            checkbox = (
+                <Col xs={"1"} className={"fix-height"}>
+                    {box}
+                </Col>
+            );
+        }
         let showEmail = this.props.showEmail === true
             ? (<React.Fragment><br /><i>student@email.com</i></React.Fragment>)
             : null;
@@ -28,7 +43,7 @@ class StudentLabel extends React.Component {
         );
         let textWidth = end === null ? "8" : "5";
         return (
-            <Row className="mainContainer">
+            <Row className="mainContainer" onClick={this.check}>
                 {checkbox}
                 <Col xs={"3"} className={"fix-height student-roster-img"}>
                     <img src="/img/turtle.png" alt="this was supposed to be a turtle" className={"student-roster-image"} />
