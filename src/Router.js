@@ -47,11 +47,32 @@ function ClassRoute(props) {
     );
 }
 
+function PuzzleRoute(props) {
+    let {id, submission} = useParams();
+    let puzzle = null; //TODO: Puzzle data
+    if (submission) {
+        return (<DevEnvironment profile={props.profile} puzzle={puzzle} submission={submission} grading={!!props.grading} />);
+    } else {
+        return (<DevEnvironment profile={props.profile} puzzle={puzzle} grading={!!props.grading} />);
+    }
+}
+
+function SandboxRoute(props) {
+    let {id} = useParams();
+    let puzzle = null; //TODO: Puzzle data
+    return (
+        <Sandbox profile={props.profile} puzzle={puzzle} />
+    );
+}
+
 function TurtleRouter(props) {
     return (
         <Switch>
             <Route path="/sandbox">
-                <Sandbox profile={props.profile} />
+                <SandboxRoute profile={props.profile} />
+            </Route>
+            <Route path="/sandbox/:id">
+                <SandboxRoute profile={props.profile} />
             </Route>
             <Route path="/class/:id">
                 <ClassRoute profile={props.profile} />
@@ -73,18 +94,12 @@ function TurtleRouter(props) {
             </Route>
             <Route path="/test">
                 <Testing profile={props.profile} />
-            </Route>n
-            <Route path="/ClassHome">
-                <ClassHome profile={props.profile} />
             </Route>
-            <Route path="/StudentHome">
-                <StudentHome profile={props.profile} />
+            <Route path="/puzzle/:id/grading/:submission">
+                <PuzzleRoute profile={props.profile} grading/>
             </Route>
-            <Route path="/TeacherHome">
-                <TeacherHome profile={props.profile} />
-            </Route>
-            <Route path="/DevEnvironment">
-                <DevEnvironment profile={props.profile} submission={"124891221"} grading={true} />
+            <Route path="/puzzle/:id">
+                <PuzzleRoute profile={props.profile} />
             </Route>
             <Route path="/landing">
                 <Landing profile={props.profile} />
