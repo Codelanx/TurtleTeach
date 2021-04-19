@@ -16,7 +16,7 @@ function PuzzleListing(props) {
     return (
         <React.Fragment>
             <Row className={"assignments-course"}>
-                <Col xs={"1"} className={"Collapse"} id={props.name}>
+                <Col xs={"1"} className={"Collapse"} onClick={toggle}>
                     {icon}
                 </Col>
                 <Col xs={"5"}>{props.name}</Col>
