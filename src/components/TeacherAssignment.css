@@ -1,14 +1,37 @@
-.assignments-course {
+.assignments-course > div:not(:first-child) {
     background-color: #04A43C;
     padding: 1rem 0;
     border-top: 1px solid #00bb00;
 }
 
-.assignments-puzzle {
+.assignments-course > div:first-child {
+    text-align: right;
+    font-size: 18pt;
+    padding-right: 0.25rem;
+}
+
+.assignments-course > div:nth-child(2),
+.assignments-puzzle > div:nth-child(2) {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.assignments-course {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.assignments-puzzle > div:not(:first-child)  {
     background-color: #999;
-    padding: 1rem 0;
-    margin-left: 8%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
     border-top: 1px solid #bbb;
+}
+
+.assignments-puzzle > div > a {
+    color: #91f6f6;
 }
 
 .category {
