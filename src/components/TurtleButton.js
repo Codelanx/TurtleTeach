@@ -19,7 +19,7 @@ function TurtleButton(props) {
     }
 
     return (
-        <Button className={out} >
+        <Button style={props.style} className={out} >
             {props.children}
         </Button>
     );

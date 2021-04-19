@@ -1,6 +1,7 @@
 import React from "react";
 import './SearchBar.css';
 import {Row, Col, InputGroup, Button, InputGroupAddon, Input, InputGroupText} from "reactstrap";
+import TurtleButton from "./TurtleButton";
 
 
 class SearchBar extends React.Component {
@@ -15,11 +16,11 @@ class SearchBar extends React.Component {
                 <InputGroup className={"col-12"}>
                     <Input placeholder={this.props.placeholder} />
                     <InputGroupAddon addonType={"append"}>
-                        <Button>
+                        <TurtleButton style={{"border-radius": "0px"}}>
                             <i className={"bi bi-search"}>
                                 &nbsp;&nbsp;Search
                             </i>
-                        </Button>
+                        </TurtleButton>
                     </InputGroupAddon>
                 </InputGroup>
             </Col>
