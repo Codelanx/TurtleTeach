@@ -6,13 +6,13 @@ import Sandbox from "./pages/sandbox/Sandbox";
 import Testing from "./pages/Testing";
 import Landing from "./pages/landing/Landing";
 import ComponentPage from "./pages/ComponentPage";
-import ClassHome from "./pages/ClassHome/ClassHome";
-import StudentHome from "./pages/StudentHome/StudentHome";
-import TeacherHome from "./pages/TeacherHome/TeacherHome";
-import DevEnvironment from "./pages/DevEnvironment/DevEnvironment";
+import ClassHome from "./pages/clazz/ClassHome";
+import StudentHome from "./pages/home/StudentHome";
+import TeacherHome from "./pages/home/TeacherHome";
+import DevEnvironment from "./pages/puzzle/DevEnvironment";
 import {Redirect, useParams} from "react-router";
-import {UserType} from "./User";
-import Course from "./Course";
+import {UserType} from "./data/User";
+import Course from "./data/Course";
 
 function LogoutRedirect(props) {
     props.profile.setCurrentUser(null);

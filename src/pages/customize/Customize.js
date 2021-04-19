@@ -1,6 +1,6 @@
 import React from 'react'
 import './Customize.css';
-import User from "../../User";
+import User from "../../data/User";
 import SearchBar from "../../components/SearchBar";
 import {Button, ButtonGroup} from "reactstrap";
 import Swagponent from "../../components/Swagponent";

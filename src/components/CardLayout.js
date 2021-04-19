@@ -2,7 +2,7 @@ import React from "react";
 import './CardLayout.css';
 import { Row, Col } from 'reactstrap';
 import ContentCard from "./ContentCard";
-import Course from "../Course.js";
+import Course from "../data/Course.js";
 
 class CardCategory extends React.Component {
 

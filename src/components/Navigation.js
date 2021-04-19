@@ -15,7 +15,7 @@ import {
     NavLink
 } from "reactstrap";
 import {Link} from "react-router-dom";
-import {UserType} from "../User";
+import {UserType} from "../data/User";
 
 function AvatarBadge(props) {
     if (!props.profile.isLoggedIn()) {

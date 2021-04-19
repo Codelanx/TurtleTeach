@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 import CardLayout, {CardCategory} from "../../components/CardLayout";
 import ContentCard from "../../components/ContentCard";
-import Course from "../../Course";
+import Course from "../../data/Course";
 import TurtleButton from "../../components/TurtleButton";
 
 

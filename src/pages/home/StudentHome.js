@@ -7,7 +7,7 @@ import CardLayout, {CardCategory} from "../../components/CardLayout";
 import {Link} from "react-router-dom";
 import TurtleButton from "../../components/TurtleButton";
 import ContentCard from "../../components/ContentCard";
-import Course from "../../Course";
+import Course from "../../data/Course";
 
 function AvatarContainer(props) {
     return (

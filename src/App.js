@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "./components/Navigation";
 import TurtleRouter from "./Router";
-import Profile from "./User";
+import Profile from "./data/User";
 import {Col, Row} from "reactstrap";
 
 function ExamplePage() {
