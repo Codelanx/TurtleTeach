@@ -1,6 +1,7 @@
 import React from "react";
 import './StudentAssignment.css';
 import './ContentCard';
+import {Assignment} from "../data/Course";
 import {Table, Col, Row, Container} from "reactstrap";
 import ContentCard from "./ContentCard";
 
@@ -41,13 +42,12 @@ class PreviousAssignment extends React.Component {
             <Col>
                 <Row className={"categories"}>Past Assignments
                 </Row>
-            <Table striped>
-                <tbody>
-                <tr><th scope="row">Slow and Curious</th></tr>
-                <tr><th scope="row">Tarantula Trap</th></tr>
-                <tr><th scope="row">Blue Lagoon</th></tr>
-                </tbody>
-            </Table>
+                <Row className={"stripe"}><Col xs={9}>Tarantula Trap</Col><Col xs={3}>Grade: A-</Col>
+                </Row>
+                <Row className={"white"}><Col xs={9}>Slow and Curious</Col><Col xs={3}>Grade: B</Col>
+                </Row>
+                <Row className={"stripe"}><Col xs={9}>Blue Lagoon</Col><Col xs={3}>Grade: C+</Col>
+                </Row>
             </Col>
         );
     }
@@ -61,9 +61,10 @@ class StudentAssignment extends React.Component {
     }
 
     render() {
-
+        let assignments = Assignment.getAssignments();
 
         return (
+
             // <Container>
             // <Row>
             //     <Col>Current Puzzles</Col>
@@ -75,9 +76,9 @@ class StudentAssignment extends React.Component {
                 <tr>
                     <td>
                         <Row>
-                        <Col><ContentCard course="Ring of Fire" date="Due Date: 4/14" link={"/DevEnvironment"}/></Col>
-                        <Col><ContentCard course="Surfin' the EAC" date="Due Date: 4/20" link={"/DevEnvironment"}/></Col>
-                        <Col><ContentCard course="Deep Diving" date="Due Date: 4/24" link={"/DevEnvironment"}/></Col>
+                        <Col><ContentCard course={assignments[0]}/></Col>
+                        <Col><ContentCard course={assignments[2]}/></Col>
+                        <Col><ContentCard course={assignments[1]}/></Col>
                         </Row>
                     </td>
                     <td rowSpan={2}>
