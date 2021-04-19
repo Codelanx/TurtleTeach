@@ -16,7 +16,7 @@
     overflow-x: hidden;
 }
 
-.spacing{
+.spacing {
     padding: 1rem 0;
 }
 
@@ -25,10 +25,7 @@
 }
 
 .area {
-    padding: 2rem 2rem;
-}
-
-
-.search{
-    padding: 1rem 2rem;
+    margin-top: 3.4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }

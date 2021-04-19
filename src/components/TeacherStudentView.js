@@ -27,7 +27,9 @@ class TeacherStudentView extends React.Component {
                     </Row>
                 </Col>
                 <Col sm={"12"} md={"6"} className={"area"}>
-                    <Row className={"search"}><SearchBar placeholder={"Search Students"}/></Row>
+                    <Row className={"search"}>
+                        <SearchBar placeholder={"Search Students"}/>
+                    </Row>
                     <Row className="text-font col-12">For Selected:</Row>
                         <Row className={"spacing"}><TurtleButton expand>Send Auto-Login Email</TurtleButton></Row>
                         <Row className={"spacing"}><TurtleButton expand={true}>Draft Email Message</TurtleButton></Row>

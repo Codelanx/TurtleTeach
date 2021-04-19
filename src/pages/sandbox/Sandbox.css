@@ -1,14 +1,8 @@
 .Sandbox {
   text-align: center;
-
-
-}
-.padding{
-
-
 }
 
-.codingSpace{
+.codingSpace {
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -49,9 +43,4 @@
 
 .Playback {
   /*buttons on bottom */
-}
-
-.searchbar{
-  margin-right: 0;
-  margin-left: auto;
 }
