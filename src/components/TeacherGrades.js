@@ -1,21 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import './TeacherAssignment.css';
-import {Row, Col, UncontrolledCollapse} from "reactstrap";
+import {Row, Col, Collapse} from "reactstrap";
 import {Link} from "react-router-dom";
 
 function PuzzleListing(props) {
+    const [open, setOpen] = useState(true);
+
+    const toggle = () => setOpen(!open);
+    let icon;
+    if (open) {
+        icon = (<i className={"bi bi-arrows-collapse"} />);
+    } else {
+        icon = (<i className={"bi bi-arrows-expand"} />);
+    }
     return (
         <React.Fragment>
             <Row className={"assignments-course"}>
                 <Col xs={"1"} className={"Collapse"} id={props.name}>
-                    <i className="bi bi-arrows-collapse" />
+                    {icon}
                 </Col>
                 <Col xs={"5"}>{props.name}</Col>
                 <Col xs={"2"}>{props.completed}</Col>
                 <Col xs={"2"}>{props.evaluated}</Col>
                 <Col xs={"2"}>{props.date}</Col>
             </Row>
-            <UncontrolledCollapse toggler={props.toggler} defaultOpen={"True"}>{props.children}</UncontrolledCollapse>
+            <Collapse isOpen={open}>
+                {props.children}
+            </Collapse>
 
         </React.Fragment>
     );

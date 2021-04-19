@@ -1,13 +1,7 @@
 import React, {useState} from "react";
 import './TeacherAssignment.css';
-import {Col, Collapse, Row, UncontrolledCollapse} from "reactstrap";
+import {Col, Collapse, Row} from "reactstrap";
 import TurtleButton from "./TurtleButton";
-
-
-function CollapseButton(props) {
-
-}
-
 
 function CourseListing(props) {
 
