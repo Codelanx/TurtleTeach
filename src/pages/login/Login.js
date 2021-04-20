@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Login.css';
 import {Button, ButtonGroup, FormGroup, Input, Label, Row} from "reactstrap";
 import {Redirect, useHistory} from "react-router";
@@ -7,18 +7,8 @@ import {Link} from "react-router-dom";
 function LoginButton(props) {
     let history = useHistory();
     //let redir = null;
-
-    function handleClick() {
-        if (props.parent.profile.setCurrentUser(props.parent.state.email) !== null) {
-            history.push('/');
-            //redir = (<Redirect to={'/'} />);
-        } else {
-            //TODO: Incorrect user name or password feedback
-        }
-    }
-
     return (
-        <Button color={"primary"} onClick={handleClick} block to={"/login"}>Log In</Button>
+        <Button color={"primary"} onClick={props.login} block>Log In</Button>
     );
 }
 
@@ -65,65 +55,67 @@ function Register(props) {
     );
 }
 
-class Login extends React.Component {
+function Login(props) {
 
-    constructor(props) {
-        super(props);
-        this.profile = props.profile;
-        this.state = {email: ''}
-        this.state = {name: ''}
-        this.state = {
-            name: "React"
-        };
-        this.onValueChange = this.onValueChange.bind(this);
+    let history = useHistory();
+    let [email, setEmail] = useState('');
+    let [valid, setValid] = useState(!!!props.invalid);
+
+    const login = (e) => {
+        if (e !== null && e.keyCode !== 13) {
+            return; //no-op
+        }
+
+        let user = props.profile.setCurrentUser(email);
+        if (user === null) {
+            setValid(false);
+        } else {
+            history.push('/');
+        }
     }
 
-    onValueChange(event) {
-        this.setState({
-            selectedOption: event.target.value
-        });
+    const updateEmail = (e) => {
+        setEmail(e.target.value);
     }
 
-    updateName = (n) => {
-        this.setState({name: n.target.value});
-    }
+    let validity = valid ? "" : " is-invalid";
 
-    updateEmail = (e) => {
-        this.setState({email: e.target.value});
-    }
+    return (
+        <React.Fragment>
+            <div className={"col-6 container-fluid"}>
+                <Row className={"loginArea justify-content-center"}>
+                    <Button className={"btnGoogle"} block><img src={"#"}/>Log in with Google</Button>
+                    <Button className={"btnFacebook"} block><img src={"#"}/>Log in with FaceBook</Button>
 
-    render() {
-        return (
-            <React.Fragment>
-                <div className={"col-6 container-fluid"}>
-                    <Row className={"loginArea justify-content-center"}>
-                        <Button className={"btnGoogle"} block><img src={"#"}/>Log in with Google</Button>
-                        <Button className={"btnFacebook"} block><img src={"#"}/>Log in with FaceBook</Button>
+                    <div className="Login">
+                        <FormGroup>
+                            <Label for={"email"}>Email</Label>
+                            <Input type={"email"} name={"email"} id={"email"}
+                                   placeholder={"raphael@turtle.teach"} value={email}
+                                   className={validity}
+                                   onChange={updateEmail}
+                                   onKeyUp={login}
+                            />
+                            <div className={"invalid-feedback"}>
+                                <span>Incorrect Username or Password</span>
+                            </div>
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for={"password"}>Password</Label>
+                            <span className={"justify-content-right forgot-password"}><Link
+                                to={"/login/forgot"}>Forgot Password?</Link></span>
+                            <Input className={validity} type={"password"} name={"password"} id={"password"}/>
+                        </FormGroup>
+                        <FormGroup>
+                            <LoginButton parent={this} login={login}/>
+                        </FormGroup>
+                    </div>
 
-                        <div className="Login">
-                            <FormGroup>
-                                <Label for={"email"}>Email</Label>
-                                <Input type={"email"} name={"email"} id={"email"}
-                                       placeholder={"raphael@turtle.teach"} value={this.state.email}
-                                       onChange={this.updateEmail}/>
-                            </FormGroup>
-                            <FormGroup>
-                                <Label for={"password"}>Password</Label>
-                                <span className={"justify-content-right forgot-password"}><Link
-                                    to={"/login/forgot"}>Forgot Password?</Link></span>
-                                <Input type={"password"} name={"password"} id={"password"}/>
-                            </FormGroup>
-                            <FormGroup>
-                                <LoginButton parent={this}/>
-                            </FormGroup>
-                        </div>
-
-                        <span>New user? <Link to={"/login/register"}>Register Now!</Link></span>
-                    </Row>
-                </div>
-            </React.Fragment>
-        );
-    }
+                    <span>New user? <Link to={"/login/register"}>Register Now!</Link></span>
+                </Row>
+            </div>
+        </React.Fragment>
+    );
 }
 
 export default Login;

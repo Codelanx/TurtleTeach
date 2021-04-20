@@ -128,7 +128,7 @@ class AccountDropdown extends React.Component {
 
 class LeftBar extends React.Component {
 
-    static IS_TESTING = true;
+    static IS_TESTING = false;
 
     constructor(props) {
         super(props);
