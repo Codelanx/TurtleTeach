@@ -5,10 +5,8 @@ import {Redirect, useHistory} from "react-router";
 import {Link} from "react-router-dom";
 
 function LoginButton(props) {
-    let history = useHistory();
-    //let redir = null;
     return (
-        <Button color={"primary"} onClick={props.login} block>Log In</Button>
+        <Button color={"primary"} onClick={() => {props.login(null);}} block to={"/"}>Log In</Button>
     );
 }
 
