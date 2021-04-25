@@ -1,5 +1,37 @@
+.add-space{
+    margin: 2rem;
+    padding: 2rem;
+}
+
 .grade-font{
     font-size: 500%;
     font-weight: bold;
     margin: auto;
+    border: 1px solid #999;
+    width: 300px;
+}
+
+.label{
+    font-weight: bold;
+    font-size: 150%;
+    border: 1px solid #999;
+    background-color: #04A43C;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.overall{
+    font-weight: bold;
+    font-size: 150%;
+    border: 1px solid #999;
+    width: 300px;
+    margin: auto;
+    margin-top: 4rem;
+    background-color: #dddddd;
+}
+
+.assignment{
+    border: 1px solid #999;
+    padding: 1rem;
+    background-color: #dddddd;
 }
