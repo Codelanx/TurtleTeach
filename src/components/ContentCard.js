@@ -48,7 +48,7 @@ class ContentCard extends React.Component {
                     <Row>
                         <Col xs={textSize} className={"card-text"}>
                             <Row>
-                                <Link to={"/class/" + this.props.course.id}>{this.props.course.title}</Link>
+                                <Link to={this.props.course.link}>{this.props.course.title}</Link>
                             </Row>
                             <Row>
                                 {this.props.course.dates}

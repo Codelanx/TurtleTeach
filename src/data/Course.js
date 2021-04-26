@@ -1,19 +1,23 @@
 class Assignment {
 
     static ASSIGNMENTS = [
-        new Assignment("Slow and Curious", "04/20"),
-        new Assignment("Tarantula Trap", "05/01"),
-        new Assignment("Blue Lagoon", "04/25"),
+        new Assignment("Slow and Curious", "04/20", "123"),
+        new Assignment("Tarantula Trap", "05/01", "157"),
+        new Assignment("Blue Lagoon", "04/25",  "912"),
         new Assignment("Skyracing with Snakes", "03/12"),
         new Assignment("Dodge the Dog", "05/16"),
         new Assignment("Flip the Turtle", "05/21")
     ];
 
-    constructor(title, dates, grade) {
+    constructor(title, dates, id) {
         this._title = title;
         this._dates = dates;
+        this._link = "/puzzle/" + id;
     }
 
+    get link(){
+        return this._link;
+    }
 
     get title() {
         return this._title;
@@ -51,6 +55,7 @@ class Course {
         this._dates = dates;
         this._currentGrade = currentGrade;
         this._teacherNotifCount = teacherNotifCount;
+        this._link = "/class/" + id;
     }
 
     static findCourse(id) {
@@ -68,6 +73,10 @@ class Course {
 
     get id() {
         return this._id;
+    }
+
+    get link(){
+        return this._link;
     }
 
     get title() {
