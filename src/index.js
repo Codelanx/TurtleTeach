@@ -8,7 +8,7 @@ import App from "./App"
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter basename={"/turtleteach/"}>
+        <BrowserRouter basename={"/turtleteach"}>
             <App />
         </BrowserRouter>
     </React.StrictMode>,
