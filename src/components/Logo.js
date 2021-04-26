@@ -13,8 +13,8 @@ class Logo extends React.Component {
     render() {
         return (
             <div>
-                <img src="/img/logo.png" alt="this was supposed to be our logo" width="113" height="71" />
-                <img src="/img/logo_inverted.png" alt="this was supposed to be our logo" width="113" height="71" />
+                <img src="img/logo.png" alt="this was supposed to be our logo" width="113" height="71" />
+                <img src="img/logo_inverted.png" alt="this was supposed to be our logo" width="113" height="71" />
                 {this.props.text}
             </div>
         );

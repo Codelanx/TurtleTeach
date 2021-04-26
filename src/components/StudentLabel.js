@@ -46,7 +46,7 @@ class StudentLabel extends React.Component {
             <Row className="mainContainer" onClick={this.check}>
                 {checkbox}
                 <Col xs={"3"} className={"fix-height student-roster-img"}>
-                    <img src="/img/turtle.png" alt="this was supposed to be a turtle" className={"student-roster-image"} />
+                    <img src="img/turtle.png" alt="this was supposed to be a turtle" className={"student-roster-image"} />
                 </Col>
                 <Col xs={textWidth}>
                     <a href="#" className={"student-roster-link"}>{this.props.you} Student Name</a>

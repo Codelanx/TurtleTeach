@@ -15,7 +15,7 @@ class TutorialCard extends React.Component {
 
         return (
             <Card>
-                <CardImg src="/img/turtle.png" alt="this was supposed to be a turtle" className={"card-image"}/>
+                <CardImg src="img/turtle.png" alt="this was supposed to be a turtle" className={"card-image"}/>
                 <CardBody>
                     <Row>
                         <Col xs={"10"}>

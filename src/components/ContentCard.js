@@ -43,7 +43,7 @@ class ContentCard extends React.Component {
         }
         return (
             <Card onClick={this.redirect(this.props.course)}>
-                <CardImg src="/img/turtle.png" alt="this was supposed to be a turtle" className={"card-image"}/>
+                <CardImg src="img/turtle.png" alt="this was supposed to be a turtle" className={"card-image"}/>
                 <CardBody>
                     <Row>
                         <Col xs={textSize} className={"card-text"}>
