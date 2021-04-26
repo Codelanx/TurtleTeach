@@ -6,10 +6,10 @@ In order to run our appliation please follow the instructiosns on one of these o
 Option 1:
 
 Required installations: None
-
 Go to the website: http://home.rogue.ninja/turtleteach/
-
 Congrulations, you're on the website, that is all you need to do.
+
+
 
 
 Option 2:
