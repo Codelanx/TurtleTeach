@@ -1,32 +1,24 @@
 # TurtleTeach
 SWEN-444 project prototype
 
+In order to run our appliation please follow the instructiosns on one of these options:
 
-Required installations:
+Option 1:
+Required installations: None
+Go to the website: http://home.rogue.ninja/turtleteach/
+Congrulations, you're on the website, that is all you need to do.
 
-React:
-npm install --save react
 
-React-Dom:
-npm install --save react-dom
+Option 2:
+Required installations: Javascript compatable IDE (our reccomendation: https://www.jetbrains.com/webstorm/download/), npm (https://www.npmjs.com/get-npm)
+Step 1: Clone this directory and open in a compatible IDE of your choice (we reccomend WebStorm)
+Step 2: Run "npm install" in terminal when inside of the newly created directory
+Step 3: Run "npm start" this will start up the project on http://localhost:3000/
 
-React-Router:
-npm install --save react-router
 
-React-Router-Dom:
-npm install --save react-router-dom
 
-React-Scripts:
-npm install --save react-scripts
 
-ReactStrap:
-npm install --save reactstrap
+Once you are on the project website you can log in using one of two accounts: "student" or "teacher" putting these names into the username field of log in will bring you to the respective account type, you do not have to enter a password.
 
-Bootstrap:
-npm install --save bootstrap
+From there you are free to explore, many of the links and pages are currently non-functional, however the website should be fully navigable.
 
-Bootstrap-Icons:
-npm install --save bootstrap-icons
-
-Currently must switch user type by using User.js line 58.
-Only Teacher and Student are mocked up.
