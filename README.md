@@ -1,37 +1,48 @@
-# TurtleTeach
-SWEN-444 project prototype
+# TurtleTeach  - SWEN-444 Prototype
 
-In order to run our appliation please follow the instructiosns on one of these options:
+#### Available Online! See: [http://home.rogue.ninja/turtleteach/](http://home.rogue.ninja/turtleteach/)
 
+# 1. Setup
 
-Option 1:
+Note that TurtleTeach is a [hosted product, available online](http://home.rogue.ninja/turtleteach/);
+end-users should not have to go through the installation process.
 
-Required installations: None
+For users (/graders) installing on their own, simply clone the code from the github repository into a desired location:
 
-Go to the website: http://home.rogue.ninja/turtleteach/
+    git clone https://github.com/Codelanx/TurtleTeach.git
 
-Congrulations, you're on the website, that is all you need to do.
+Once the download is complete, change into the cloned directory, and install dependencies:
 
-.
-.
-.
+    npm install
 
-Option 2:
+Following that, you can start the development server on your local machine via:
 
-Required installations: Javascript compatable IDE (our reccomendation: https://www.jetbrains.com/webstorm/download/), npm (https://www.npmjs.com/get-npm)
+    npm start
 
-Step 1: Clone this directory and open in a compatible IDE of your choice (we reccomend WebStorm)
+Finally, you can access TurtleTeach in your browser locally:
 
-Step 2: Run "npm install" in terminal when inside of the newly created directory
-
-Step 3: Run "npm start" this will start up the project on http://localhost:3000/
-
-.
-.
-.
+    http://localhost:3011       | Note: We use port 3011, but this can be changed
 
 
-Once you are on the project website you can log in using one of two accounts: "student" or "teacher" putting these names into the username field of log in will bring you to the respective account type, you do not have to enter a password.
+# 2. Usage
 
-From there you are free to explore, many of the links and pages are currently non-functional, however the website should be fully navigable.
+With a running application underway, once you have navigated to the URL for the TurtleTeach
+page, simply log in with one of the premade trial accounts, while keeping note of their
+level of support:
+   
+
+ * `Student`: Majority of interfaces completed, but some visual tweaks remain. A couple
+    pages were stripped down/incomplete, for the sake of finalizing the other pages within our
+   allotted time.
+ * `Teacher`: All teacher-specific interfaces are implemented.
+ * `Creator`: Few to none in terms of interface support. This work role was out of scope for
+    our prototype.
+ 
+To log in, click "Login / Register" in the top right, enter one of the above `Username`s into
+the username field (on the /login page), and enter any password that you prefer. The password is
+not authenticated, any password (even blank) will be acceptable to log in with.
+
+
+From there you are free to explore. Some of the links (usually, green buttons) and pages are currently non-functional,
+however the website should be fully navigable.
 
