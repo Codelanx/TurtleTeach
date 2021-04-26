@@ -111,7 +111,7 @@ const StudentTab = (props) => {
                     </NavLink>
                 </NavItem>
             </Nav>
-            <TabContent activeTab={activeTab}>
+            <TabContent style={{"margin-top": "1rem"}} activeTab={activeTab}>
                 <TabPane tabId="1">
                     <Row>
                         <StudentAssignment/>
@@ -126,8 +126,7 @@ const StudentTab = (props) => {
                     <StudentGrades/>
                 </TabPane>
                 <TabPane tabId="4">
-                    <Row><Tutorial/>
-                    </Row>
+                    <Tutorial />
                 </TabPane>
             </TabContent>
         </div>

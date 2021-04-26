@@ -51,7 +51,7 @@ const TeacherTab = (props) => {
                     </NavLink>
                 </NavItem>
             </Nav>
-            <TabContent activeTab={activeTab}>
+            <TabContent style={{"margin-top": "1rem"}} activeTab={activeTab}>
                 <TabPane tabId="1" >
                     <TeacherStudentView />
                 </TabPane>
