@@ -98,9 +98,7 @@ class ProfilePicture extends React.Component {
         return (
             <div className={"navbar-avatar"}>
                 <img src={avatar} />
-                <AvatarBadge profile={this.props.profile}>
-                    42
-                </AvatarBadge>
+                {badge}
             </div>
         );
     }
