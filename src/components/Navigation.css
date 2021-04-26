@@ -1,38 +1,80 @@
-.navbar-avatar > .avatar-level-badge,
-.navbar-avatar > .avatar-notif-badge {
+.avatar-level-badge,
+.avatar-notif-badge {
     position: absolute;
     text-align: center;
     vertical-align: center;
     justify-content: center;
     text-overflow: clip;
+}
+
+.avatar-level-badge > .level {
+
+}
+
+.avatar-level-badge > i {
+}
+
+.avatar-level-badge > i > span {
+
+}
+
+.level-badge {
+    position: absolute;
+    top: 5px;
+    right: 95px;
+    background-color: #ffcccc;
+    border: 1px solid #333;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: text-top;
+    text-overflow: clip;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.avatar-level-badge > i {
+    color: #84b2fc;
+    text-shadow: 1px 1px 3px #333;
+    font-size: 2rem;
     display: flex;
-    bottom: -10px;
-    right: -10px;
+    justify-content: center;
+}
+
+.avatar-level-badge > i > span {
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: none;
+    color: #333;
+    position: absolute;
+    transform: translateY(0.3rem);
+}
+
+.avatar-level-badge {
+    display: flex;
+    top: -15px;
+    right: -15px;
     height: 30px;
     width: 30px;
     align-items: center;
     flex-direction: column;
 }
 
-i {
-    font-style: inherit;
-}
-
-.navbar-avatar > .avatar-level-badge {
-    color: #fff;
-}
-
-.navbar-avatar > .avatar-notif-badge {
+.avatar-notif-badge {
     background-color: #ffafaf;
     color: #111;
-    top: -10px;
-    right: -10px;
+    top: 0.5rem;
+    right: 0.5rem;
     border: 1px solid #333;
     height: 30px;
     width: 30px;
     padding: 0.2rem;
     border-radius: 50%;
- }
+}
+
+i {
+    font-style: inherit;
+}
 
 .turtle-nav {
     background-color: #04a43c;
@@ -48,12 +90,13 @@ i {
 
 .nav-dropdown {
     background-color: #04a43c;
+    align-self: stretch;
 }
 
 .nav-item {
 }
 
-.profile-image{
+.profile-image {
     max-width: 4rem;
     max-height: 3rem;
     height: 100%;
@@ -75,25 +118,26 @@ i {
 }
 
 
-.nav-dropdown > button {
+.nav-dropdown > button,
+.nav-dropdown > a {
     background-color: #04a43c;
     /*transform: scaleY(1.5);*/
     border: none;
     border-radius: 0;
-}
-
-.nav-dropdown > button > span {
-    /*transform: scaleY(0.6666);*/
-}
-
-.nav-dropdown > button > div {
-}
-
-.nav-dropdown > button {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
+.nav-dropdown > button > span,
+.nav-dropdown > a > span {
+    /*transform: scaleY(0.6666);*/
+}
+
+.nav-dropdown > button > div,
+.nav-dropdown > a > div {
+}
+
 
 .navbar-avatar {
     display: inline-block;
@@ -112,28 +156,21 @@ i {
     height: auto;
 }
 
-.level-badge {
-    position: absolute;
-    top: 5px;
-    right: 95px;
-    background-color: #ffcccc;
-    border: 1px solid #333;
-    height: 20px;
-    width: 20px;
-    text-align: center;
-    vertical-align: text-top;
-    text-overflow: clip;
-    padding: 0;
-    border-radius: 50%;
+.nav-icon {
+    font-size: 1.5rem;
 }
 
 .nav-dropdown > button:hover,
-.nav-dropdown > button:focus {
+.nav-dropdown > button:focus,
+.nav-dropdown > a:hover,
+.nav-dropdown > a:focus {
     background-color: #06d049;
 }
 
 .nav-dropdown > button:active,
-.nav-dropdown > button:active:not(:disabled):not(.disabled) {
+.nav-dropdown > button:active:not(:disabled):not(.disabled),
+.nav-dropdown > a:active,
+.nav-dropdown > a:active:not(:disabled):not(.disabled) {
     background-color: #038832;
 }
 
@@ -175,17 +212,8 @@ i {
     color: #fff;
 }
 
-.turtle-nav > NavItem > :visited {
-
-}
-
 /** TODO: Rename */
 
 .turtle-secondary {
     background-color: #7ab648;
-}
-
-.level{
-    color: #ffcccc;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }

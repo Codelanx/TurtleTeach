@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './Navigation.css';
 import {
     Badge,
@@ -27,7 +27,9 @@ function AvatarBadge(props) {
             return (
                 <div className={"avatar-level-badge"}>
                     <i className={"bi bi-star-fill level"}>
-                        {props.children}
+                        <span>
+                            {props.children}
+                        </span>
                     </i>
                 </div>
             );
@@ -35,7 +37,9 @@ function AvatarBadge(props) {
         case UserType.TEACHER:
             return (
                 <div className={"avatar-notif-badge"}>
-                    {props.children}
+                    <span>
+                        {props.children}
+                    </span>
                 </div>
             );
             break;
@@ -83,6 +87,14 @@ class ProfilePicture extends React.Component {
             return null;
         }
         let avatar = "/img/turtle.png";
+        let badge = null;
+        if (this.props.profile.getCurrentUser().isStudent()) {
+            badge = (
+                <AvatarBadge profile={this.props.profile}>
+                    42
+                </AvatarBadge>
+            );
+        }
         return (
             <div className={"navbar-avatar"}>
                 <img src={avatar} />
@@ -107,7 +119,7 @@ class ClassDropdown extends React.Component {
     };
 
     render() {
-        var prof = this.props.profile;
+        let prof = this.props.profile;
         if (!prof.isLoggedIn() || prof.getCurrentUser().isCreator()) {
             return null;
         }
@@ -124,6 +136,47 @@ class ClassDropdown extends React.Component {
     }
 }
 
+function AlertDropdown(props) {
+    let [isOpen, setIsOpen] = useState(!!props.isOpen);
+    let toggle = () => setIsOpen(!isOpen);
+    let content = !!props.children
+        ? props.children
+        : (
+            <React.Fragment>
+                <Link to={"#"}><DropdownItem>Notification 1</DropdownItem></Link>
+                <Link to={"#"}><DropdownItem>Notification 2</DropdownItem></Link>
+                <Link to={"#"}><DropdownItem>Notification 3</DropdownItem></Link>
+            </React.Fragment>
+        );
+    let count = null;
+    if (props.profile.getCurrentUser().isTeacher()) {
+        count = (
+            <AvatarBadge profile={props.profile}>
+            42
+            </AvatarBadge>
+        );
+    }
+    return (
+        <Dropdown className="nav-dropdown" isOpen={isOpen} toggle={toggle} >
+            <DropdownToggle caret>
+                <span><i className={"bi bi-bell-fill nav-icon"}/></span>
+                {count}
+            </DropdownToggle>
+            <DropdownMenu right>
+                {content}
+            </DropdownMenu>
+        </Dropdown>
+    );
+}
+
+function HomeButton(props) {
+    return (
+        <div className="nav-dropdown">
+            <Button tag={Link} to={"/"}><i className={"bi bi-house-fill nav-icon"} /></Button>
+        </div>
+    );
+}
+
 class AccountDropdown extends React.Component {
 
     constructor(props) {
@@ -136,9 +189,6 @@ class AccountDropdown extends React.Component {
     }
 
     render() {
-        if (!this.props.profile.isLoggedIn()) {
-            return (<Link to={"/login"}><span>Login / Register</span></Link>);
-        }
         return (
             <Dropdown className="nav-dropdown" isOpen={this.state.isOpen} toggle={this.toggle} >
                 <DropdownToggle caret>
@@ -183,6 +233,34 @@ class LeftBar extends React.Component {
     }
 }
 
+function RightBar(props) {
+    if (!props.profile.isLoggedIn()) {
+        return (
+            <Nav className={"no-pad"}>
+                <NavItem>
+                    <Link to={"/login"}><span>Login / Register</span></Link>
+                </NavItem>
+            </Nav>
+        );
+    }
+    return (
+        <Nav className={"no-pad"}>
+            <NavItem>
+                <HomeButton />
+            </NavItem>
+            <NavItem>
+                <AlertDropdown profile={props.profile} />
+            </NavItem>
+            <NavItem>
+                <ClassDropdown profile={props.profile} />
+            </NavItem>
+            <NavItem>
+                <AccountDropdown profile={props.profile} />
+            </NavItem>
+        </Nav>
+    );
+}
+
 class Navigation extends React.Component {
 
     constructor(props) {
@@ -201,16 +279,7 @@ class Navigation extends React.Component {
     render() {
         let rightNav = null;
         if (!this.isAuth) {
-            rightNav = (
-                <Nav className={"no-pad"}>
-                    <NavItem>
-                        <ClassDropdown profile={this.props.profile} />
-                    </NavItem>
-                    <NavItem>
-                        <AccountDropdown profile={this.props.profile} />
-                    </NavItem>
-                </Nav>
-            );
+            rightNav = (<RightBar profile={this.props.profile} />);
         }
         return (
             <div className="turtle-nav">
