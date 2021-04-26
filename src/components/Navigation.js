@@ -44,6 +44,35 @@ function AvatarBadge(props) {
     }
 }
 
+
+function AccountDropdownMenu(props) {
+    if (!props.profile.isLoggedIn()) {
+        return null;
+    }
+    let user = props.profile.getCurrentUser();
+    switch (user.getUserType()) {
+        case UserType.STUDENT:
+            return (
+                <DropdownMenu right>
+                    <Link to={"/account"}><DropdownItem>Account Settings</DropdownItem></Link>
+                    <Link to={"/customize"}><DropdownItem>Customize Turtle</DropdownItem></Link>
+                    <Link to={"/logout"}><DropdownItem>Sign Out</DropdownItem></Link>
+                </DropdownMenu>
+            );
+            break;
+        case UserType.TEACHER:
+            return (
+                <DropdownMenu right>
+                    <Link to={"/account"}><DropdownItem>Account Settings</DropdownItem></Link>
+                    <Link to={"/logout"}><DropdownItem>Sign Out</DropdownItem></Link>
+                </DropdownMenu>
+            );
+            break;
+        default:
+            return null;
+    }
+}
+
 class ProfilePicture extends React.Component {
     constructor(props) {
         super(props);
@@ -116,11 +145,7 @@ class AccountDropdown extends React.Component {
                     <ProfilePicture profile={this.props.profile} />
                     <span>{this.props.profile.getCurrentUser().getUsername()}</span>
                 </DropdownToggle>
-                <DropdownMenu right>
-                    <Link to={"/account"}><DropdownItem>Account Settings</DropdownItem></Link>
-                    <Link to={"/customize"}><DropdownItem>Customize Turtle</DropdownItem></Link>
-                    <Link to={"/logout"}><DropdownItem>Sign Out</DropdownItem></Link>
-                </DropdownMenu>
+                <AccountDropdownMenu profile={this.props.profile}/>
             </Dropdown>
         );
     }
