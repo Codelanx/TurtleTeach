@@ -7,20 +7,17 @@ class Landing extends React.Component {
     static LENGTH = 3;
     static ITEMS = [
         {
-            //ahh, hardcoded svg, yum
-            src: '/img/turtle_base.png',
+            src: 'img/turtle_base.png',
             altText: 'Turtles are cool I guess',
             caption: 'Welcome to TurtleTeach'
         },
         {
-            //ahh, hardcoded svg, yum
-            src: '/img/turtle_patriot.png',
+            src: 'img/turtle_patriot.png',
             altText: 'I like turtles',
             caption: 'Welcome to TurtleTeach'
         },
         {
-            //ahh, hardcoded svg, yum
-            src: '/img/turtle_3.png',
+            src: 'img/turtle_3.png',
             altText: 'TURRRRRTLE',
             caption: 'Welcome to TurtleTeach'
         }
@@ -70,7 +67,7 @@ class Landing extends React.Component {
 
     render() {
         return (
-            <div style={{"backgroundColor": "#666666"}}>
+            <div style={{"backgroundColor": "#666"}}>
                 <Carousel activeIndex={this.state.index} next={this.next} previous={this.previous}>
                     <CarouselIndicators items={Landing.ITEMS} activeIndex={this.state.index} onClickHandler={this.setIndex}/>
                     {this.slides}

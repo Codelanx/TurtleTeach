@@ -285,7 +285,7 @@ class Navigation extends React.Component {
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar className={"justify-content-md-between"}>
                         <LeftBar profile={this.props.profile} />
-                        <Link className={"no-pad no-margin logo-link"} to={"/"}><img className={"logo"} src={"/img/logo_inverted.png"} alt={"Click logo to return to home screen"} /></Link>
+                        <Link className={"no-pad no-margin logo-link"} to={"/"}><img className={"logo"} src={"img/logo_inverted.png"} alt={"Click logo to return to home screen"} /></Link>
                         {rightNav}
                     </Collapse>
                 </Navbar>

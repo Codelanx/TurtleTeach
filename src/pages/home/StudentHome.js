@@ -13,7 +13,7 @@ function AvatarContainer(props) {
     return (
         <Row className={"avatar-container"}>
             <Link to={"/customize"}>
-                <img className={"customize-avatar"} src={"/img/turtle.png"} alt="this was supposed to be the users profile image" />
+                <img className={"customize-avatar"} src={"img/turtle.png"} alt="this was supposed to be the users profile image" />
             </Link>
         </Row>
     );
