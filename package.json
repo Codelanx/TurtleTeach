@@ -1,8 +1,8 @@
 {
-  "name": "website",
-  "version": "0.1.0",
+  "name": "turtleteach",
+  "version": "0.2.0",
   "private": true,
-  "homepage": "https://www.shantanav.com",
+  "homepage": "https://home.rogue.ninja/turtleteach/",
   "dependencies": {
     "@babel/preset-stage-2": "^7.8.3",
     "@material-ui/core": "^4.11.3",
