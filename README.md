@@ -1,10 +1,10 @@
 # TurtleTeach  - SWEN-444 Prototype
 
-#### Available Online! See: [http://home.rogue.ninja/turtleteach/](http://home.rogue.ninja/turtleteach/)
+#### Available Online! See: [https://home.rogue.ninja/turtleteach/](https://home.rogue.ninja/turtleteach/)
 
 # 1. Setup
 
-Note that TurtleTeach is a [hosted product, available online](http://home.rogue.ninja/turtleteach/);
+Note that TurtleTeach is a [hosted product, available online](https://home.rogue.ninja/turtleteach/);
 end-users should not have to go through the installation process.
 
 For users (/graders) installing on their own, simply clone the code from the github repository into a desired location:
