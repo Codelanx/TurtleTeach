@@ -19,8 +19,8 @@ class ComponentPage extends React.Component {
                 <h1>Component Render:</h1>
                 <div className="content-border">
 
-                    <Swagponent pathname="/img/sunglasses.png" />
-                    <Swagponent pathname="/img/flag.png" />
+                    <Swagponent pathname="img/sunglasses.png" />
+                    <Swagponent pathname="img/flag.png" />
                 </div>
             </div>
         );

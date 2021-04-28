@@ -86,7 +86,7 @@ class ProfilePicture extends React.Component {
         if (!this.props.profile.isLoggedIn()) {
             return null;
         }
-        let avatar = "/img/turtle.png";
+        let avatar = "img/turtle.png";
         let badge = null;
         if (this.props.profile.getCurrentUser().isStudent()) {
             badge = (

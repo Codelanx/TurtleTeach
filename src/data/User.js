@@ -20,7 +20,7 @@ class User {
     }
 
     getAvatarURL() {
-        return '/img/turtle.png';
+        return 'img/turtle.png';
     }
 
     isStudent() {
